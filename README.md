@@ -1,1 +1,0 @@
-# gnof-centennial
