@@ -15,15 +15,25 @@
     <main id="main">
       <section id="animation">Logo Evolution Animation goes here</section>
       <section id="section1">
-        <h2>1800+</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <h2>$10 Million</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <h2>2,401</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <hr>
-        <h2>OUR STORY</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="info-point">
+          <h2>1800+</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="info-point">
+          <h2>$10 Million</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="info-point">
+          <h2>2,401</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </section>
+      <hr>
+      <section id="section2">
+        <div>
+          <h2>OUR STORY</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
       </section>
       <Timeline />
     </main>
@@ -58,11 +68,12 @@ li {
   display: inline-block;
   margin: 0 10px;
 }
-hr {
-  margin: 20px;
-}
 p {
   padding-bottom: 20px;
+}
+.info-point {
+  width: 300px;
+  margin: 0 auto;
 }
 #main {
   margin-top: 55px;
@@ -75,11 +86,12 @@ p {
   right: 0;
   width: 100%;
   height: 75px;
-  background-color: #58b2d0;
+  background-color: #00a1e2;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2;
 }
 #animation {
   width: 100%;
@@ -107,7 +119,11 @@ p {
   font-size: 14px;
   line-height: 0px;
 }
-#section1 {
-  padding: 20px 0;
+#section1, #section2 {
+  padding: 20px 40px;
 }
+#section1 {
+  display: flex;
+}
+
 </style>

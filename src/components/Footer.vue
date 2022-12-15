@@ -21,12 +21,13 @@ export default {
 
 <style scoped>
 #footer {
+  /* not sure if we want a sticky footer or not */
   position: fixed;
   left: 0;
   bottom: 0;
   height: 150px;
   width: 100%;
-  background-color: navy;
+  background-color: #04307e;
 }
 * {
   color: white;
