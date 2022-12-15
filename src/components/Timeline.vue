@@ -67,6 +67,10 @@ export default {
   height: 600px;
   border-radius: 10px;
   margin: 20px;
+  box-shadow: 2px 2px 2px #b0a9a0;
+  -moz-box-shadow: 2px 2px 3px #b0a9a0;
+  -webkit-box-shadow: 2px 2px 3px #b0a9a0;
+  border-radius: 8px;
 }
 #divider {
   height: 200px;

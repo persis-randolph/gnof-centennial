@@ -1,5 +1,6 @@
 <template>
   <div class="card">
+    <div class="line"></div>
     <strong>{{ card.year }}</strong><br>{{ card.header }}<br>{{ card.body }}
     <div class="color-highlight"><div class="category-text">{{ card.category.toUpperCase() }}</div></div>
   </div>
@@ -24,9 +25,9 @@ export default {
   text-align: left;
   padding: 20px;
   background-color: white;
-  -moz-box-shadow: 2px 2px 3px #222;
-  -webkit-box-shadow: 2px 2px 3px #222;
-  box-shadow: 2px 2px 2px #222;
+  box-shadow: 2px 2px 2px #b0a9a0;
+  -moz-box-shadow: 2px 2px 3px #b0a9a0;
+  -webkit-box-shadow: 2px 2px 3px #b0a9a0;
   border-radius: 8px;
   position: relative;
 }
@@ -34,15 +35,27 @@ export default {
   background-color: #04307e;
   color: white;
   width: 20px;
-  height: 100%;
+  height: 140px;
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   border-radius: 0 8px 8px 0;
+  margin: 0 auto;
 }
 .category-text {
-  transform: rotate(270deg) translateX(-110px);
-  /* -webkit-transform: rotate(270deg) translateY(100px) ; */
+  width: 140px;
+  text-align: center;
+  transform: rotate(270deg) translateX(-60px) translateY(-58px);
+  -webkit-transform: rotate(270deg) translateX(-60px) translateY(-58px);
+}
+
+.line {
+  width: 3px;
+  height: 40px;
+  background-color: white;
+  position: absolute;
+  transform: rotate(90deg) translateX(30px) translateY(40px);
+  -webkit-transform: rotate(90deg) translateX(30px) translateY(40px);
 }
 </style>
