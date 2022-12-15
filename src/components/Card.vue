@@ -1,7 +1,11 @@
 <template>
   <div class="card">
     <div class="line"></div>
-    <strong>{{ card.year }}</strong><br>{{ card.header }}<br>{{ card.body }}
+    <div class="text">
+      <span class="year">{{ card.year }}</span>
+      <span class="header">{{ card.header }}</span>
+      <span class="body">{{ card.body }}</span>
+    </div>
     <div class="color-highlight"><div class="category-text">{{ card.category.toUpperCase() }}</div></div>
   </div>
 </template>
@@ -49,7 +53,6 @@ export default {
   transform: rotate(270deg) translateX(-60px) translateY(-58px);
   -webkit-transform: rotate(270deg) translateX(-60px) translateY(-58px);
 }
-
 .line {
   width: 3px;
   height: 40px;
@@ -57,5 +60,19 @@ export default {
   position: absolute;
   transform: rotate(90deg) translateX(30px) translateY(40px);
   -webkit-transform: rotate(90deg) translateX(30px) translateY(40px);
+}
+.text {
+  display: grid;
+}
+.year {
+  font-weight: bolder;
+  font-size: 20px;
+}
+.header {
+  font-weight: bold;
+  font-size: 18px;
+}
+.body {
+  font-size: 14px;
 }
 </style>

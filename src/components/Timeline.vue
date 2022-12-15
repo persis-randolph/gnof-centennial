@@ -71,6 +71,7 @@ export default {
   -moz-box-shadow: 2px 2px 3px #b0a9a0;
   -webkit-box-shadow: 2px 2px 3px #b0a9a0;
   border-radius: 8px;
+  margin-right: 30px;
 }
 #divider {
   height: 200px;
