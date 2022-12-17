@@ -1,12 +1,13 @@
 <template>
   <div class="card">
-    <div class="line"></div>
+    <!-- <div class="line"></div> -->
     <div class="text">
       <span class="year">{{ card.year }}</span>
       <span class="header">{{ card.header }}</span>
       <span class="body">{{ card.body }}</span>
     </div>
-    <div class="color-highlight"><div class="category-text">{{ card.category.toUpperCase() }}</div></div>
+    <div class="color-highlight"></div>
+    <div class="category-text"><span>{{ card.category.toUpperCase() }}</span></div>
   </div>
 </template>
 
@@ -23,11 +24,10 @@ export default {
 
 <style scoped>
 .card {
-  height: 100px;
-  width: 70vw;
+  min-height: 100px;
   margin: 20px auto;
   text-align: left;
-  padding: 20px;
+  padding: 20px 30px 20px 20px;
   background-color: white;
   box-shadow: 2px 2px 2px #b0a9a0;
   -moz-box-shadow: 2px 2px 3px #b0a9a0;
@@ -38,20 +38,23 @@ export default {
 .color-highlight {
   background-color: #04307e;
   color: white;
-  width: 20px;
-  height: 140px;
+  width: 25px;
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   border-radius: 0 8px 8px 0;
-  margin: 0 auto;
 }
 .category-text {
-  width: 140px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  writing-mode: vertical-lr;
+  right: 0;
+  color: white;
   text-align: center;
-  transform: rotate(270deg) translateX(-60px) translateY(-58px);
-  -webkit-transform: rotate(270deg) translateX(-60px) translateY(-58px);
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
 }
 .line {
   width: 3px;

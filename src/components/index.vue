@@ -67,7 +67,7 @@ p {
   margin: 0 auto;
 }
 #main {
-  margin-top: 55px;
+  margin-top: 75px;
   padding-top: 20px;
 }
 #animation {

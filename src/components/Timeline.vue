@@ -1,21 +1,31 @@
 <template>
-  <div id="timeline-section">
-    <div id="container">
-      <div id="timeline" class="sticky"></div>
-      <div>
-        <Card
-          v-for="card in cardData"
-          :key="card.message"
-          :card="card"
-        />
-      </div>
+  <div id="container">
+    <div
+      id="timeline"
+      class="sticky"
+      :style="{'height': (windowHeight * .8) + 'px'}"
+    ></div>
+    <div
+      id="card-section"
+      :style="{width: (windowWidth * 0.7) + 'px', 'height': (windowHeight * 0.815) + 'px'}"
+    >
+      <Card
+        v-for="card in cardData"
+        :key="card.message"
+        :card="card"
+      />
+      <Card
+        v-for="card in cardData"
+        :key="card.message"
+        :card="card"
+      />
     </div>
-    <div id="divider"></div>
   </div>
 </template>
 
 <script>
 import Card from './Card.vue'
+import { ref, onMounted, nextTick, onBeforeUnmount, watch } from 'vue'
 
 export default {
   name: 'Timeline',
@@ -67,42 +77,72 @@ export default {
         body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
       }
     ]
+
+    // const windowHeight = ref(window.innerHeight + window.scrollY)
+    const windowHeight = ref(window.innerHeight)
+    const windowWidth = ref(window.innerWidth)
+
+    watch([windowHeight, windowWidth], () => {
+      console.log('height: ' + windowHeight.value + ' width: ' + windowWidth.value)
+    })
+
+    const onResize = () => {
+      windowHeight.value = window.innerHeight
+      windowWidth.value = window.innerWidth
+    }
+
+    // const onScroll = () => {
+    //   windowHeight.value = window.innerHeight
+    //   windowHeight.value = window.innerHeight
+    // }
+
+    onMounted(() => {
+      nextTick(() => {
+        window.addEventListener('resize', onResize)
+        // window.addEventListener('scroll', onScroll)
+      })
+    })
+
+    onBeforeUnmount(() => {
+      window.removeEventListener('resize', onResize)
+      // window.removeEventListener('scroll', onScroll)
+    })
+
     return {
-      cardData
+      cardData,
+      windowHeight,
+      windowWidth
     }
   }
 }
 </script>
 
 <style scoped>
-* {
-  background-color: #e2f6ff;
-}
 #container {
   display: flex;
   justify-content: center;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 75px;
+  background-color: #e2f6ff;
 }
-#timeline-section {
-  padding-top: 50px;
+#card-section {
+  /* background-color: magenta; */
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  /* padding-top: 50px; */
+}
+#card-section::-webkit-scrollbar {
+  display: none;
 }
 #timeline {
   background-color: white;
   width: 20px;
-  height: 600px;
   border-radius: 10px;
-  margin: 20px;
   box-shadow: 2px 2px 2px #b0a9a0;
   -moz-box-shadow: 2px 2px 3px #b0a9a0;
   -webkit-box-shadow: 2px 2px 3px #b0a9a0;
-  border-radius: 8px;
-  margin-right: 30px;
-}
-#divider {
-  height: 40px;
-}
-.sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 120px;
+  margin: 20px 30px 20px 0;
 }
 </style>

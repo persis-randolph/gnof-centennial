@@ -1,15 +1,9 @@
 <template>
   <header id="header">
-    <div id="fakelogo">
-      GREATER<br>
-      NEW ORLEANS<br>
-      FOUNDATION
-    </div>
-    <div id="faketitle">
-      <span id="line1">1  0  0</span><br>
-      <span id="line2">Y E A R S</span><br>
-      <span id="line3">1923 - 2023</span>
-    </div>
+    <img
+      class="logo"
+      src="../assets/GNOF_CentennialLogo_RGB_White.png"
+    />
   </header>
 </template>
 
@@ -34,27 +28,10 @@ export default {
   color: white;
   display: flex;
   align-items: center;
-  justify-content: center;
   z-index: 2;
+  padding: 10px;
 }
-#fakelogo {
-  text-align: right;
-}
-#faketitle {
-  text-align: justify;
-  padding-left: 5px;
-  width: 100px;
-}
-#line1 {
-  font-size: 20px;
-  line-height: 0px;
-}
-#line2 {
-  font-size: 16px;
-  line-height: 0px;
-}
-#line3 {
-  font-size: 14px;
-  line-height: 0px;
+.logo {
+  height: 60px;
 }
 </style>
