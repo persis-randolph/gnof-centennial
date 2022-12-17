@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card" :id="card.year">
     <!-- <div class="line"></div> -->
     <div class="text">
       <span class="year">{{ card.year }}</span>
@@ -12,11 +12,19 @@
 </template>
 
 <script>
+// import { ref } from 'vue'
+
 export default {
   props: {
     card: Object // contains year, category, header, and body
   },
   setup() {
+    // SETUP SOMETHING TO LISTEN FOR TOP BOUND OF CARD (or something similar)
+    // if that position is 100px from top of viewport emit an event to the timeline to set this as the active card
+    // const currentCard = document.getElementById(props.card.year)
+    // const cardBounds = ref(currentCard.getBoundingClientRect())
+    // console.log(cardBounds.value)
+
     return {}
   }
 }

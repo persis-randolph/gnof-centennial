@@ -3,15 +3,15 @@
     <div
       id="timeline"
       class="sticky"
-      :style="{'height': (windowHeight * .8) + 'px'}"
+      :style="{'height': (windowHeight * .7) + 'px'}"
     ></div>
     <div
       id="card-section"
-      :style="{width: (windowWidth * 0.7) + 'px', 'height': (windowHeight * 0.815) + 'px'}"
+      :style="{width: (windowWidth * 0.7) + 'px', 'height': (windowHeight * 0.715) + 'px'}"
     >
       <Card
         v-for="card in cardData"
-        :key="card.message"
+        :key="card.year"
         :card="card"
       />
     </div>
@@ -34,9 +34,11 @@ export default {
     // const windowHeight = ref(window.innerHeight + window.scrollY)
     const windowHeight = ref(window.innerHeight)
     const windowWidth = ref(window.innerWidth)
+    const scrollYPosition = ref(window.scrollY)
 
-    watch([windowHeight, windowWidth], () => {
+    watch([windowHeight, windowWidth, scrollYPosition], () => {
       console.log('height: ' + windowHeight.value + ' width: ' + windowWidth.value)
+      console.log('scrollY: ', scrollYPosition.value)
     })
 
     const onResize = () => {
@@ -44,21 +46,22 @@ export default {
       windowWidth.value = window.innerWidth
     }
 
-    // const onScroll = () => {
-    //   windowHeight.value = window.innerHeight
-    //   windowWidth.value = window.innerWidth
-    // }
+    const onScroll = () => {
+      scrollYPosition.value = window.scrollY
+      // windowHeight.value = window.innerHeight
+      // windowWidth.value = window.innerWidth
+    }
 
     onMounted(() => {
       nextTick(() => {
         window.addEventListener('resize', onResize)
-        // window.addEventListener('scroll', onScroll)
+        window.addEventListener('scroll', onScroll)
       })
     })
 
     onBeforeUnmount(() => {
       window.removeEventListener('resize', onResize)
-      // window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('scroll', onScroll)
     })
 
     return {
