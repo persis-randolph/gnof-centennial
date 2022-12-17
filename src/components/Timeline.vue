@@ -4,7 +4,7 @@
       id="timeline"
       class="sticky"
       :style="{'height': (windowHeight * .7) + 'px'}"
-    ></div>
+    >{{ currentCard }}</div>
     <div
       id="card-section"
       :style="{width: (windowWidth * 0.7) + 'px', 'height': (windowHeight * 0.715) + 'px'}"
@@ -13,6 +13,7 @@
         v-for="card in cardData"
         :key="card.year"
         :card="card"
+        @set-current-card="setCurrentCard"
       />
     </div>
   </div>
@@ -30,6 +31,11 @@ export default {
   },
   setup () {
     const cardData = data
+    const currentCard = ref(undefined)
+
+    const setCurrentCard = (cardYear) => {
+      currentCard.value = cardYear
+    }
 
     // const windowHeight = ref(window.innerHeight + window.scrollY)
     const windowHeight = ref(window.innerHeight)
@@ -66,8 +72,10 @@ export default {
 
     return {
       cardData,
+      currentCard,
       windowHeight,
-      windowWidth
+      windowWidth,
+      setCurrentCard
     }
   }
 }

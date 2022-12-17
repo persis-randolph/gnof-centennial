@@ -1,5 +1,5 @@
 <template>
-  <div class="card" :id="card.year">
+  <div class="card" :id="card.year" @click="onClick">
     <!-- <div class="line"></div> -->
     <div class="text">
       <span class="year">{{ card.year }}</span>
@@ -18,14 +18,20 @@ export default {
   props: {
     card: Object // contains year, category, header, and body
   },
-  setup() {
+  emits: ['set-current-card'],
+  setup(props, { emit }) {
+    const onClick = () => {
+      emit('set-current-card', props.card.year)
+    }
     // SETUP SOMETHING TO LISTEN FOR TOP BOUND OF CARD (or something similar)
     // if that position is 100px from top of viewport emit an event to the timeline to set this as the active card
     // const currentCard = document.getElementById(props.card.year)
     // const cardBounds = ref(currentCard.getBoundingClientRect())
     // console.log(cardBounds.value)
 
-    return {}
+    return {
+      onClick
+    }
   }
 }
 </script>
