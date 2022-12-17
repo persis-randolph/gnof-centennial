@@ -77,7 +77,7 @@ p {
 }
 #main {
   margin-top: 55px;
-  padding: 20px 0;
+  padding-top: 20px;
 }
 #header {
   position: fixed;

@@ -10,7 +10,7 @@
         />
       </div>
     </div>
-    <div id="divider"></div>
+    <!-- <div id="divider"></div> -->
   </div>
 </template>
 
