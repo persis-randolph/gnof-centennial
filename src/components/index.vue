@@ -1,17 +1,6 @@
 <template>
   <div>
-    <header id="header">
-      <div id="fakelogo">
-        GREATER<br>
-        NEW ORLEANS<br>
-        FOUNDATION
-      </div>
-      <div id="faketitle">
-        <span id="line1">1  0  0</span><br>
-        <span id="line2">Y E A R S</span><br>
-        <span id="line3">1923 - 2023</span>
-      </div>
-    </header>
+    <Header />
     <main id="main">
       <section id="animation">Logo Evolution Animation goes here</section>
       <section id="section1">
@@ -44,8 +33,10 @@
 <script>
 import Footer from './Footer.vue'
 import Timeline from './Timeline.vue'
+import Header from './Header.vue'
+
 export default {
-  components: { Footer, Timeline },
+  components: { Footer, Timeline, Header },
   name: 'Index',
   setup () {
     return {}
@@ -79,45 +70,11 @@ p {
   margin-top: 55px;
   padding-top: 20px;
 }
-#header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 75px;
-  background-color: #00a1e2;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-}
 #animation {
   width: 100%;
   height: 300px;
-  background-color: black;
+  background-color: grey;
   color: white;
-}
-#fakelogo {
-  text-align: right;
-}
-#faketitle {
-  text-align: justify;
-  padding-left: 5px;
-  width: 100px;
-}
-#line1 {
-  font-size: 20px;
-  line-height: 0px;
-}
-#line2 {
-  font-size: 16px;
-  line-height: 0px;
-}
-#line3 {
-  font-size: 14px;
-  line-height: 0px;
 }
 #section1, #section2 {
   padding: 20px 40px;

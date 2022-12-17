@@ -1,7 +1,7 @@
 <template>
   <div id="timeline-section">
     <div id="container">
-      <div id="timeline"></div>
+      <div id="timeline" class="sticky"></div>
       <div>
         <Card
           v-for="card in cardData"
@@ -10,7 +10,7 @@
         />
       </div>
     </div>
-    <!-- <div id="divider"></div> -->
+    <div id="divider"></div>
   </div>
 </template>
 
@@ -42,6 +42,30 @@ export default {
         header: 'Lorem ipsum dolor sit amet, consectetur',
         body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
       },
+      {
+        year: '1927',
+        category: 'action',
+        header: 'Lorem ipsum dolor sit amet, consectetur',
+        body: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni'
+      },
+      {
+        year: '1928',
+        category: 'action',
+        header: 'Lorem ipsum dolor sit amet, consectetur',
+        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
+      },
+      {
+        year: '1929',
+        category: 'action',
+        header: 'Lorem ipsum dolor sit amet, consectetur',
+        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
+      },
+      {
+        year: '1932',
+        category: 'action',
+        header: 'Lorem ipsum dolor sit amet, consectetur',
+        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
+      }
     ]
     return {
       cardData
@@ -74,6 +98,11 @@ export default {
   margin-right: 30px;
 }
 #divider {
-  height: 200px;
+  height: 40px;
+}
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 120px;
 }
 </style>
