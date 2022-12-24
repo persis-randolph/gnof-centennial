@@ -11,6 +11,7 @@
           :key="year"
           class="year-div"
           :class="currentCard === year ? 'selected' : ''"
+          @click="onClick(year)"
         >
           {{ currentCard === year ? currentCard : '' }}
         </div>
@@ -60,14 +61,23 @@ export default {
     }
 
     const topYearMap = {}
+    const reverseMap = {}
     watch(scrollYPosition, () => {
       const highestToLowest = Object.keys(topYearMap).reverse()
-      const closestMatch = highestToLowest.find(e => e <= scrollYPosition.value + 250) || highestToLowest[highestToLowest.length - 1]
+      const closestMatch = highestToLowest.find(e => e <= scrollYPosition.value + 300) || highestToLowest[highestToLowest.length - 1]
       if (currentCard.value !== topYearMap[closestMatch]) {
         currentCard.value = topYearMap[closestMatch]
       }
 
     })
+
+    const onClick = (year) => {
+      currentCard.value = year
+      window.scroll({
+        top: reverseMap[year],
+        behavior: 'smooth'
+      })
+    }
 
     onMounted(() => {
       nextTick(() => {
@@ -79,6 +89,7 @@ export default {
         // had to add the scrollY because if it mounts already scrolled then it doesn't include that in the top measurement
         // with scrollY added it's consistent
         topYearMap[cardBounds.top + window.scrollY] = cardData[i].year
+        reverseMap[cardData[i].year] = cardBounds.top + window.scrollY
       }
     })
     onBeforeUnmount(() => {
@@ -91,6 +102,7 @@ export default {
       firstYear,
       lastYear,
       uniqueYears,
+      onClick,
       setCurrentCard
     }
   }

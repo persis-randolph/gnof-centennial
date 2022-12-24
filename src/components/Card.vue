@@ -1,5 +1,5 @@
 <template>
-  <div class="card" :id="card.year" @click="onClick">
+  <div class="card" :id="card.year">
     <!-- <div class="line"></div> -->
     <div class="text">
       <span class="year">{{ card.year }}</span>
@@ -16,14 +16,14 @@ export default {
   props: {
     card: Object // contains year, category, header, and body
   },
-  emits: ['set-current-card'],
-  setup(props, { emit }) {
-    const onClick = () => {
-      emit('set-current-card', props.card.year)
-    }
+  // emits: ['set-current-card'],
+  setup() {
+    // const onClick = () => {
+    //   emit('set-current-card', props.card.year)
+    // }
 
     return {
-      onClick
+      // onClick
     }
   }
 }
