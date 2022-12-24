@@ -5,7 +5,16 @@
         <div>{{ firstYear }}</div>
         <div>{{ lastYear }}</div>
       </div>
-      <div id="timeline">{{ currentCard }}</div>
+      <div id="timeline">
+        <div
+          v-for="year in uniqueYears"
+          :key="year"
+          class="year-div"
+          :class="currentCard === year ? 'selected' : ''"
+        >
+          {{ currentCard === year ? currentCard : '' }}
+        </div>
+      </div>
     </div>
     <div id="card-section">
       <Card
@@ -39,11 +48,17 @@ export default {
     const firstYear = data[0].year
     const lastYear = data[data.length - 1].year
 
+    const years = data.map(card => {
+      return card.year
+    })
+    const uniqueYears = new Set(years)
+
     return {
       cardData,
       currentCard,
       firstYear,
       lastYear,
+      uniqueYears,
       setCurrentCard
     }
   }
@@ -76,11 +91,13 @@ export default {
   width: 80%;
   height: 20px;
   border-radius: 10px;
-  box-shadow: 2px 2px 2px #b0a9a0;
+  /* box-shadow: 2px 2px 2px #b0a9a0;
   -moz-box-shadow: 2px 2px 3px #b0a9a0;
-  -webkit-box-shadow: 2px 2px 3px #b0a9a0;
+  -webkit-box-shadow: 2px 2px 3px #b0a9a0; */
   margin: auto;
   color: #04307e;
+  display: flex;
+  flex-direction: row;
 }
 
 #years {
@@ -88,5 +105,22 @@ export default {
   width: 80%;
   justify-content: space-between;
   padding: 0 10%;
+}
+
+.year-div {
+  flex-grow: 1;
+  /* border: 1px solid black; */
+}
+
+.year-div:first-of-type {
+  border-radius: 10px 0 0 10px;
+}
+
+.year-div:last-of-type {
+  border-radius: 0 10px 10px 0;
+}
+
+.selected {
+  background-color: #00a1e2;
 }
 </style>
