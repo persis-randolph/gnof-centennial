@@ -1,14 +1,9 @@
 <template>
   <div id="container">
-    <div
-      id="timeline"
-      class="sticky"
-      :style="{'height': (windowHeight * .7) + 'px'}"
-    >{{ currentCard }}</div>
-    <div
-      id="card-section"
-      :style="{width: (windowWidth * 0.7) + 'px', 'height': (windowHeight * 0.715) + 'px'}"
-    >
+    <div id="timeline">{{ currentCard }}</div>
+    <!-- :style="{'height': (windowHeight * .7) + 'px'}" -->
+    <div id="card-section">
+    <!-- :style="{width: (windowWidth * 0.7) + 'px', 'height': (windowHeight * 0.715) + 'px'}" -->
       <Card
         v-for="card in cardData"
         :key="card.year"
@@ -83,30 +78,34 @@ export default {
 
 <style scoped>
 #container {
-  display: flex;
-  justify-content: center;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 75px;
+  display: block;
+  /* justify-content: center; */
+  /* align-items: center; */
   background-color: #e2f6ff;
+  padding-top: 20px;
 }
 #card-section {
   /* background-color: magenta; */
-  overflow: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  /* padding-top: 50px; */
+  /* overflow: scroll; */
+  /* -ms-overflow-style: none; */
+  /* scrollbar-width: none; */
+  width: 80%;
+  margin: 0 auto;
 }
-#card-section::-webkit-scrollbar {
-  display: none;
-}
+/* #card-section::-webkit-scrollbar { */
+  /* display: none; */
+/* } */
 #timeline {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
   background-color: white;
-  width: 20px;
+  width: 80%;
+  height: 20px;
   border-radius: 10px;
   box-shadow: 2px 2px 2px #b0a9a0;
   -moz-box-shadow: 2px 2px 3px #b0a9a0;
   -webkit-box-shadow: 2px 2px 3px #b0a9a0;
-  margin: 20px 30px 20px 0;
+  margin: 0 auto;
 }
 </style>
