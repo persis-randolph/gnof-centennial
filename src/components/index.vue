@@ -23,6 +23,7 @@
           <h2>OUR STORY</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
+        <font-awesome-icon icon="fa-solid fa-angle-down" />
       </section>
       <Timeline />
     </main>
@@ -82,5 +83,4 @@ p {
 #section1 {
   display: flex;
 }
-
 </style>
