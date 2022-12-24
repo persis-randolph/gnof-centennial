@@ -64,7 +64,7 @@ export default {
   top: 0;
   bottom: 0;
   writing-mode: vertical-lr;
-  right: 0;
+  right: 2.5px;
   color: white;
   text-align: center;
   transform: rotate(180deg);
