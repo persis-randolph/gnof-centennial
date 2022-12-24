@@ -21,6 +21,7 @@
         v-for="card in cardData"
         :key="card.year"
         :card="card"
+        class="card"
         @set-current-card="setCurrentCard"
       />
     </div>
@@ -29,7 +30,7 @@
 
 <script>
 import Card from './Card.vue'
-import { ref } from 'vue'
+import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue'
 import data from '../data/cardData'
 
 export default {
@@ -45,13 +46,39 @@ export default {
       currentCard.value = cardYear
     }
 
-    const firstYear = data[0].year
-    const lastYear = data[data.length - 1].year
+    const firstYear = cardData[0].year
+    const lastYear = cardData[cardData.length - 1].year
 
-    const years = data.map(card => {
+    const years = cardData.map(card => {
       return card.year
     })
     const uniqueYears = new Set(years)
+
+    const scrollYPosition = ref(window.scrollY)
+    // const top = computed(190 + scrollYPosition.value)
+    const onScroll = () => {
+      scrollYPosition.value = window.scrollY
+    }
+
+    // watch(scrollYPosition, () => {
+    //   console.log('scrollY: ', scrollYPosition.value)
+    // })
+    const topYearMap = {}
+
+    onMounted(() => {
+      nextTick(() => {
+        window.addEventListener('scroll', onScroll)
+      })
+      const cards = document.getElementsByClassName('card')
+      for (let i = 0; i < cards.length; i++) {
+        let cardBounds = cards[i].getBoundingClientRect()
+        topYearMap[cardBounds.top] = cardData[i].year // problem here - if you reload the page when already scrolled, this sets the top according to the original viewport and doesn't include the scroll
+      }
+      console.log(topYearMap)
+    })
+    onBeforeUnmount(() => {
+      window.removeEventListener('scroll', onScroll)
+    })
 
     return {
       cardData,
@@ -109,6 +136,7 @@ export default {
 
 .year-div {
   flex-grow: 1;
+  height: 100%;
   /* border: 1px solid black; */
 }
 
