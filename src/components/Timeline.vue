@@ -80,7 +80,6 @@ export default {
         // with scrollY added it's consistent
         topYearMap[cardBounds.top + window.scrollY] = cardData[i].year
       }
-      console.log(topYearMap)
     })
     onBeforeUnmount(() => {
       window.removeEventListener('scroll', onScroll)
