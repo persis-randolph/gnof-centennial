@@ -25,4 +25,8 @@ export default {
   color: #2c3e50;
   overflow-x: hidden;
 }
+a, a:link, a:visited, a:hover, a:active {
+  color: white;
+  text-decoration: none;
+}
 </style>

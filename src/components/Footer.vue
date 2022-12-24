@@ -1,12 +1,33 @@
 <template>
   <div id="footer">
-    <span>CONTACT</span>
-    <address>
-      919 St. Charles Avenue<br>
-      Center for Philanthropy<br>
-      New Orleans, Louisiana 70130<br>
-      www.gnof.org
-    </address>
+    <div id="logo-container">
+      <img src="../assets/GNOF_CentennialLogo_RGB_Full_Color.png" id="color-logo">
+    </div>
+    <div id="contact-container">
+      <div id="contact">
+        <h3>CONTACT</h3>
+        <address>
+          919 St. Charles Avenue<br>
+          Center for Philanthropy<br>
+          New Orleans, Louisiana 70130
+        </address>
+      </div>
+      <div id="online">
+        <h3 id="online-header">ONLINE</h3>
+        <a href="http://www.gnof.org">www.gnof.org</a>
+        <div id="icons">
+          <a href="https://www.facebook.com/greaterneworleansfoundation/" target="_blank">
+            <img src="../assets/Icon_awesome-facebook-f.png" class="icon">
+          </a>
+          <a href="https://twitter.com/GNOFoundation" target="_blank">
+            <img src="../assets/Icon_awesome-twitter.png" class="icon">
+          </a>
+          <a href="https://www.instagram.com/gnofoundation" target="_blank">
+            <img src="../assets/Icon_awesome-instagram.png" class="icon">
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -21,24 +42,62 @@ export default {
 
 <style scoped>
 #footer {
-  /* not sure if we want a sticky footer or not */
-  /* position: fixed;
-  left: 0;
-  bottom: 0; */
-  height: 150px;
-  width: 100%;
-  background-color: #04307e;
+  /* height: 175px; */
+  display: flex;
 }
-* {
-  color: white;
-  text-align: left;
-  padding: 10px 20px;
-}
-span {
-  padding-bottom: 0;
-}
-address {
+address, a {
   font-style: normal;
-  font-weight: bold;
+  font-size: 14px;
+}
+#online {
+  display: flex;
+  flex-direction: column;
+}
+#icons {
+  width: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+#online {
+  padding-left: 20px;
+}
+#contact-container {
+  display: flex;
+  background-color: #04307e;
+  width: 50%;
+  height: 100%;
+  text-align: left;
+  color: white;
+  padding: 20px;
+}
+#logo-container {
+  background-color: white;
+  width: 50%;
+  text-align: right;
+}
+#color-logo {
+  width: 200px;
+  display: inline-block;
+  padding: 20px;
+}
+
+@media only screen and (max-width: 650px)  {
+  #footer {
+    display: block;
+  }
+
+  #logo-container {
+    text-align: center;
+    width: 100%;
+  }
+  #contact-container {
+    width: 100%;
+    text-align: justify;
+  }
+  #online-header {
+    display: none;
+  }
 }
 </style>
