@@ -1,10 +1,10 @@
 <template>
-  <header id="header">
+  <div id="header">
     <img
       class="logo"
       src="../assets/GNOF_CentennialLogo_RGB_White.png"
     />
-  </header>
+  </div>
 </template>
 
 <script>
@@ -18,20 +18,22 @@ export default {
 
 <style scoped>
 #header {
-  position: fixed;
+  /* position: fixed; */
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
+  /* left: 0;
+  right: 0; */
   width: 100%;
-  height: 75px;
+  height: 95px;
   background-color: #00a1e2;
   color: white;
   display: flex;
   align-items: center;
   z-index: 2;
-  padding: 10px;
+  /* padding: 10px; */
 }
 .logo {
   height: 60px;
+  margin: 10px;
 }
 </style>

@@ -67,10 +67,6 @@ p {
   width: 300px;
   margin: 0 auto;
 }
-#main {
-  margin-top: 75px;
-  padding-top: 20px;
-}
 #animation {
   width: 100%;
   height: 300px;
@@ -82,5 +78,13 @@ p {
 }
 #section1 {
   display: flex;
+  flex-direction: row;
 }
+
+@media only screen and (max-width: 650px)  {
+  #section1 {
+    flex-direction: column;
+  }
+}
+
 </style>

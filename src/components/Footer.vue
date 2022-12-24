@@ -44,6 +44,7 @@ export default {
 #footer {
   /* height: 175px; */
   display: flex;
+  width: 100%;
 }
 address, a {
   font-style: normal;
@@ -58,10 +59,13 @@ address, a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 10px;
+  margin-top: 10px;
 }
 #online {
-  padding-left: 20px;
+  margin: 20px 0 20px 20px;
+}
+#contact {
+  margin: 20px 0 20px 20px;
 }
 #contact-container {
   display: flex;
@@ -70,7 +74,8 @@ address, a {
   height: 100%;
   text-align: left;
   color: white;
-  padding: 20px;
+  flex-direction: row;
+  /* padding: 20px; */
 }
 #logo-container {
   background-color: white;
@@ -80,24 +85,33 @@ address, a {
 #color-logo {
   width: 200px;
   display: inline-block;
-  padding: 20px;
+  /* padding: 20px; */
+  margin: 20px 20px 0 0;
 }
 
 @media only screen and (max-width: 650px)  {
   #footer {
     display: block;
   }
-
   #logo-container {
     text-align: center;
     width: 100%;
   }
   #contact-container {
     width: 100%;
-    text-align: justify;
+    flex-direction: column;
   }
   #online-header {
     display: none;
+  }
+  #online {
+  margin: 0 0 20px 20px;
+  }
+  #contact {
+    margin: 20px 0 0 20px;
+  }
+  #color-logo {
+    margin: 20px;
   }
 }
 </style>
