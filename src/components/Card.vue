@@ -12,9 +12,6 @@
 </template>
 
 <script>
-// import { ref } from 'vue'
-import { onMounted } from 'vue'
-
 export default {
   props: {
     card: Object // contains year, category, header, and body
@@ -24,22 +21,6 @@ export default {
     const onClick = () => {
       emit('set-current-card', props.card.year)
     }
-
-    const topYearMap = {}
-
-    // SETUP SOMETHING TO LISTEN FOR TOP BOUND OF CARD (or something similar)
-    // if that position is 100px from top of viewport emit an event to the timeline to set this as the active card
-
-    // const cardBounds = ref(currentCard.getBoundingClientRect())
-    // console.log(cardBounds.value)
-    onMounted(() => {
-      const currentCard = document.getElementById(props.card.year)
-      const cardBounds = currentCard.getBoundingClientRect()
-      // console.log('CARD: ', props.card.year)
-      // console.log('bounds: ', cardBounds)
-      topYearMap[cardBounds.top] = props.card.year
-      // console.log(topYearMap)
-    })
 
     return {
       onClick
@@ -82,14 +63,14 @@ export default {
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
 }
-.line {
+/* .line {
   width: 3px;
   height: 40px;
   background-color: white;
   position: absolute;
   transform: rotate(90deg) translateX(30px) translateY(40px);
   -webkit-transform: rotate(90deg) translateX(30px) translateY(40px);
-}
+} */
 .text {
   display: grid;
 }

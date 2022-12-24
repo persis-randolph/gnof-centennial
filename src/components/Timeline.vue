@@ -30,7 +30,7 @@
 
 <script>
 import Card from './Card.vue'
-import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue'
+import { ref, onMounted, onBeforeUnmount, nextTick, watch } from 'vue'
 import data from '../data/cardData'
 
 export default {
@@ -40,7 +40,7 @@ export default {
   },
   setup () {
     const cardData = data
-    const currentCard = ref(undefined)
+    const currentCard = ref(cardData[0].year)
 
     const setCurrentCard = (cardYear) => {
       currentCard.value = cardYear
@@ -55,15 +55,19 @@ export default {
     const uniqueYears = new Set(years)
 
     const scrollYPosition = ref(window.scrollY)
-    // const top = computed(190 + scrollYPosition.value)
     const onScroll = () => {
       scrollYPosition.value = window.scrollY
     }
 
-    // watch(scrollYPosition, () => {
-    //   console.log('scrollY: ', scrollYPosition.value)
-    // })
     const topYearMap = {}
+    watch(scrollYPosition, () => {
+      const highestToLowest = Object.keys(topYearMap).reverse()
+      const closestMatch = highestToLowest.find(e => e <= scrollYPosition.value + 250) || highestToLowest[highestToLowest.length - 1]
+      if (currentCard.value !== topYearMap[closestMatch]) {
+        currentCard.value = topYearMap[closestMatch]
+      }
+
+    })
 
     onMounted(() => {
       nextTick(() => {
@@ -72,7 +76,9 @@ export default {
       const cards = document.getElementsByClassName('card')
       for (let i = 0; i < cards.length; i++) {
         let cardBounds = cards[i].getBoundingClientRect()
-        topYearMap[cardBounds.top] = cardData[i].year // problem here - if you reload the page when already scrolled, this sets the top according to the original viewport and doesn't include the scroll
+        // had to add the scrollY because if it mounts already scrolled then it doesn't include that in the top measurement
+        // with scrollY added it's consistent
+        topYearMap[cardBounds.top + window.scrollY] = cardData[i].year
       }
       console.log(topYearMap)
     })
