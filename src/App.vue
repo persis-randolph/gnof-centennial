@@ -23,7 +23,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 a, a:link, a:visited, a:hover, a:active {
   color: white;

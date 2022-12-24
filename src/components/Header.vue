@@ -30,7 +30,7 @@ export default {
   align-items: center;
   z-index: 2;
   padding: 10px;
-  /* display: none; */
+  display: none;
 }
 .logo {
   height: 60px;
