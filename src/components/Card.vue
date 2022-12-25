@@ -2,7 +2,7 @@
   <div class="card" :id="card.year">
     <!-- <div class="line"></div> -->
     <div class="text" :class="card.imageUrl ? 'textWithImage' : ''">
-      <span class="year">{{ card.year }}</span>
+      <span class="year" :class="headerColor">{{ card.year }}</span>
       <!-- TODO: need to figure out how we want to display rest of header/body if it is condensed -->
       <span class="header">{{ displayHeader }}</span>
       <span class="body">{{ displayBody }}</span>
@@ -24,7 +24,8 @@ export default {
     card: Object // contains year, category, header, imageUrl, and body
   },
   setup(props) {
-    const highlightColor = ref(props.card.category)
+    const highlightColor = ref(props.card.category + '-highlight')
+    const headerColor = ref(props.card.category + '-header')
 
     const displayHeader = computed(() => {
       if (props.card.header.length > 40) {
@@ -43,7 +44,8 @@ export default {
     return {
       displayBody,
       displayHeader,
-      highlightColor
+      highlightColor,
+      headerColor
     }
   }
 }
@@ -51,7 +53,6 @@ export default {
 
 <style scoped>
 .card {
-  /* min-height: 20px; */
   margin: 15px auto;
   text-align: left;
   padding: 50px 70px 50px 70px;
@@ -94,18 +95,20 @@ export default {
   -webkit-transform: rotate(90deg) translateX(30px) translateY(40px);
 } */
 .text {
-  display: grid;
+  display: flex;
+  flex-direction: column;
 }
 .year {
-  font-weight: bolder;
-  font-size: 20px;
+  font-weight: 700;
+  font-size: 36px;
 }
 .header {
-  font-weight: bold;
-  font-size: 18px;
+  font-weight: 500;
+  font-size: 38px;
 }
 .body {
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 300;
 }
 .image {
   /* width: 150px;
@@ -119,13 +122,22 @@ export default {
   padding-right: 40%;
 }
 
-.philanthropy {
+.philanthropy-highlight {
   background-color: #1D428A;
 }
-.leadership {
+.leadership-highlight {
   background-color: #8DB9CA;
 }
-.action {
+.action-highlight {
   background-color: #00A9E0;
+}
+.philanthropy-header {
+  color: #1D428A;
+}
+.leadership-header {
+  color: #8DB9CA;
+}
+.action-header {
+  color: #00A9E0;
 }
 </style>

@@ -73,6 +73,7 @@ export default {
       if (!isScrolling.value) {
         const cardPositions = Object.keys(topYearMap)
         const highToLow = cardPositions.map(el => +el).sort((a, b) => b - a)
+        // using 250 as a buffer right now as a perceived median card height - will likely need to be dynamic depending on the cards and the width of the page, maybe not if resize calculates it
         const closestMatch = highToLow.find(e => e <= +scrollYPosition.value + 250) || highToLow[highToLow.length - 1]
         if (currentCard.value !== topYearMap[closestMatch]) {
           currentCard.value = topYearMap[closestMatch]
