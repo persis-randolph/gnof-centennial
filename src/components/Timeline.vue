@@ -64,9 +64,9 @@ export default {
     const reverseMap = {}
     watch(scrollYPosition, () => {
       if (!isScrolling.value) {
-        const highestToLowest = Object.keys(topYearMap).sort().reverse()
-        console.log(highestToLowest)
-        const closestMatch = highestToLowest.find(e => e <= scrollYPosition.value + 200) || highestToLowest[highestToLowest.length - 1]
+        const cardPositions = Object.keys(topYearMap)
+        const highToLow = cardPositions.map(el => +el).sort((a, b) => b - a)
+        const closestMatch = highToLow.find(e => e <= +scrollYPosition.value + 200) || highToLow[highToLow.length - 1]
         if (currentCard.value !== topYearMap[closestMatch]) {
           currentCard.value = topYearMap[closestMatch]
         }
@@ -100,6 +100,7 @@ export default {
         topYearMap[cardBounds.top + window.scrollY] = cardData[i].year
         reverseMap[cardData[i].year] = cardBounds.top + window.scrollY
       }
+      console.log(topYearMap)
     })
     onBeforeUnmount(() => {
       window.removeEventListener('scroll', onScroll)
