@@ -7,9 +7,10 @@
       <span class="header">{{ displayHeader }}</span>
       <span class="body">{{ displayBody }}</span>
     </div>
-    <!-- TODO: get image to be 1/3 of box w/ auto-crop -->
-    <div class="image" v-if="card.imageUrl">
-      <img :src="card.imageUrl">
+    <div class="image-div" v-if="card.imageUrl">
+      <div class="image-container">
+        <img :src="card.imageUrl" class="image">
+      </div>
     </div>
     <div class="color-highlight" :class="highlightColor"></div>
     <div class="category-text"><span>{{ card.category.toUpperCase() }}</span></div>
@@ -97,6 +98,7 @@ export default {
 .text {
   display: flex;
   flex-direction: column;
+  word-break: break-word;
 }
 .year {
   font-weight: 700;
@@ -110,19 +112,28 @@ export default {
   font-size: 16px;
   font-weight: 300;
 }
-.image {
-  /* width: 150px;
-  height: 150px;
-  background-color: green; */
+.image-div {
   position: absolute;
   top: 0;
   right: 30px;
-  margin-left: 10px;
+  height: 100%;
+  width: 30%;
 }
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.image {
+  position: absolute;
+}
+
 /* TODO: might need to do something for words in header longer than 60% width */
 .textWithImage {
-  /* padding-right: 40%; */
-  margin-right: 30%;
+  margin-right: 35%;
 }
 
 .philanthropy-highlight {

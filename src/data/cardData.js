@@ -4,7 +4,7 @@ export default [
     category: 'philanthropy',
     header: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
-    imageUrl: 'https://via.placeholder.com/150'
+    imageUrl: 'https://via.placeholder.com/450'
   },
   {
     year: '1923',
