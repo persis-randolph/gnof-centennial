@@ -61,9 +61,17 @@ export default {
     }
 
     const windowWidth = ref(window.innerWidth)
-    // TODO: on resize we probably want to recalculate the top and reverse maps since the positioning will change
+    // on resize, recalculating position maps since the positions will vary due to width
     const onResize = () => {
       windowWidth.value = window.innerWidth
+      const cards = document.getElementsByClassName('card')
+      for (let member in topYearMap) delete topYearMap[member]
+      for (let member in reverseMap) delete reverseMap[member]
+      for (let i = 0; i < cards.length; i++) {
+        let cardBounds = cards[i].getBoundingClientRect()
+        topYearMap[cardBounds.top + window.scrollY] = cardData[i].year
+        reverseMap[cardData[i].year] = cardBounds.top + window.scrollY
+      }
     }
 
 
@@ -73,7 +81,6 @@ export default {
       if (!isScrolling.value) {
         const cardPositions = Object.keys(topYearMap)
         const highToLow = cardPositions.map(el => +el).sort((a, b) => b - a)
-        // using 250 as a buffer right now as a perceived median card height - will likely need to be dynamic depending on the cards and the width of the page, maybe not if resize calculates it
         const closestMatch = highToLow.find(e => e <= +scrollYPosition.value + 250) || highToLow[highToLow.length - 1]
         if (currentCard.value !== topYearMap[closestMatch]) {
           currentCard.value = topYearMap[closestMatch]
@@ -104,8 +111,6 @@ export default {
       const cards = document.getElementsByClassName('card')
       for (let i = 0; i < cards.length; i++) {
         let cardBounds = cards[i].getBoundingClientRect()
-        // had to add the scrollY because if it mounts already scrolled then it doesn't include that in the top measurement
-        // with scrollY added it's consistent
         topYearMap[cardBounds.top + window.scrollY] = cardData[i].year
         reverseMap[cardData[i].year] = cardBounds.top + window.scrollY
       }
