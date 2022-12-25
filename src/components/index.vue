@@ -3,28 +3,9 @@
     <Header />
     <main id="main">
       <section id="animation">Logo Evolution Animation goes here</section>
-      <section id="section1">
-        <div class="info-point">
-          <h2>1800+</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-        <div class="info-point">
-          <h2>$10 Million</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-        <div class="info-point">
-          <h2>2,401</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-      </section>
+      <PullOutFigureSection />
       <hr>
-      <section id="section2">
-        <div>
-          <h2>OUR STORY</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-        <font-awesome-icon icon="fa-solid fa-angle-down" />
-      </section>
+      <OurStory />
       <Timeline />
     </main>
     <Footer />
@@ -33,11 +14,19 @@
 
 <script>
 import Footer from './Footer.vue'
-import Timeline from './Timeline.vue'
 import Header from './Header.vue'
+import OurStory from './OurStory.vue'
+import PullOutFigureSection from './PullOutFigureSection.vue'
+import Timeline from './Timeline.vue'
 
 export default {
-  components: { Footer, Timeline, Header },
+  components: {
+    Footer,
+    Header,
+    OurStory,
+    PullOutFigureSection,
+    Timeline
+  },
   name: 'Index',
   setup () {
     return {}
@@ -46,45 +35,10 @@ export default {
 </script>
 
 <style scoped>
-h2 {
-  color: navy;
-}
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-p {
-  padding-bottom: 20px;
-}
-.info-point {
-  width: 300px;
-  margin: 0 auto;
-}
 #animation {
   width: 100%;
   height: 300px;
   background-color: grey;
   color: white;
 }
-#section1, #section2 {
-  padding: 20px 40px;
-}
-#section1 {
-  display: flex;
-  flex-direction: row;
-}
-
-@media only screen and (max-width: 650px)  {
-  #section1 {
-    flex-direction: column;
-  }
-}
-
 </style>

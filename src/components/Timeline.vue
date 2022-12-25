@@ -31,7 +31,7 @@
 
 <script>
 import Card from './Card.vue'
-import { ref, onMounted, onBeforeUnmount, nextTick, watch, computed } from 'vue'
+import { ref, onMounted, onBeforeUnmount, nextTick, watch } from 'vue'
 import data from '../data/cardData'
 
 export default {
@@ -61,10 +61,7 @@ export default {
     }
 
     const windowWidth = ref(window.innerWidth)
-    // trying to solve the problem that the expected height of each card varies due to both contents and screen width, needs work
-    const buffer = computed(() => {
-      return windowWidth.value > 800 ? 150 : 250
-    })
+    // TODO: on resize we probably want to recalculate the top and reverse maps since the positioning will change
     const onResize = () => {
       windowWidth.value = window.innerWidth
     }
@@ -76,7 +73,7 @@ export default {
       if (!isScrolling.value) {
         const cardPositions = Object.keys(topYearMap)
         const highToLow = cardPositions.map(el => +el).sort((a, b) => b - a)
-        const closestMatch = highToLow.find(e => e <= +scrollYPosition.value + buffer.value) || highToLow[highToLow.length - 1]
+        const closestMatch = highToLow.find(e => e <= +scrollYPosition.value + 250) || highToLow[highToLow.length - 1]
         if (currentCard.value !== topYearMap[closestMatch]) {
           currentCard.value = topYearMap[closestMatch]
         }
@@ -133,26 +130,27 @@ export default {
 <style scoped>
 #container {
   display: block;
-  background-color: #e2f6ff;
+  background-color: #E2F6FF;
   padding-bottom: 20px;
 }
 
 #card-section {
   width: 80%;
   margin: 0 auto;
+  /* padding: 15px 0; */
 }
 
 #timeline-container {
-  background-color: #04307e;
+  background-color: #ffffff;
   color: white;
   position: sticky;
-  top: 95px;
+  top: 100px;
   z-index: 2;
   padding: 20px 0 35px 0;
 }
 
 #timeline {
-  background-color: white;
+  background-color: #1D428A;
   width: 80%;
   height: 20px;
   border-radius: 10px;
@@ -169,7 +167,9 @@ export default {
   display: flex;
   width: 80%;
   justify-content: space-between;
-  padding: 0 10%;
+  padding: 0 10% 5px 10%;
+  color: #1D428A;
+  font-weight: 300;
 }
 
 .year-div {
@@ -187,6 +187,6 @@ export default {
 }
 
 .selected {
-  background-color: #00a1e2;
+  background-color: #00A9E0;
 }
 </style>

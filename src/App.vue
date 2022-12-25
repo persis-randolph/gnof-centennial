@@ -22,11 +22,19 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  /* overflow-x: hidden; */
 }
 a, a:link, a:visited, a:hover, a:active {
   color: white;
   text-decoration: none;
+}
+h2 {
+  color: #1D428A;
+  font-size: 56px;
+  font-weight: 700;
+}
+p {
+  color: #1D428A;
+  font-size: 16px;
+  font-weight: 300;
 }
 </style>

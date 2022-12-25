@@ -18,22 +18,18 @@ export default {
 
 <style scoped>
 #header {
-  /* position: fixed; */
   position: sticky;
   top: 0;
-  /* left: 0;
-  right: 0; */
   width: 100%;
-  height: 95px;
-  background-color: #00a1e2;
+  height: 100px;
+  background-color: #00A9E0;
   color: white;
   display: flex;
   align-items: center;
   z-index: 2;
-  /* padding: 10px; */
 }
 .logo {
   height: 60px;
-  margin: 10px;
+  margin: 0 auto;
 }
 </style>
