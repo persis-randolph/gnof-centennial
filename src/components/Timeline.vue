@@ -6,6 +6,7 @@
         <div>{{ lastYear }}</div>
       </div>
       <div id="timeline">
+        <!-- TODO: do we want a hover effect? -->
         <div
           v-for="year in uniqueYears"
           :key="year"

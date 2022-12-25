@@ -28,6 +28,7 @@ export default {
   align-items: center;
   z-index: 2;
 }
+/* note: if this is displaying on a phone might want to move the logo down since some phone tops have a divot */
 .logo {
   height: 60px;
   margin: 0 auto;

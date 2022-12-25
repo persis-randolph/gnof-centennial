@@ -117,9 +117,12 @@ export default {
   position: absolute;
   top: 0;
   right: 30px;
+  margin-left: 10px;
 }
+/* TODO: might need to do something for words in header longer than 60% width */
 .textWithImage {
-  padding-right: 40%;
+  /* padding-right: 40%; */
+  margin-right: 30%;
 }
 
 .philanthropy-highlight {
