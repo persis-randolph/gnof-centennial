@@ -119,23 +119,18 @@ export default {
   height: 100%;
   width: 30%;
 }
-
 .image-container {
   width: 100%;
   height: 100%;
   overflow: hidden;
   position: relative;
 }
-
 .image {
   position: absolute;
 }
-
-/* TODO: might need to do something for words in header longer than 60% width */
 .textWithImage {
   margin-right: 35%;
 }
-
 .philanthropy-highlight {
   background-color: #1D428A;
 }

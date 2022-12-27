@@ -42,7 +42,6 @@ export default {
 
 <style scoped>
 #footer {
-  /* height: 175px; */
   display: flex;
   width: 100%;
 }
@@ -85,7 +84,6 @@ address, a {
 #color-logo {
   width: 200px;
   display: inline-block;
-  /* padding: 20px; */
   margin: 20px 20px 0 0;
 }
 

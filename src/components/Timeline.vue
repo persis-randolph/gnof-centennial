@@ -161,9 +161,9 @@ export default {
   width: 80%;
   height: 20px;
   border-radius: 10px;
-  /* box-shadow: 2px 2px 2px #b0a9a0;
+  box-shadow: 2px 2px 2px #b0a9a0;
   -moz-box-shadow: 2px 2px 3px #b0a9a0;
-  -webkit-box-shadow: 2px 2px 3px #b0a9a0; */
+  -webkit-box-shadow: 2px 2px 3px #b0a9a0;
   margin: auto;
   color: #04307e;
   display: flex;
@@ -182,7 +182,6 @@ export default {
 .year-div {
   flex-grow: 1;
   height: 100%;
-  /* border: 1px solid black; */
 }
 
 .year-div:first-of-type {

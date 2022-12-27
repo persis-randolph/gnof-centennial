@@ -28,7 +28,6 @@ export default {
 #container {
   display: flex;
   flex-direction: row;
-  /* flex-direction: column; */
   padding: 20px 40px;
 }
 
