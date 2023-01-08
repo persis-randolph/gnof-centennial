@@ -1,5 +1,14 @@
 export default [
   {
+    month: 'Jan',
+    year: '1922',
+    category: 'philanthropy',
+    header: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+    imageUrl: 'https://via.placeholder.com/350',
+  },
+  {
+    month: 'Mar',
     year: '1922',
     category: 'philanthropy',
     header: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',

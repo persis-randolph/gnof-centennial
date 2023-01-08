@@ -1,9 +1,9 @@
 <template>
   <div>
     <Header />
+    <router-link class="nav-link" to="/home" v-if="selectedView !== '/home'">Go to Home</router-link>
+    <router-link class="nav-link" to="/timeline" v-if="selectedView !== '/timeline'">Go to Timeline</router-link>
     <main id="main">
-      <router-link class="nav-link" to="/home" v-if="selectedView !== '/home'">Home</router-link>
-      <router-link class="nav-link" to="/timeline" v-if="selectedView !== '/timeline'">Timeline</router-link>
       <router-view />
     </main>
     <Footer />
@@ -22,9 +22,16 @@ export default {
   setup () {
     const selectedView = ref('/home')
 
-    router.beforeEach((to, _, next) => {
-      selectedView.value = to.path
-      next()
+    router.beforeEach((to, from, next) => {
+      if (to.path === '/') {
+        selectedView.value = '/home'
+        next({
+          path: '/home',
+        })
+      } else {
+        selectedView.value = to.path
+        next()
+      }
     })
 
     return {

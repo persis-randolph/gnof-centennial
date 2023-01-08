@@ -2,16 +2,16 @@
   <div class="card" :id="card.year">
     <!-- <div class="line"></div> -->
     <div class="text" :class="card.imageUrl ? 'textWithImage' : ''">
-      <span class="year" :class="headerColor">{{ card.year }}</span>
+      <span class="date" :class="headerColor">{{ card.month ? card.month + ' ' : '' }}{{ card.year }}</span>
       <!-- TODO: need to figure out how we want to display rest of header/body if it is condensed -->
       <span class="header">{{ displayHeader }}</span>
       <span class="body">{{ displayBody }}</span>
     </div>
-    <div class="image-div" v-if="card.imageUrl">
+    <!-- <div class="image-div" v-if="card.imageUrl">
       <div class="image-container">
         <img :src="card.imageUrl" class="image">
       </div>
-    </div>
+    </div> -->
     <div class="color-highlight" :class="highlightColor"></div>
     <div class="category-text"><span>{{ card.category.toUpperCase() }}</span></div>
   </div>
@@ -22,7 +22,7 @@ import { computed, ref } from 'vue'
 
 export default {
   props: {
-    card: Object // contains year, category, header, imageUrl, and body
+    card: Object // contains month, year, category, header, imageUrl, and body
   },
   setup(props) {
     const highlightColor = ref(props.card.category + '-highlight')
@@ -100,7 +100,7 @@ export default {
   flex-direction: column;
   word-break: break-word;
 }
-.year {
+.date {
   font-weight: 700;
   font-size: 36px;
 }
@@ -129,7 +129,7 @@ export default {
   position: absolute;
 }
 .textWithImage {
-  margin-right: 35%;
+  /* margin-right: 35%; */
 }
 .philanthropy-highlight {
   background-color: #1D428A;

@@ -1,12 +1,8 @@
 <template>
   <div id="container">
     <div id="timeline-container">
-      <div id="years">
-        <div>{{ firstYear }}</div>
-        <div>{{ lastYear }}</div>
-      </div>
       <div id="timeline">
-        <!-- TODO: do we want a hover effect? -->
+        <span id="first-year">{{ firstYear }}</span>
         <div
           v-for="year in uniqueYears"
           :key="year"
@@ -14,8 +10,10 @@
           :class="currentCard === year ? 'selected' : ''"
           @click="onClick(year)"
         >
-          {{ currentCard === year ? currentCard : '' }}
+          <div class="tooltip" v-if="currentCard === year">{{ currentCard }}</div>
+          <!-- {{ currentCard === year ? currentCard : '' }} -->
         </div>
+        <span id="last-year">{{ lastYear }}</span>
       </div>
     </div>
     <div id="card-section">
@@ -138,13 +136,11 @@ export default {
   background-color: #E2F6FF;
   padding-bottom: 20px;
 }
-
 #card-section {
   width: 80%;
   margin: 0 auto;
   /* padding: 15px 0; */
 }
-
 #timeline-container {
   background-color: #ffffff;
   color: white;
@@ -153,7 +149,6 @@ export default {
   z-index: 2;
   padding: 20px 0 35px 0;
 }
-
 #timeline {
   background-color: #1D428A;
   width: 80%;
@@ -166,31 +161,37 @@ export default {
   color: #04307e;
   display: flex;
   flex-direction: row;
+  position: relative;
 }
-
-#years {
-  display: flex;
-  width: 80%;
-  justify-content: space-between;
-  padding: 0 10% 5px 10%;
-  color: #1D428A;
+#first-year, #last-year {
+  position: absolute;
   font-weight: 300;
 }
-
+#first-year {
+  left: -40px;
+}
+#last-year {
+  right: -40px;
+}
 .year-div {
   flex-grow: 1;
   height: 100%;
 }
-
 .year-div:first-of-type {
   border-radius: 10px 0 0 10px;
 }
-
 .year-div:last-of-type {
   border-radius: 0 10px 10px 0;
 }
-
 .selected {
   background-color: #00A9E0;
+}
+.tooltip {
+  height: 20px;
+  width: 40px;
+  background-color: black;
+  color: white;
+  position: absolute;
+  top: -25px;
 }
 </style>
