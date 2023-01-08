@@ -4,7 +4,7 @@
       <h2>OUR STORY</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et <a href="#" target="_blank">dolore magna aliqua</a>.</p>
     </div>
-    <font-awesome-icon icon="fas fa-angle-down" class="icon" />
+    <!-- <font-awesome-icon icon="fas fa-angle-down" class="icon" /> -->
   </section>
 </template>
 
@@ -23,13 +23,14 @@ a, a:link, a:visited, a:hover, a:active {
   text-decoration: underline;
   font-weight: 700;
 }
-.icon {
+/* .icon {
   height: 40px;
   color: #1D428A;
   padding-top: 40px;
   padding-bottom: 20px;
-}
+} */
 #container {
-  padding: 100px 40px 0px 40px;
+  /* replace 2nd 100px with 0 if icon goes back in */
+  padding: 100px 40px 100px 40px;
 }
 </style>

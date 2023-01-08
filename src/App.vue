@@ -3,13 +3,11 @@
 </template>
 
 <script>
-import Index from './components/index.vue'
+import Index from './views/index.vue'
 
 export default {
   name: 'App',
-  components: {
-    Index
-  }
+  components: { Index }
 }
 </script>
 

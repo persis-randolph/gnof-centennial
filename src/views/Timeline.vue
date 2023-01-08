@@ -31,15 +31,13 @@
 </template>
 
 <script>
-import Card from './Card.vue'
+import Card from '../components/Card.vue'
 import { ref, onMounted, onBeforeUnmount, nextTick, watch } from 'vue'
 import data from '../data/cardData'
 
 export default {
   name: 'Timeline',
-  components: {
-    Card
-  },
+  components: { Card },
   setup () {
     const cardData = data
     const currentCard = ref(cardData[0].year)
