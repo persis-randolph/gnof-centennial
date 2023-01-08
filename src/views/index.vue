@@ -1,8 +1,8 @@
 <template>
   <div>
-    <Header />
-    <router-link class="nav-link" to="/home" v-if="selectedView !== '/home'">Go to Home</router-link>
-    <router-link class="nav-link" to="/timeline" v-if="selectedView !== '/timeline'">Go to Timeline</router-link>
+    <Header
+      :selectedView="selectedView"
+    />
     <main id="main">
       <router-view />
     </main>
@@ -40,10 +40,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.nav-link {
-  color: black;
-  padding: 10px;
-}
-</style>

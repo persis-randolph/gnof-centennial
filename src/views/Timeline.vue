@@ -10,8 +10,8 @@
           :class="currentCard === year ? 'selected' : ''"
           @click="onClick(year)"
         >
+          <div class="tooltip-arrow" v-if="currentCard === year"></div>
           <div class="tooltip" v-if="currentCard === year">{{ currentCard }}</div>
-          <!-- {{ currentCard === year ? currentCard : '' }} -->
         </div>
         <span id="last-year">{{ lastYear }}</span>
       </div>
@@ -147,7 +147,7 @@ export default {
   position: sticky;
   top: 100px;
   z-index: 2;
-  padding: 20px 0 35px 0;
+  padding: 40px 0 50px 0;
 }
 #timeline {
   background-color: #1D428A;
@@ -186,12 +186,24 @@ export default {
 .selected {
   background-color: #00A9E0;
 }
-.tooltip {
-  height: 20px;
-  width: 40px;
-  background-color: black;
-  color: white;
+.tooltip, .tooltip-arrow {
   position: absolute;
-  top: -25px;
+}
+.tooltip {
+  padding: 5px 10px;
+  color: white;
+  top: 30px;
+  transform: translateX(-10px);
+  background-color: #1D428A;
+}
+.tooltip-arrow {
+  height: 0;
+  width: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid #1D428A;
+  z-index: 3;
+  top: 20px;
+  transform: translateX(12px);
 }
 </style>
