@@ -44,9 +44,10 @@
     </div>
     <!-- card display -->
     <div id="card-section">
+      <!-- need the card key to be unique, maybe fix this to be better later -->
       <Card
-        v-for="card in cardData"
-        :key="card.year"
+        v-for="(card, i) in cardData"
+        :key="i + card.year + card.header + card.category"
         :card="card"
         class="card"
         @set-current-card="setCurrentCard"
@@ -57,7 +58,7 @@
 
 <script>
 import Card from '../components/Card.vue'
-import { computed, reactive, ref, onMounted, onBeforeUnmount, nextTick, watch } from 'vue'
+import { computed, reactive, ref, onMounted, onBeforeUnmount, nextTick, watch, onUpdated } from 'vue'
 import data from '../data/cardData'
 
 export default {
@@ -82,7 +83,7 @@ export default {
       scrollYPosition.value = window.scrollY
     }
 
-    const resetMaps = () => {
+    onUpdated(() => {
       const cards = document.getElementsByClassName('card')
       for (let member in topYearMap) delete topYearMap[member]
       for (let member in reverseMap) delete reverseMap[member]
@@ -91,13 +92,12 @@ export default {
         topYearMap[cardBounds.top + window.scrollY] = cardData.value[i].year
         reverseMap[cardData.value[i].year] = cardBounds.top + window.scrollY
       }
-    }
+    })
 
     const windowWidth = ref(window.innerWidth)
     // on resize, recalculating position maps since the positions will vary due to width
     const onResize = () => {
       windowWidth.value = window.innerWidth
-      resetMaps()
     }
 
     const topYearMap = {}
@@ -134,7 +134,19 @@ export default {
       'action': true
     })
     const toggleFilter = (selectedFilter) => {
-      selectedFiltersObj[selectedFilter] = !selectedFiltersObj[selectedFilter]
+      const filterWithAllChoices = {
+        'philanthropy': selectedFiltersObj['philanthropy'],
+        'leadership': selectedFiltersObj['leadership'],
+        'action': selectedFiltersObj['action']
+      }
+      filterWithAllChoices[selectedFilter] = !filterWithAllChoices[selectedFilter]
+      if (
+        filterWithAllChoices['philanthropy'] ||
+        filterWithAllChoices['leadership'] ||
+        filterWithAllChoices['action']
+      ) {
+        selectedFiltersObj[selectedFilter] = !selectedFiltersObj[selectedFilter]
+      }
     }
 
     watch(selectedFiltersObj, () => {
@@ -145,7 +157,6 @@ export default {
         return
       })
       uniqueYears.value = new Set(years.value)
-      resetMaps()
     }, { deep: true })
 
     onMounted(() => {
