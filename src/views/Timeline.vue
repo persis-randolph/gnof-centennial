@@ -1,6 +1,31 @@
 <template>
   <div id="container">
     <div id="timeline-container">
+      <!-- timeline filters -->
+      <div id="filters">
+        <div class="filter" id="philanthropy" @click="toggleFilter('philanthropy')">
+          <font-awesome-icon
+            :icon="selectedFiltersObj['philanthropy'] ? 'fas fa-square-check' : 'fas fa-square'"
+            class="icon"
+          />
+          Philanthropy
+        </div>
+        <div class="filter" id="leadership" @click="toggleFilter('leadership')">
+          <font-awesome-icon
+            :icon="selectedFiltersObj['leadership'] ? 'fas fa-square-check' : 'fas fa-square'"
+            class="icon"
+          />
+          Leadership
+        </div>
+        <div class="filter" id="action" @click="toggleFilter('action')">
+          <font-awesome-icon
+            :icon="selectedFiltersObj['action'] ? 'fas fa-square-check' : 'fas fa-square'"
+            class="icon"
+          />
+          Action
+        </div>
+      </div>
+      <!-- interactive timeline bar -->
       <div id="timeline">
         <span id="first-year">{{ firstYear }}</span>
         <div
@@ -10,12 +35,14 @@
           :class="currentCard === year ? 'selected' : ''"
           @click="onClick(year)"
         >
+          <!-- tooltip -->
           <div class="tooltip-arrow" v-if="currentCard === year"></div>
           <div class="tooltip" v-if="currentCard === year">{{ currentCard }}</div>
         </div>
         <span id="last-year">{{ lastYear }}</span>
       </div>
     </div>
+    <!-- card display -->
     <div id="card-section">
       <Card
         v-for="card in cardData"
@@ -30,47 +57,48 @@
 
 <script>
 import Card from '../components/Card.vue'
-import { ref, onMounted, onBeforeUnmount, nextTick, watch } from 'vue'
+import { computed, reactive, ref, onMounted, onBeforeUnmount, nextTick, watch } from 'vue'
 import data from '../data/cardData'
 
 export default {
   name: 'Timeline',
   components: { Card },
   setup () {
-    const cardData = data
-    const currentCard = ref(cardData[0].year)
+    const cardData = ref(data)
+    const currentCard = ref(data[0].year)
 
     const setCurrentCard = (cardYear) => {
       currentCard.value = cardYear
     }
 
-    const firstYear = cardData[0].year
-    const lastYear = cardData[cardData.length - 1].year
+    const firstYear = computed(() => cardData.value[0].year)
+    const lastYear = computed(() => cardData.value[cardData.value.length - 1].year)
 
-    const years = cardData.map(card => {
-      return card.year
-    })
-    const uniqueYears = new Set(years)
+    const years = computed(() => cardData.value.map(card => card.year))
+    const uniqueYears = ref(new Set(years.value))
 
     const scrollYPosition = ref(window.scrollY)
     const onScroll = () => {
       scrollYPosition.value = window.scrollY
     }
 
+    const resetMaps = () => {
+      const cards = document.getElementsByClassName('card')
+      for (let member in topYearMap) delete topYearMap[member]
+      for (let member in reverseMap) delete reverseMap[member]
+      for (let i = 0; i < cardData.value.length; i++) {
+        let cardBounds = cards[i].getBoundingClientRect()
+        topYearMap[cardBounds.top + window.scrollY] = cardData.value[i].year
+        reverseMap[cardData.value[i].year] = cardBounds.top + window.scrollY
+      }
+    }
+
     const windowWidth = ref(window.innerWidth)
     // on resize, recalculating position maps since the positions will vary due to width
     const onResize = () => {
       windowWidth.value = window.innerWidth
-      const cards = document.getElementsByClassName('card')
-      for (let member in topYearMap) delete topYearMap[member]
-      for (let member in reverseMap) delete reverseMap[member]
-      for (let i = 0; i < cards.length; i++) {
-        let cardBounds = cards[i].getBoundingClientRect()
-        topYearMap[cardBounds.top + window.scrollY] = cardData[i].year
-        reverseMap[cardData[i].year] = cardBounds.top + window.scrollY
-      }
+      resetMaps()
     }
-
 
     const topYearMap = {}
     const reverseMap = {}
@@ -100,6 +128,26 @@ export default {
       }
     }
 
+    const selectedFiltersObj = reactive({
+      'philanthropy': true,
+      'leadership': true,
+      'action': true
+    })
+    const toggleFilter = (selectedFilter) => {
+      selectedFiltersObj[selectedFilter] = !selectedFiltersObj[selectedFilter]
+    }
+
+    watch(selectedFiltersObj, () => {
+      cardData.value = data.filter(card => {
+        if (selectedFiltersObj[card.category]) {
+          return card
+        }
+        return
+      })
+      uniqueYears.value = new Set(years.value)
+      resetMaps()
+    }, { deep: true })
+
     onMounted(() => {
       nextTick(() => {
         window.addEventListener('scroll', onScroll)
@@ -108,8 +156,8 @@ export default {
       const cards = document.getElementsByClassName('card')
       for (let i = 0; i < cards.length; i++) {
         let cardBounds = cards[i].getBoundingClientRect()
-        topYearMap[cardBounds.top + window.scrollY] = cardData[i].year
-        reverseMap[cardData[i].year] = cardBounds.top + window.scrollY
+        topYearMap[cardBounds.top + window.scrollY] = cardData.value[i].year
+        reverseMap[cardData.value[i].year] = cardBounds.top + window.scrollY
       }
     })
     onBeforeUnmount(() => {
@@ -122,9 +170,11 @@ export default {
       currentCard,
       firstYear,
       lastYear,
+      selectedFiltersObj,
       uniqueYears,
       onClick,
-      setCurrentCard
+      setCurrentCard,
+      toggleFilter
     }
   }
 }
@@ -147,7 +197,7 @@ export default {
   position: sticky;
   top: 100px;
   z-index: 2;
-  padding: 40px 0 50px 0;
+  padding: 15px 0 50px 0;
 }
 #timeline {
   background-color: #1D428A;
@@ -172,6 +222,12 @@ export default {
 }
 #last-year {
   right: -40px;
+}
+#filters {
+  color: #04307e;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5px;
 }
 .year-div {
   flex-grow: 1;
@@ -205,5 +261,8 @@ export default {
   z-index: 3;
   top: 20px;
   transform: translateX(12px);
+}
+.filter {
+  padding: 0 10px;
 }
 </style>

@@ -2,7 +2,7 @@
   <div>
     <section id="animation">Logo Evolution Animation goes here</section>
     <PullOutFigureSection />
-    <hr>
+    <!-- <hr> -->
     <OurStory />
   </div>
 </template>

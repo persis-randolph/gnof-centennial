@@ -1,32 +1,38 @@
 <template>
-  <div id="footer">
-    <div id="logo-container">
-      <img src="../assets/GNOF_CentennialLogo_RGB_Full_Color.png" id="color-logo">
-    </div>
-    <div id="contact-container">
-      <div id="contact">
-        <h3>CONTACT</h3>
-        <address>
-          919 St. Charles Avenue<br>
-          Center for Philanthropy<br>
-          New Orleans, Louisiana 70130
-        </address>
-      </div>
-      <div id="online">
-        <h3 id="online-header">ONLINE</h3>
-        <a href="http://www.gnof.org">www.gnof.org</a>
-        <div id="icons">
-          <a href="https://www.facebook.com/greaterneworleansfoundation/" target="_blank">
-            <img src="../assets/Icon_awesome-facebook-f.png" class="icon">
-          </a>
-          <a href="https://twitter.com/GNOFoundation" target="_blank">
-            <img src="../assets/Icon_awesome-twitter.png" class="icon">
-          </a>
-          <a href="https://www.instagram.com/gnofoundation" target="_blank">
-            <img src="../assets/Icon_awesome-instagram.png" class="icon">
-          </a>
+  <div>
+    <div id="footer-head">
+      <!-- <div id="contact-online-container"> -->
+        <div id="logo-container">
+          <img src="../assets/GNOF_CentennialLogo_RGB_Full_Color.png" id="color-logo">
         </div>
-      </div>
+        <div id="contact-container">
+          <div id="contact">
+            <h3>CONTACT</h3>
+            <address>
+              919 St. Charles Avenue<br>
+              Center for Philanthropy<br>
+              New Orleans, Louisiana 70130
+            </address>
+          </div>
+          <div id="online">
+            <h3 id="online-header">ONLINE</h3>
+            <a href="http://www.gnof.org">www.gnof.org</a>
+            <div id="icons">
+              <a href="https://www.facebook.com/greaterneworleansfoundation/" target="_blank">
+                <img src="../assets/Icon_awesome-facebook-f.png" class="icon">
+              </a>
+              <a href="https://twitter.com/GNOFoundation" target="_blank">
+                <img src="../assets/Icon_awesome-twitter.png" class="icon">
+              </a>
+              <a href="https://www.instagram.com/gnofoundation" target="_blank">
+                <img src="../assets/Icon_awesome-instagram.png" class="icon">
+              </a>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div id="copyright">
+      <div id="copyright-text">Copyright &copy; 2023 Greater New Orleans Foundation. All rights reserved.</div>
     </div>
   </div>
 </template>
@@ -41,7 +47,7 @@ export default {
 </script>
 
 <style scoped>
-#footer {
+#footer-head {
   display: flex;
   width: 100%;
 }
@@ -86,9 +92,21 @@ address, a {
   display: inline-block;
   margin: 20px 20px 0 0;
 }
+#copyright {
+  width: 100%;
+  height: 40px;
+  background-color: #00A9E0;
+  display: table;
+  color: white;
+  font-size: 14px;
+}
+#copyright-text {
+  vertical-align: middle;
+  display: table-cell;
+}
 
 @media only screen and (max-width: 650px)  {
-  #footer {
+  #footer-head {
     display: block;
   }
   #logo-container {

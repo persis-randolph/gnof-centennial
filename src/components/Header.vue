@@ -48,10 +48,10 @@ export default {
   height: 100px;
   display: flex;
   flex-direction: column;
-  padding: 20px 20px 0 0;
+  padding: 10px 10px 0 0;
   align-items: flex-end;
 }
 .nav-link {
-  color: black;
+  color: white;
 }
 </style>

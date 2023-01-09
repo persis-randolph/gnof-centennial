@@ -32,5 +32,6 @@ a, a:link, a:visited, a:hover, a:active {
 #container {
   /* replace 2nd 100px with 0 if icon goes back in */
   padding: 100px 40px 100px 40px;
+  background-color: #E2F6FF;
 }
 </style>
