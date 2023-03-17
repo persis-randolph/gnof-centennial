@@ -2,17 +2,25 @@
   <div class="card" :id="card.year">
     <!-- <div class="line"></div> -->
     <div class="text" :class="card.imageUrl ? 'textWithImage' : ''">
-      <span class="date" :class="headerColor">{{ card.month ? card.month + ' ' : '' }}{{ card.year }}</span>
-      <!-- TODO: need to figure out how we want to display rest of header/body if it is condensed -->
+      <!-- CARD DATE -->
+      <span class="date" :class="headerColor">
+        {{ card.month ? card.month + ' ' : '' }}{{ card.day ? card.day + ', ' : '' }}{{ card.year }}
+      </span>
+      <!-- CARD HEADER (if exists) -->
       <span class="header">{{ displayHeader }}</span>
-      <span class="body">{{ displayBody }}</span>
+      <!-- CARD PARAGRAPHS -->
+      <p v-for="(paragraph, i) of displayBody" :key="i" class="body">
+        {{ paragraph }}
+      </p>
     </div>
     <!-- <div class="image-div" v-if="card.imageUrl">
       <div class="image-container">
         <img :src="card.imageUrl" class="image">
       </div>
     </div> -->
+    <!-- CATEGORY RIGHT-SIDE COLOR BORDER -->
     <div class="color-highlight" :class="highlightColor"></div>
+    <!-- CATEGORY RIGHT-SIDE TEXT -->
     <div class="category-text"><span>{{ card.category.toUpperCase() }}</span></div>
   </div>
 </template>
@@ -36,9 +44,9 @@ export default {
     })
 
     const displayBody = computed(() => {
-      if (props.card.body.length >= 120) {
-        return props.card.body.slice(0, 119) + '...'
-      }
+      // if (props.card.body.length >= 120) {
+      //   return props.card.body.slice(0, 119) + '...'
+      // }
       return props.card.body
     })
 

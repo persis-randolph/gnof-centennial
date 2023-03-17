@@ -1,174 +1,37 @@
 export default [
   {
     month: 'Jan',
-    year: '1922',
-    category: 'philanthropy',
-    header: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    body: 'Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor.',
-    imageUrl: 'https://via.placeholder.com/350',
-  },
-  {
-    month: 'Mar',
-    year: '1922',
-    category: 'philanthropy',
-    header: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor.',
-    imageUrl: 'https://via.placeholder.com/350',
-  },
-  {
-    year: '1923',
+    day: '31',
+    year: '1914',
     category: 'leadership',
-    header: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do',
-    body: 'Lorem ipsum dolor sit, consectetur adipiscing elit, sed do eiusmod tempor.'
-  },
-  {
-    year: '1925',
-    category: 'action',
-    header: 'Lorem ipsum dolor sit amet, consectetur',
-    body: 'Lorem ipsum dolor sit amet, consec adipiscing elit, sed do eiusmod tempor.'
-  },
-  {
-    year: '1927',
-    category: 'action',
-    header: 'Lorem ipsum dolor sit amet, consectetur',
-    body: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quvoluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni'
-  },
-  {
-    year: '1928',
-    category: 'action',
-    header: 'Lorem ipsum dolor sit amet, consectetur',
-    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
-  },
-  {
-    year: '1929',
-    category: 'action',
-    header: 'Lorem ipsum dolor sit amet, consectetur',
-    body: 'Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor.'
-  },
-  {
-    year: '1932',
-    category: 'action',
-    header: 'Lorem ipsum dolor sit amet, consectetur',
-    body: 'Lorem ipsum dolor st amet, consectetur adipiscing elit, sed do eiusmod tempor.'
-  },
-  {
-    year: '1933',
-    category: 'philanthropy',
-    header: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli, sed do eiusmod tempor.'
-  },
-  {
-    year: '1934',
-    category: 'leadership',
-    header: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do',
-    body: 'Lorem isum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
-  },
-  {
-    year: '1935',
-    category: 'action',
-    header: 'Lorem ipsum dolor sit amet, consectetur',
-    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmd tempor.'
-  },
-  {
-    year: '1936',
-    category: 'action',
-    header: 'Lorem ipsum dolor sit amet, consectetur',
-    body: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt eplicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni'
-  },
-  {
-    year: '1938',
-    category: 'action',
-    header: 'Lorem ipum dolor sit amet, consectetur',
-    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
-  },
-  {
-    year: '1939',
-    category: 'action',
-    header: 'Lorem ipsum dolor sit amet, consectetur',
-    body: 'Lorem ipsum dolor sit met, consectetur adipiscing elit, sed do eiusmod tempor.'
-  },
-  {
-    year: '1940',
-    category: 'action',
-    header: 'Lorem ipsum dolor sit amet, consectetur',
-    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d eiusmod tempor.'
-  },
-  {
-    year: '1941',
-    category: 'leadership',
-    header: 'Lorem ipsum door sit amet, consectetur adipiscing elit, sed do',
-    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
-  },
-  {
-    year: '1942',
-    category: 'action',
-    header: 'Lorem ipsum dolorsit amet, consectetur',
-    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
-  },
-  {
-    year: '1943',
-    category: 'action',
-    header: 'Lorem ipsum dolor sit amet, consectetur',
-    body: 'Sed ut perspiciatis unde omnis iste natus error sit volupatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni'
-  },
-  {
-    year: '1944',
-    category: 'action',
-    header: 'Lorem ipsum dolor sit amet, consectetur',
-    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
-  },
-  {
-    year: '1945',
-    category: 'action',
-    header: 'Lorem ipsum dolor sit amet, consectetur',
-    body: 'Lorem ipsum door sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
-  },
-  {
-    year: '1947',
-    category: 'action',
-    header: 'Lorem ipsum olor sit amet, consectetur',
-    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
-  },
-  {
-    year: '1948',
-    category: 'philanthropy',
-    header: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo tempor.'
-  },
-  {
-    year: '1949',
-    category: 'leadership',
-    header: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do',
-    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiumod tempor.'
-  },
-  {
-    year: '1950',
-    category: 'action',
-    header: 'Lorem ipsum dolor sit amet, consectetur',
-    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod tempor.'
-  },
-  {
-    year: '1951',
-    category: 'action',
-    header: 'Lorem ipsum dolor sit amet, consectetur',
-    body: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni'
-  },
-  {
-    year: '1952',
-    category: 'action',
-    header: 'Lorem ipsum dolor sit amet, consectetur',
-    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed o eiusmod tempor.'
-  },
-  {
-    year: '1954',
-    category: 'action',
-    header: 'Lorem ipsum dolor sit amet, consectetur',
-    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d eiusmod tempor.'
-  },
-  {
-    year: '1955',
-    category: 'action',
-    header: 'Lorem ipsum dolor sit amet, consectetur',
-    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sd do eiusmod tempor.'
+    header: '',
+    body: [
+      'Long before the concept of the Foundation and the Community Chest, there were social service organizations that nursed the sick, raised funds, and organized resources to combat epidemics. These charitable organizations in New Orleans, each charged with raising their own charitable funds, were led by religious groups, ethnic groups, and non-sectarian orders.',
+      'Following the devastation of the Civil War and the onset of the first World War, a group of prominent New Orleans civic leaders implemented a community organization called the Federation of Non-sectarian Charity and Philanthropy of New Orleans. This would be a true umbrella agency that would combine efforts at raising charitable funds to grant aid and assistance to needy groups.',
+      'Following the devastation of the Civil War and the onset of the first World War, a group of prominent New Orleans civic leaders implemented a community organization called the Federation of Non-sectarian Charity and Philanthropy of New Orleans. This would be a true umbrella agency that would combine efforts at raising charitable funds to grant aid and assistance to needy groups.',
+      'Their main goals were to prevent indiscriminate and unauthorized solicitations, insure a fair and equitable distribution of funds in order to benefit the greatest number of citizens, insure a public detailed accounting of the allocation of funds by the Federation and by constituent organizations, and to allow constituent organizations to focus their efforts on managing their affairs without the necessity of soliciting funds.'
+    ],
+    images: [
+      {
+        description: 'Leaders of New Orleans Life Working for Community Chest',
+        url: 'https://www.dropbox.com/s/e1ijxrdxwfpaccj/Legacy%20Photos.png?dl=0'
+      },
+      {
+        description: 'Charter, Federation of Non-sectarian Charity and Philanthropy of New Orleans',
+        url: 'https://www.dropbox.com/s/gnqqq32e395qzf1/Charter.pdf?dl=0'
+      },
+      {
+        description: 'Officers, Federation of Non-sectarian Charity and Philanthropy of New Orleans',
+        url: 'https://www.dropbox.com/s/q8isvas4ry10yj5/1914_Officers%20FedNonSectarian.tif?dl=0'
+      },
+      {
+        description: 'Membership, Federation of Non-sectarian Charity and Philanthropy of New Orleans (1914)',
+        url: 'https://www.dropbox.com/s/b5cjz2y4y0aglij/1914%20_Letterhead%20Membership%20List%20FedNonSectarian.tif?dl=0'
+      },
+      {
+        description: 'Pledge Card, Federation of Non-sectarian Charity and Philanthropy of New Orleans',
+        url: 'https://www.dropbox.com/s/kbjvru0htaocif1/20221223_133215.pdf?dl=0'
+      }
+    ]
   }
 ]
