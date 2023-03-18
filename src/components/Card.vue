@@ -4,14 +4,30 @@
     <div class="text" :class="card.imageUrl ? 'textWithImage' : ''">
       <!-- CARD DATE -->
       <span class="date" :class="headerColor">
-        {{ card.month ? card.month + ' ' : '' }}{{ card.day ? card.day + ', ' : '' }}{{ card.year }}
+        {{ card.month ? card.month + ' ' : '' }}
+        {{ card.day ? card.day + ', ' : '' }}
+        {{ card.year }}
+        {{ card.yearEnd ? ' - ' + card.yearEnd : '' }}
       </span>
       <!-- CARD HEADER (if exists) -->
       <span class="header">{{ displayHeader }}</span>
-      <!-- CARD PARAGRAPHS -->
-      <p v-for="(paragraph, i) of displayBody" :key="i" class="body">
-        {{ paragraph }}
-      </p>
+      <div :class="card.images.length ? 'image-text-container' : ''">
+        <!-- IMAGES (if exist) -->
+        <div class="image-container">
+          <img :src="card.images[0].url" class="image-planning">
+          <img :src="card.images[1].url" class="image-planning">
+          <img :src="card.images[2].url" class="image-planning">
+        </div>
+        <!-- CARD PARAGRAPHS -->
+        <div class="paragraphs">
+          <div v-for="(paragraph, i) of displayBody" :key="i">
+            <p class="body">
+              {{ paragraph }}
+            </p>
+            <br v-if="displayBody.length - 1 > i">
+          </div>
+        </div>
+      </div>
     </div>
     <!-- <div class="image-div" v-if="card.imageUrl">
       <div class="image-container">
@@ -157,4 +173,22 @@ export default {
 .action-header {
   color: #00A9E0;
 }
+
+.image-container {
+  
+}
+
+.image-text-container {
+  display: flex;
+}
+
+.paragraphs {
+  flex-direction: column;
+  color: red;
+}
+
+.image-planning {
+  border: 1px solid black;
+}
+
 </style>
