@@ -26,12 +26,12 @@ a, a:link, a:visited, a:hover, a:active {
   text-decoration: none;
 }
 h2 {
-  color: #1D428A;
+  color: #041e42;
   font-size: 56px;
   font-weight: 700;
 }
 p {
-  color: #1D428A;
+  color: #041e42;
   font-size: 16px;
   font-weight: 300;
 }

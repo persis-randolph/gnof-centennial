@@ -27,7 +27,7 @@
       </div>
       <!-- interactive timeline bar -->
       <div id="timeline">
-        <span id="first-year">{{ firstYear }}</span>
+        <!-- <span id="first-year">{{ firstYear }}</span> -->
         <div
           v-for="year in uniqueYears"
           :key="year"

@@ -4,7 +4,7 @@ export default [
     day: '31',
     year: '1914',
     category: 'leadership',
-    header: '',
+    header: 'Founding of the Federation of Non-sectarion Charity and Philanthropy in New Orleans',
     body: [
       'Long before the concept of the Foundation and the Community Chest, there were social service organizations that nursed the sick, raised funds, and organized resources to combat epidemics. These charitable organizations in New Orleans, each charged with raising their own charitable funds, were led by religious groups, ethnic groups, and non-sectarian orders.',
       'Following the devastation of the Civil War and the onset of the first World War, a group of prominent New Orleans civic leaders implemented a community organization called the Federation of Non-sectarian Charity and Philanthropy of New Orleans. This would be a true umbrella agency that would combine efforts at raising charitable funds to grant aid and assistance to needy groups.',
@@ -14,13 +14,15 @@ export default [
     images: [
       {
         description: 'Leaders of New Orleans Life Working for Community Chest',
-        url: 'https://www.gnof.org/wp-content/uploads/2023/03/F_Legacy-Photos.jpg',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/F_Legacy-Photos-2.jpg',
         size: 'full'
       },
       {
         description: 'Charter, Federation of Non-sectarian Charity and Philanthropy of New Orleans',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/H_L_Charter-1.jpg',
-        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Charter.pdf'
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Charter.pdf',
+        icon: 'pdf_dark.svg',
+        rightMargin: true
       },
       {
         description: 'Officers, Federation of Non-sectarian Charity and Philanthropy of New Orleans',
@@ -30,7 +32,7 @@ export default [
       {
         description: 'Membership, Federation of Non-sectarian Charity and Philanthropy of New Orleans (1914)',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/H_1914-_Letterhead-Membership-List-FedNonSectarian.jpg',
-
+        rightMargin: true
       },
       {
         description: 'Pledge Card, Federation of Non-sectarian Charity and Philanthropy of New Orleans',
@@ -43,14 +45,16 @@ export default [
     day: '11',
     year: '1914',
     category: 'leadership',
-    header: '',
+    header: 'Letter from the Salvation Army to The Federation of Non-sectarian Charity and Philanthropy of New Orleans',
     body: [
       `During a joint meeting of the Executive & Finance Committee, a letter was read to the board from the Salvation Army, a non member organization, stating that the Federation's efforts to solicit funds hampered the Salvation Army's fundraising efforts. The Federation of Non-sectarian Charity and Philanthropy of New Orleans released a statement for publication that only member organizations would receive funds from the Federation during 1914, with the expectation that in 1915 all charitable organizations in the city would become members of the Federation.`
     ],
     images: [
       {
         description: 'Minutes, Letter from the Salvation Army to The Federation of Non-sectarian Charity and Philanthropy of New Orleans',
-        url: 'https://www.dropbox.com/s/02wkokwioyofgs4/Salvation%20Army%20Meeting.pdf?dl=0'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Salvation-Army-Meeting-1.jpg',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Salvation-Army-Meeting.pdf',
+        icon: 'pdf_dark.svg'
       }
     ]
   },

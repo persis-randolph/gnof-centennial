@@ -1,7 +1,7 @@
 <template>
   <div class="card" :id="card.year">
     <!-- <div class="line"></div> -->
-    <div class="text" :class="card.imageUrl ? 'textWithImage' : ''">
+    <div class="text">
       <!-- CARD DATE -->
       <span class="date" :class="headerColor">
         {{ card.month ? card.month + ' ' : '' }}
@@ -13,10 +13,21 @@
       <span class="header">{{ displayHeader }}</span>
       <div :class="card.images.length ? 'image-text-container' : ''">
         <!-- IMAGES (if exist) -->
-        <div class="image-container">
-          <img :src="card.images[0].url" class="image-planning">
-          <img :src="card.images[1].url" class="image-planning">
-          <img :src="card.images[2].url" class="image-planning">
+        <div class="image-container" v-if="card.images.length">
+          <!-- TODO: make class dynamic to add margin to the right on 1st half images -->
+          <div v-for="(image) in card.images" :key="image.category + image.header">
+            <!-- EACH IMAGE -->
+            <div class="single-image-container">
+              <a :href="image.clickThrough" target="_blank">
+                <img :src="image.url" :class="image.rightMargin ? 'image-half-left' : 'image'">
+              </a>
+              <!-- OPTIONAL ICON -->
+              <!-- TODO: center if i have time -->
+              <a :href="image.clickThrough" target="_blank">
+                <img v-if="image.icon" :src="image.icon" class="icon">
+              </a>
+            </div>
+          </div>  
         </div>
         <!-- CARD PARAGRAPHS -->
         <div class="paragraphs">
@@ -29,11 +40,6 @@
         </div>
       </div>
     </div>
-    <!-- <div class="image-div" v-if="card.imageUrl">
-      <div class="image-container">
-        <img :src="card.imageUrl" class="image">
-      </div>
-    </div> -->
     <!-- CATEGORY RIGHT-SIDE COLOR BORDER -->
     <div class="color-highlight" :class="highlightColor"></div>
     <!-- CATEGORY RIGHT-SIDE TEXT -->
@@ -53,9 +59,9 @@ export default {
     const headerColor = ref(props.card.category + '-header')
 
     const displayHeader = computed(() => {
-      if (props.card.header.length > 40) {
-        return props.card.header.slice(0, 39) + '...'
-      }
+      // if (props.card.header.length > 40) {
+      //   return props.card.header.slice(0, 39) + '...'
+      // }
       return props.card.header
     })
 
@@ -103,10 +109,10 @@ export default {
   top: 0;
   bottom: 0;
   writing-mode: vertical-lr;
-  right: 0.5px;
+  right: 3px;
   color: #ffffff;
   font-weight: 300;
-  font-size: 24px;
+  font-size: 18px;
   text-align: center;
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
@@ -131,29 +137,25 @@ export default {
 .header {
   font-weight: 500;
   font-size: 38px;
+  line-height: 1.1;
+  color: #041e42;
 }
 .body {
   font-size: 16px;
   font-weight: 300;
 }
-.image-div {
-  position: absolute;
-  top: 0;
-  right: 30px;
-  height: 100%;
-  width: 30%;
-}
 .image-container {
-  width: 100%;
+  max-width: 430px;
+  min-width: 430px;
   height: 100%;
-  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.single-image-container {
   position: relative;
-}
-.image {
-  position: absolute;
-}
-.textWithImage {
-  /* margin-right: 35%; */
+  /* text-align: center; */
 }
 .philanthropy-highlight {
   background-color: #1D428A;
@@ -174,12 +176,9 @@ export default {
   color: #00A9E0;
 }
 
-.image-container {
-  
-}
-
 .image-text-container {
   display: flex;
+  margin-top: 10px;
 }
 
 .paragraphs {
@@ -187,8 +186,24 @@ export default {
   color: red;
 }
 
-.image-planning {
-  border: 1px solid black;
+.image {
+  border: 0.5px solid #dedada;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.image-half-left {
+  border: 0.5px solid #dedada;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  display: block;
+}
+
+.icon {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 50px;
 }
 
 </style>
