@@ -39,7 +39,7 @@
                 class="expand-link"
                 @click="toggleExpand"
               >
-                <br><br>Collapse
+                <br><br>Close
               </span>
             </p>
             <br v-if="card.body.length - 1 > i">
@@ -47,7 +47,7 @@
         </div>
         <div class="body" v-else>
           <div class="collapsed-text"><span>{{ card.body[0] }}</span></div>
-          <span @click="toggleExpand" class="expand-link">Read more...</span>
+          <br><span @click="toggleExpand" class="expand-link">View more...</span>
         </div>
       </div>
     </div>

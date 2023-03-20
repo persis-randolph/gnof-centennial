@@ -5,8 +5,12 @@
       src="../assets/GNOF_CentennialLogo_RGB_White.png"
     />
     <div class="link-container">
-      <router-link class="nav-link" to="/home" v-if="selectedView !== '/home'">Home</router-link>
-      <router-link class="nav-link" to="/timeline" v-if="selectedView !== '/timeline'">Timeline</router-link>
+      <router-link class="nav-link" to="/home" :class="selectedView !== '/home' ? 'active-link' : 'inactive-link'">
+        HOME
+      </router-link>
+      <router-link class="nav-link" to="/timeline" :class="selectedView !== '/timeline' ? 'active-link' : 'inactive-link'">
+        TIMELINE
+      </router-link>
     </div>
   </div>
 </template>
@@ -41,17 +45,29 @@ export default {
 }
 .logo {
   height: 60px;
-  /* margin: 0 auto; */
-  margin-left: 20px;
+  margin-left: 180px;
 }
 .link-container {
-  height: 100px;
   display: flex;
-  flex-direction: column;
-  padding: 10px 10px 0 0;
-  align-items: flex-end;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 180px;
 }
 .nav-link {
-  color: white;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.nav-link:first-of-type {
+  margin-right: 20px;
+}
+
+.inactive-link {
+  cursor: default;
+}
+
+.active-link {
+  font-weight: bold;
+  text-decoration: underline;
 }
 </style>
