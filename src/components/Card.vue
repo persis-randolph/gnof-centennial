@@ -13,7 +13,7 @@
       <span class="header">{{ displayHeader }}</span>
       <div :class="card.images.length ? 'image-text-container' : ''">
         <!-- IMAGES (if exist) -->
-        <div class="image-container" v-if="card.images.length">
+        <div class="image-container" :class="halfImageWidth ? 'half-width' : 'full-width'" v-if="card.images.length">
           <!-- TODO: make class dynamic to add margin to the right on 1st half images -->
           <div v-for="(image) in card.images" :key="image.category + image.header">
             <!-- EACH IMAGE -->
@@ -72,9 +72,18 @@ export default {
       return props.card.body
     })
 
+    // if a single half-width image - half image container width
+    const halfImageWidth = computed(() => {
+      if (props.card.images.length === 1 && !props.card.images[0].size) {
+        return true
+      }
+      return false
+    })
+
     return {
       displayBody,
       displayHeader,
+      halfImageWidth,
       highlightColor,
       headerColor
     }
@@ -145,12 +154,20 @@ export default {
   font-weight: 300;
 }
 .image-container {
-  max-width: 430px;
-  min-width: 430px;
   height: 100%;
   display: flex;
   flex-wrap: wrap;
   text-align: center;
+}
+
+.half-width {
+  max-width: 215px;
+  min-width: 215px;
+}
+
+.full-width {
+  max-width: 430px;
+  min-width: 430px;
 }
 
 .single-image-container {
