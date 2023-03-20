@@ -4,17 +4,17 @@
     <div class="text">
       <!-- CARD DATE -->
       <span class="date" :class="headerColor">
-        {{ card.month ? card.month + ' ' : '' }}
-        {{ card.day ? card.day + ', ' : '' }}
-        {{ card.year }}
-        {{ card.yearEnd ? ' - ' + card.yearEnd : '' }}
+        {{ cardDateDisplay }}
       </span>
       <!-- CARD HEADER (if exists) -->
       <span class="header">{{ displayHeader }}</span>
       <div :class="card.images.length ? 'image-text-container' : ''">
-        <!-- IMAGES (if exist) -->
-        <div class="image-container" :class="halfImageWidth ? 'half-width' : 'full-width'" v-if="card.images.length">
-          <!-- TODO: make class dynamic to add margin to the right on 1st half images -->
+        <!-- IMAGES (if exist & non-collapsed) -->
+        <div
+          class="image-container"
+          :class="halfImageWidth ? 'half-width' : 'full-width'"
+          v-if="card.images.length && isExpanded"
+        >
           <div v-for="(image) in card.images" :key="image.category + image.header">
             <!-- EACH IMAGE -->
             <div class="single-image-container">
@@ -30,13 +30,24 @@
           </div>  
         </div>
         <!-- CARD PARAGRAPHS -->
-        <div class="paragraphs">
-          <div v-for="(paragraph, i) of displayBody" :key="i">
+        <div v-if="isExpanded">
+          <div v-for="(paragraph, i) of card.body" :key="i">
             <p class="body">
               {{ paragraph }}
+              <span
+                v-if="card.body.length - 1 === i"
+                class="expand-link"
+                @click="toggleExpand"
+              >
+                <br><br>Collapse
+              </span>
             </p>
-            <br v-if="displayBody.length - 1 > i">
+            <br v-if="card.body.length - 1 > i">
           </div>
+        </div>
+        <div class="body" v-else>
+          <div class="collapsed-text"><span>{{ card.body[0] }}</span></div>
+          <span @click="toggleExpand" class="expand-link">Read more...</span>
         </div>
       </div>
     </div>
@@ -55,21 +66,26 @@ export default {
     card: Object // contains month, year, category, header, imageUrl, and body
   },
   setup(props) {
+    const isExpanded = ref(false)
+    const toggleExpand = () => {
+      isExpanded.value = !isExpanded.value
+    }
+
     const highlightColor = ref(props.card.category + '-highlight')
     const headerColor = ref(props.card.category + '-header')
+
+    const cardDateDisplay = computed(() => {
+      return `${props.card.month ? props.card.month + ' ' : ''}
+      ${props.card.day ? props.card.day + ', ' : ''}
+      ${props.card.year}
+      ${props.card.yearEnd ? ' - ' + props.card.yearEnd : ''}`
+    })
 
     const displayHeader = computed(() => {
       // if (props.card.header.length > 40) {
       //   return props.card.header.slice(0, 39) + '...'
       // }
       return props.card.header
-    })
-
-    const displayBody = computed(() => {
-      // if (props.card.body.length >= 120) {
-      //   return props.card.body.slice(0, 119) + '...'
-      // }
-      return props.card.body
     })
 
     // if a single half-width image - half image container width
@@ -81,17 +97,26 @@ export default {
     })
 
     return {
-      displayBody,
+      cardDateDisplay,
       displayHeader,
       halfImageWidth,
       highlightColor,
-      headerColor
+      headerColor,
+      isExpanded,
+      toggleExpand
     }
   }
 }
 </script>
 
 <style scoped>
+
+/* stack images above text if screen size is under 1180px wide */
+@media only screen and (max-width: 1180px)  {
+  .image-text-container {
+    flex-direction: column;
+  }
+}
 .card {
   margin: 15px auto;
   text-align: left;
@@ -198,9 +223,9 @@ export default {
   margin-top: 10px;
 }
 
-.paragraphs {
-  flex-direction: column;
-  color: red;
+.collapsed-text {
+  max-height: 40px;
+  overflow: hidden;
 }
 
 .image {
@@ -221,6 +246,15 @@ export default {
   bottom: 5px;
   left: 0;
   width: 50px;
+}
+
+.expand-link {
+  color: #5a87c6;
+}
+
+.expand-link:hover {
+  color: #041e42;
+  cursor: pointer;
 }
 
 </style>
