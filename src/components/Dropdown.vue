@@ -1,6 +1,6 @@
 <template>
     <div class="menu">
-        <div v-for="option in options" :key="option" class="option">
+        <div v-for="(option, i) in options" :key="option" class="option">
             <router-link
                 class="nav-link"
                 :to="option"
@@ -9,6 +9,7 @@
             >
                 {{ option.slice(1).toUpperCase() }}
             </router-link>
+            <hr v-if="i !== options.length - 1">
         </div>
     </div>
 </template>
@@ -45,9 +46,12 @@ export default {
     position: absolute;
     right: 0;
     background-color: white;
-    border: 1px solid #041e42;
+    border: 1px solid #b0a9a0;
     border-radius: 8px;
-    padding: 5px;
+    padding: 10px;
+    /* box-shadow: 2px 2px 2px #b0a9a0;
+    -moz-box-shadow: 2px 2px 3px #b0a9a0;
+    -webkit-box-shadow: 2px 2px 3px #b0a9a0; */
 }
 
 .inactive-link {
@@ -57,7 +61,8 @@ export default {
 
 .active-link {
   font-weight: bold;
-  text-decoration: underline;
+  text-decoration: none;
+  /* text-decoration: underline; */
 }
 
 .nav-link {

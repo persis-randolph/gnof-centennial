@@ -84,8 +84,13 @@ export default {
   margin-right: 20px;
 }
 
+a, a:link, a:visited, a:hover, a:active {
+  color: white;
+}
+
 .inactive-link {
   cursor: default;
+  text-decoration: none;
 }
 
 .active-link {
@@ -101,15 +106,18 @@ export default {
   cursor: pointer;
 }
 
-@media only screen and (min-width: 600px)  {
-  .icon {
-    display: none;
-  }
-}
-
 .dropdown-menu {
   position: relative;
   display: inline-block;
   margin-right: 10%;
+}
+
+@media only screen and (min-width: 600px)  {
+  .icon {
+    display: none;
+  }
+  .dropdown-menu {
+    display: none;
+  }
 }
 </style>
