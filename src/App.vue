@@ -21,10 +21,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
 }
-a, a:link, a:visited, a:hover, a:active {
-  color: white;
-  text-decoration: none;
-}
 h2 {
   color: #041e42;
   font-size: 56px;
@@ -35,4 +31,7 @@ p {
   font-size: 16px;
   font-weight: 300;
 }
+a, a:link, a:visited, a:hover, a:active {
+    color: blue;
+  }
 </style>

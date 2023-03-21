@@ -21,7 +21,7 @@ export default [
         description: 'Charter, Federation of Non-sectarian Charity and Philanthropy of New Orleans',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/H_L_Charter-1.jpg',
         clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Charter.pdf',
-        icon: 'pdf_dark.svg',
+        icon: 'dark',
         rightMargin: true
       },
       {
@@ -54,7 +54,7 @@ export default [
         description: 'Minutes, Letter from the Salvation Army to The Federation of Non-sectarian Charity and Philanthropy of New Orleans',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Salvation-Army-Meeting-1.jpg',
         clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Salvation-Army-Meeting.pdf',
-        icon: 'pdf_dark.svg'
+        icon: 'dark'
       }
     ]
   },
@@ -63,14 +63,16 @@ export default [
     day: '14',
     year: '1915',
     category: 'leadership',
-    header: '',
+    header: 'Federation Makes Public Appeal for Assistance in Raising Funds',
     body: [
       'The Federation of Non-sectarian Charity and Philanthropy of New Orleans found itself in crisis, unable to raise the necessary funds for its member organization. The Federation made a public appeal in the Times-Picayune for assistance in raising funds.'
     ],
     images: [
       {
         description: 'Appeal for aid is made by the Federation of Non-sectarian Charity and Philanthropy of New Orleans',
-        url: 'https://www.dropbox.com/s/03ypx2pmmbfuj9i/Appeal_For_Aid_Is_Made_By_Federation_Of__Times-Picayune_published_as_The_Times-Picayune.___June_14_1915__p3.pdf?dl=0'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Appeal_For_Aid_Is_Made_By_Federation_Of__Times-Picayune_published_as_The_Times-Picayune.___June_14_1915__p3.jpg',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Appeal_For_Aid_Is_Made_By_Federation_Of__Times-Picayune_published_as_The_Times-Picayune.___June_14_1915__p3.pdf',
+        icon: 'dark'
       }
     ]
   },

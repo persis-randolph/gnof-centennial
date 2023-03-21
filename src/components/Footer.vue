@@ -129,5 +129,9 @@ address, a {
   #color-logo {
     margin: 20px;
   }
+  a, a:link, a:visited, a:hover, a:active {
+    color: white;
+    text-decoration: none;
+  }
 }
 </style>

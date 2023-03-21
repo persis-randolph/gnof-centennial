@@ -23,8 +23,9 @@
               </a>
               <!-- OPTIONAL ICON -->
               <!-- TODO: center if i have time -->
-              <a :href="image.clickThrough" target="_blank">
-                <img v-if="image.icon" :src="image.icon" class="icon">
+              <a :href="image.clickThrough" target="_blank" v-if="image.icon">
+                <img v-if="image.icon === 'dark'" src="../assets/pdf_dark.svg" class="icon">
+                <img v-if="image.icon === 'light'" src="../assets/pdf_light.svg" class="icon">
               </a>
             </div>
           </div>  
@@ -173,6 +174,16 @@ export default {
   font-size: 38px;
   line-height: 1.1;
   color: #041e42;
+}
+
+@media only screen and (max-width: 750px)  {
+  .header {
+    font-size: 20px;
+  }
+
+  .date {
+    font-size: 18px;
+  }
 }
 .body {
   font-size: 16px;

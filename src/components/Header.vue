@@ -12,12 +12,20 @@
         TIMELINE
       </router-link>
     </div>
+    <div class="dropdown-menu">
+      <img src="../assets/hamburger.svg" class="icon" @click="toggleMenu">
+      <Dropdown v-if="menuOpen" :options="['/home', '/timeline']" :selectedOption="selectedView" @toggle-menu="toggleMenu" />
+    </div>
   </div>
 </template>
 
 <script>
+import { ref } from 'vue'
+import Dropdown from '../components/Dropdown.vue'
+
 export default {
   name: 'Header',
+  components: { Dropdown },
   props: {
     selectedView: {
       type: String,
@@ -25,7 +33,15 @@ export default {
     }
   },
   setup () {
-    return {}
+    const menuOpen = ref(false)
+    const toggleMenu = () => {
+      menuOpen.value = !menuOpen.value
+    }
+
+    return {
+      menuOpen,
+      toggleMenu
+    }
   }
 }
 </script>
@@ -41,17 +57,23 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 2;
+  z-index: 4;
 }
 .logo {
   height: 60px;
-  margin-left: 180px;
+  margin-left: 10%;
 }
 .link-container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-right: 180px;
+  margin-right: 10%;
+}
+
+@media only screen and (max-width: 600px)  {
+  .link-container {
+    display: none;
+  }
 }
 .nav-link {
   font-size: 20px;
@@ -69,5 +91,25 @@ export default {
 .active-link {
   font-weight: bold;
   text-decoration: underline;
+}
+
+.icon {
+  height: 32px;
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 600px)  {
+  .icon {
+    display: none;
+  }
+}
+
+.dropdown-menu {
+  position: relative;
+  display: inline-block;
+  margin-right: 10%;
 }
 </style>
