@@ -78,7 +78,7 @@ export default {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     text-align: left;
 }
 
