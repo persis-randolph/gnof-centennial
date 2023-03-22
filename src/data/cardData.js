@@ -182,7 +182,7 @@ export default [
     body: [],
     images: [
       {
-        description: '',
+        description: 'Articles of Incorporation, 1924',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/articles-of-incorporation-1924-1.jpg',
         clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/articles-of-incorporation-1924.pdf',
         icon: 'dark'
@@ -200,7 +200,7 @@ export default [
     ],
     images: [
       {
-        description: '',
+        description: 'Rabbi Emil W. Leipziger',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Emil-Leipziger-1.png'
       }
     ]
@@ -215,7 +215,7 @@ export default [
     body: [],
     images: [
       {
-        description: '',
+        description: 'George H. Terriberry',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/George-Hitching-Terriberry-1921.jpg'
       }
     ]
@@ -277,11 +277,11 @@ export default [
     year: '1925',
     yearEnd: '1926',
     category: 'leadership',
-    header: 'Chair of the Board, Charles Seyburn William',
+    header: 'Chair of the Board, Charles Seyburn Williams',
     body: [],
     images: [
       {
-        description: '',
+        description: 'Charles Seyburn Williams',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Charles-Seyburn-Williams.png'
       }
     ]
@@ -331,7 +331,7 @@ export default [
     body: [],
     images: [
       {
-        description: '',
+        description: 'Ben C. Casanas',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Benjamin-C.-Casanas-1919.jpg'
       }
     ]
@@ -380,7 +380,7 @@ export default [
     body: [],
     images: [
       {
-        description: '',
+        description: 'Edgar B. Stern, Sr.',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Edgar-B-Stern.jpg'
       }
     ]
@@ -395,7 +395,7 @@ export default [
     body: [],
     images: [
       {
-        description: '',
+        description: 'Bradley Buell',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Bradley-Buell-1927-1930.jpg'
       }
     ]
