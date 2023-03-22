@@ -132,7 +132,8 @@ export default [
         description: 'Lack of Support Causes Death of Federation, Times-Picayune, September 6, 1915',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Lack_Of_Support_Causes_Death_Of_Federation_Non-__Times-Picayune_published_as_The_Times-Picayune.___September_6_1915__p5.jpg',
         clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Lack_Of_Support_Causes_Death_Of_Federation_Non-__Times-Picayune_published_as_The_Times-Picayune.___September_6_1915__p5.pdf',
-        icon: 'dark'
+        icon: 'dark',
+        rightMargin: true
       },
       {
         description: 'Letter to member organizations of the Federation of Non-sectarian Charity and Philanthropy of New Orleans',
@@ -161,7 +162,8 @@ export default [
         description: 'Minutes from the 1st Organizational Meeting of the Community Chest',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/First-meeting-1924.jpg',
         clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/First-meeting-1924.pdf',
-        icon: 'dark'
+        icon: 'dark',
+        rightMargin: true
       },
       {
         description: 'First Board Members of the Community Chest',
@@ -312,7 +314,8 @@ export default [
     images: [
       {
         description: 'Minutes from January 11, 1926 Board of Directors of the Community Chest: 1926 Community Chest Budget of member social service organizations.',
-        url: 'hhttps://www.gnof.org/wp-content/uploads/2023/03/1926-oganizations-1.png',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/1926-oganizations-1.png',
+        size: 'full',
         clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/1926-oganizations.pdf',
         icon: 'dark'
       }
@@ -442,7 +445,8 @@ export default [
     images: [
       {
         description: 'General Allison Owen, 1927',
-        url: 'https://www.gnof.org/wp-content/uploads/2023/03/General-Allison-Owen-1927.jpg'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/General-Allison-Owen-1927.jpg',
+        rightMargin: true
       },
       {
         description: 'General Allison Owen, Annual Report 1929',
@@ -557,7 +561,8 @@ export default [
         description: '1933 Community Chest Annual Report | The Community Chest in the Ninth Year | For Human Needs',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/1925-1935-Annual-Report-11th-year-1.png',
         clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/1925-1935-Annual-Report-11th-year.pdf',
-        icon: 'dark'
+        icon: 'dark',
+        rightMargin: true
       },
       {
         description: '1936 Community Chest Annual Report | The Community Chest in the 12th Year | Business Improvement',
@@ -738,7 +743,7 @@ export default [
     images: [
       {
         description: 'Picture from 1940 Community Chest Annual Report',
-        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Norman-Mayer-Building-Dedication.png',
+        url: '',
         clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Norman-Mayer-Building-Dedication.pdf',
         icon: 'dark'
       }
@@ -758,7 +763,8 @@ export default [
         description: 'Article from Times-Picayune about the need of the War Chest (Dec. 23, 1942)',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/War-Chest-Ad.png',
         clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/War-Chest-Ad.pdf',
-        icon: 'dark'
+        icon: 'dark',
+        rightMargin: true
       },
       {
         description: 'Board of Directors, First Meeting of the United Community and War Chest',
@@ -806,7 +812,7 @@ export default [
     images: [
       {
         description: 'Leon Heymann',
-        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Leon-Heymann-Loving-Cup.png',
+        url: '',
         clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Leon-Heymann-Loving-Cup.pdf',
         icon: 'dark'
       }

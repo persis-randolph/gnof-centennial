@@ -19,7 +19,7 @@
             <!-- EACH IMAGE -->
             <div class="single-image-container">
               <a :href="image.clickThrough" target="_blank">
-                <img :src="image.url" :class="image.rightMargin ? 'image-half-left' : 'image'">
+                <img :src="image.url" :class="image.rightMargin ? 'image-half-left' : 'image'" :alt="image.description">
               </a>
               <!-- OPTIONAL ICON -->
               <!-- TODO: center if i have time -->
@@ -31,7 +31,7 @@
           </div>  
         </div>
         <!-- CARD PARAGRAPHS -->
-        <div v-if="isExpanded">
+        <div v-if="isExpanded && card.body.length">
           <div v-for="(paragraph, i) of card.body" :key="i">
             <p class="body">
               {{ paragraph }}
@@ -46,16 +46,14 @@
             <br v-if="card.body.length - 1 > i">
           </div>
         </div>
-        <span
-          v-if="!card.body.length && isExpanded"
-          class="expand-link"
-          @click="toggleExpand"
-        >
-          Close
-        </span>
+        <div v-else-if="isExpanded && !card.body.length">
+          <span class="expand-link" @click="toggleExpand">
+            Close
+          </span>
+        </div>
         <div class="body" v-else>
           <div class="collapsed-text"><span>{{ card.body[0] }}</span></div>
-          <br v-if="card.body.length"><span @click="toggleExpand" class="expand-link">View more...</span>
+          <br v-if="card.body.length && !isExpanded"><span @click="toggleExpand" class="expand-link">View more...</span>
         </div>
       </div>
     </div>
