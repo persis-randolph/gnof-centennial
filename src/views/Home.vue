@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section id="animation">Logo Evolution Animation goes here</section>
+    <Animation />
     <PullOutFigureSection />
     <!-- <hr> -->
     <OurStory />
@@ -8,23 +8,19 @@
 </template>
 
 <script>
-import PullOutFigureSection from '../components/PullOutFigureSection.vue'
-import OurStory from '../components/OurStory.vue'
+import PullOutFigureSection from "../components/PullOutFigureSection.vue"
+import OurStory from "../components/OurStory.vue"
+import Animation from "../components/Animation.vue"
 
 export default {
-  name: 'Home',
-  components: { PullOutFigureSection, OurStory },
-  setup () {
+  name: "Home",
+  components: {
+    Animation,
+    OurStory,
+    PullOutFigureSection,
+  },
+  setup() {
     return {}
-  }
-}
+  },
+};
 </script>
-
-<style scoped>
-#animation {
-  width: 100%;
-  height: 300px;
-  background-color: grey;
-  color: white;
-}
-</style>
