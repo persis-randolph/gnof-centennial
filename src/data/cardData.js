@@ -192,14 +192,14 @@ export default [
     day: '',
     year: '1924',
     category: 'leadership',
-    header: 'First Chair of the Board - Rabbi Emil W. Leipziger',
+    header: 'First Chair of the Board, Rabbi Emil W. Leipziger',
     body: [
       '(1877-1963), U.S. Reform rabbi. Leipziger, who was born in Stockholm, Sweden, went to the United States with his family in 1881. He was ordained by Hebrew Union College, Cincinnati, in 1900, and from that year until 1913 served as a rabbi in Terre Haute, Indiana. He went to Temple Sinai, New Orleans, in 1913. Leipziger was active in social welfare movements in New Orleans and played a leading role in establishing the local community chest (1925). From 1939 to 1941 Leipziger was president of the Central Conference of American Rabbis.'
     ],
     images: [
       {
         description: '',
-        url: 'https://www.dropbox.com/s/l6tppuks3i4rms2/Emil%20Leipziger%20%281%29.png?dl=0'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Emil-Leipziger-1.png'
       }
     ]
   },
@@ -209,14 +209,12 @@ export default [
     year: '1924',
     yearEnd: '1925',
     category: 'leadership',
-    header: 'George H. Terriberry, Chair of the Board',
-    body: [
-      ''
-    ],
+    header: 'Chair of the Board, George H. Terriberry',
+    body: [],
     images: [
       {
         description: '',
-        url: 'https://www.dropbox.com/s/yzg3inrqb0k1amw/George%20Hitching%20Terriberry%20%281921%29.jpg?dl=0'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/George-Hitching-Terriberry-1921.jpg'
       }
     ]
   },
@@ -226,14 +224,14 @@ export default [
     year: '1924',
     yearEnd: '1927',
     category: 'leadership',
-    header: 'First Community Chest Executive Director - Sherman Conrad',
-    body: [
-      ''
-    ],
+    header: 'First Community Chest Executive Director, Sherman Conrad',
+    body: [],
     images: [
       {
         description: 'Minutes from September 3, 1924 Board of Directors Meeting',
-        url: 'https://www.dropbox.com/s/ml3tvv3lhdumnyz/Sherman%20Conrad_%20ED%209.3.1924.pdf?dl=0'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Sherman-Conrad_-ED-9.3.1924.jpg',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Sherman-Conrad_-ED-9.3.1924.pdf',
+        icon: 'dark'
       }
     ]
   },
@@ -242,15 +240,14 @@ export default [
     day: '',
     year: '1925',
     category: 'action',
-    header: '1925 Community Chest Annual Report',
-    body: [
-      'EMBED LINK: <div style="position:relative;padding-top:max(60%,326px);height:0;width:100%"><iframe allow="clipboard-write" sandbox="allow-top-navigation allow-top-navigation-by-user-activation allow-downloads allow-scripts allow-same-origin allow-popups allow-modals allow-popups-to-escape-sandbox allow-forms" allowfullscreen="true" style="position:absolute;border:none;width:100%;height:100%;left:0;right:0;top:0;bottom:0;" src="https://e.issuu.com/embed.html?d=1925-1935_annual_report_1st_year&hideShareButton=true&logoImageUrl=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fs4yppl0pr5nvbda%2FGNOF_CentennialLogo_RGB_Full%2520Color.png%3Fdl%3D0&pageLayout=singlePage&u=greaterneworleansfoundation"></iframe></div>',
-      'FULL SCREEN ISSUU LINK: https://issuu.com/greaterneworleansfoundation/docs/1925-1935_annual_report_1st_year?fr=sZWI5MTU4Njg0NTI'
-    ],
+    header: 'Community Chest Annual Report',
+    body: [],
     images: [
       {
-        description: 'PDF',
-        url: 'https://www.dropbox.com/s/0n8drskrep18wup/1925-1935%20Annual%20Report%201st%20year.pdf?dl=0'
+        description: '1925 Community Chest Annual Report',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/1925-1935-Annual-Report-1st-year-1.png',
+        clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/1925-1935_annual_report_1st_year?fr=sZWI5MTU4Njg0NTI',
+        icon: 'dark'
       }
     ]
   },
@@ -259,14 +256,16 @@ export default [
     day: '5',
     year: '1925',
     category: 'philanthropy',
-    header: '',
+    header: 'Community Chest Sets Fundraising Goal',
     body: [
       'The Community Chest set a fundraising goal of $887,000 to cover all of the expenses of 64 social service organizations.'
     ],
     images: [
       {
         description: 'Minutes from January 5, 1925 Board of Directors of the Community Chest: 1925 Community Chest Budget of member social organizations.',
-        url: 'https://www.dropbox.com/s/b6sqtwgh5yvnob6/1925%20member%20organizations.pdf?dl=0'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/1925-member-organizations-1.png',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/1925-member-organizations.pdf',
+        icon: 'dark'
       }
     ]
   },
@@ -276,14 +275,12 @@ export default [
     year: '1925',
     yearEnd: '1926',
     category: 'leadership',
-    header: 'Charles Seyburn Williams, Chair of the Board',
-    body: [
-      ''
-    ],
+    header: 'Chair of the Board, Charles Seyburn William',
+    body: [],
     images: [
       {
         description: '',
-        url: 'https://www.dropbox.com/s/g1h9cdlo6ti9r69/Charles%20Seyburn%20Williams.png?dl=0'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Charles-Seyburn-Williams.png'
       }
     ]
   },
@@ -292,15 +289,14 @@ export default [
     day: '',
     year: '1926',
     category: 'action',
-    header: '1926 Community Chest Annual Report',
-    body: [
-      'Embed link - <div style="position:relative;padding-top:max(60%,326px);height:0;width:100%"><iframe allow="clipboard-write" sandbox="allow-top-navigation allow-top-navigation-by-user-activation allow-downloads allow-scripts allow-same-origin allow-popups allow-modals allow-popups-to-escape-sandbox allow-forms" allowfullscreen="true" style="position:absolute;border:none;width:100%;height:100%;left:0;right:0;top:0;bottom:0;" src="https://e.issuu.com/embed.html?d=1925-1935_annual_report_2nd_year&hideIssuuLogo=true&hideShareButton=true&logoImageUrl=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fs4yppl0pr5nvbda%2FGNOF_CentennialLogo_RGB_Full%2520Color.png%3Fdl%3D0&pageLayout=singlePage&u=greaterneworleansfoundation"></iframe></div>',
-      'Full screen Issuu link - https://issuu.com/greaterneworleansfoundation/docs/1925-1935_annual_report_2nd_year?fr=sYzNlZTU4Njg0NTI'
-    ],
+    header: 'Community Chest Annual Report',
+    body: [],
     images: [
       {
-        description: 'PDF',
-        url: 'https://www.dropbox.com/s/2c1wqsh7sqrvocc/1925-1935%20Annual%20Report%202nd%20year.pdf?dl=0'
+        description: '1926 Community Chest Annual Report',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/1925-1935-Annual-Report-2nd-year-1.png',
+        clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/1925-1935_annual_report_2nd_year?fr=sYzNlZTU4Njg0NTI',
+        icon: 'dark'
       }
     ]
   },
@@ -309,14 +305,16 @@ export default [
     day: '11',
     year: '1926',
     category: 'philanthropy',
-    header: '',
+    header: 'Community Chest Sets Budget',
     body: [
       'The Community Chest set a budget to cover the expenses of 82 member social service organizations.'
     ],
     images: [
       {
         description: 'Minutes from January 11, 1926 Board of Directors of the Community Chest: 1926 Community Chest Budget of member social service organizations.',
-        url: 'https://www.dropbox.com/s/lol03m4sd4ubb20/1926%20oganizations.pdf?dl=0'
+        url: 'hhttps://www.gnof.org/wp-content/uploads/2023/03/1926-oganizations-1.png',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/1926-oganizations.pdf',
+        icon: 'dark'
       }
     ]
   },
@@ -326,14 +324,12 @@ export default [
     year: '1926',
     yearEnd: '1927',
     category: 'leadership',
-    header: 'Ben C. Casanas, Chair of the Board',
-    body: [
-      ''
-    ],
+    header: 'Chair of the Board, Ben C. Casanas',
+    body: [],
     images: [
       {
         description: '',
-        url: 'https://www.dropbox.com/s/eeot90anq9sq46q/Benjamin%20C.%20Casanas%20%281919%29.jpg?dl=0'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Benjamin-C.-Casanas-1919.jpg'
       }
     ]
   },
@@ -342,15 +338,14 @@ export default [
     day: '',
     year: '1927',
     category: 'action',
-    header: '1927 Community Chest Annual Report',
-    body: [
-      'Embed link - <div style="position:relative;padding-top:max(60%,326px);height:0;width:100%"><iframe allow="clipboard-write" sandbox="allow-top-navigation allow-top-navigation-by-user-activation allow-downloads allow-scripts allow-same-origin allow-popups allow-modals allow-popups-to-escape-sandbox allow-forms" allowfullscreen="true" style="position:absolute;border:none;width:100%;height:100%;left:0;right:0;top:0;bottom:0;" src="https://e.issuu.com/embed.html?d=1925-1935_annual_report_3rd_year&hideIssuuLogo=true&hideShareButton=true&logoImageUrl=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fs4yppl0pr5nvbda%2FGNOF_CentennialLogo_RGB_Full%2520Color.png%3Fdl%3D0&pageLayout=singlePage&u=greaterneworleansfoundation"></iframe></div>',
-      'Full screen Issuu Link - https://issuu.com/greaterneworleansfoundation/docs/1925-1935_annual_report_3rd_year?fr=sZTFkMDU4Njg0NTI'
-    ],
+    header: 'Community Chest Annual Report',
+    body: [],
     images: [
       {
-        description: 'PDF',
-        url: 'https://www.dropbox.com/s/9z0nanytunplb61/1925-1935%20Annual%20report%203rd%20year.pdf?dl=0'
+        description: '1927 Community Chest Annual Report',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/1925-1935-Annual-report-3rd-year-1.png',
+        clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/1925-1935_annual_report_3rd_year?fr=sZTFkMDU4Njg0NTI',
+        icon: 'dark'
       }
     ]
   },
@@ -359,14 +354,16 @@ export default [
     day: '30',
     year: '1927',
     category: 'philanthropy',
-    header: '',
+    header: 'Community Chest Sets Budget for Member Organization Expenses',
     body: [
       'The Community Chest set a budget to cover the expenses of the member social service organizations.'
     ],
     images: [
       {
         description: 'Minutes from December 30, 1926 Board of Directors of the Community Chest: 1927 Community Chest Budget of member social service organizations.',
-        url: 'https://www.dropbox.com/s/g7xo7qrtbkns5th/1927%20member%20organizations.pdf?dl=0'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/1927-member-organizations-1.png',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/1927-member-organizations.pdf',
+        icon: 'dark'
       }
     ]
   },
@@ -376,14 +373,12 @@ export default [
     year: '1927',
     yearEnd: '1928',
     category: 'leadership',
-    header: 'Edgar B. Stern, Sr., Chair of the Board',
-    body: [
-      ''
-    ],
+    header: 'Chair of the Board, Edgar B. Stern, Sr.',
+    body: [],
     images: [
       {
         description: '',
-        url: 'https://www.dropbox.com/s/fsxnv22uos6icd8/Edgar%20B%20Stern.jpg?dl=0'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Edgar-B-Stern.jpg'
       }
     ]
   },
@@ -393,14 +388,12 @@ export default [
     year: '1927',
     yearEnd: '1930',
     category: 'leadership',
-    header: 'Bradley Buell, Executive Director of the Community Chest',
-    body: [
-      ''
-    ],
+    header: 'Executive Director of the Community Chest, Bradley Buell',
+    body: [],
     images: [
       {
         description: '',
-        url: 'https://www.dropbox.com/s/4uy61p05whf7z9l/Bradley%20Buell%201927-1930.jpg?dl=0'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Bradley-Buell-1927-1930.jpg'
       }
     ]
   },
@@ -409,14 +402,16 @@ export default [
     day: '',
     year: '1928',
     category: 'action',
-    header: '',
+    header: 'Community Chest Selects Logo',
     body: [
-      'The Community Chest selects its permanent logo. Designed by Miss Corinna M. Luria. QUESTION: Header or body?'
+      'The Community Chest selects its permanent logo. Designed by Miss Corinna M. Luria.'
     ],
     images: [
       {
         description: 'Times Picayune, October 29, 1928 - page 5',
-        url: 'https://www.dropbox.com/s/6x329ezu5x5sqid/News_Article__Times-Picayune_published_as_THE_TIMES-PICAYUNE.___October_29_1928__p5.pdf?dl=0'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/News_Article__Times-Picayune_published_as_THE_TIMES-PICAYUNE.___October_29_1928__p5.png',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/News_Article__Times-Picayune_published_as_THE_TIMES-PICAYUNE.___October_29_1928__p5.pdf',
+        icon: 'dark'
       }
     ]
   },
@@ -426,14 +421,13 @@ export default [
     year: '1928',
     category: 'action',
     header: 'Community Chest Annual Report',
-    body: [
-      'Embed link - <div style="position:relative;padding-top:max(60%,326px);height:0;width:100%"><iframe allow="clipboard-write" sandbox="allow-top-navigation allow-top-navigation-by-user-activation allow-downloads allow-scripts allow-same-origin allow-popups allow-modals allow-popups-to-escape-sandbox allow-forms" allowfullscreen="true" style="position:absolute;border:none;width:100%;height:100%;left:0;right:0;top:0;bottom:0;" src="https://e.issuu.com/embed.html?d=1925-1935_annual_report_4th_year&hideIssuuLogo=true&hideShareButton=true&logoImageUrl=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fs4yppl0pr5nvbda%2FGNOF_CentennialLogo_RGB_Full%2520Color.png%3Fdl%3D0&pageLayout=singlePage&u=greaterneworleansfoundation"></iframe></div>',
-      'Full Screen Issuu Link - https://issuu.com/greaterneworleansfoundation/docs/1925-1935_annual_report_4th_year?fr=sM2ZhYTU4Njg0NTI'
-    ],
+    body: [],
     images: [
       {
-        description: 'PDF',
-        url: 'https://www.dropbox.com/s/c9ei04yjr2d21hd/1925-1935%20Annual%20Report%204th%20year.pdf?dl=0'
+        description: '1928 Community Chest Annual Report',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/1925-1935-Annual-Report-4th-year-1.png',
+        clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/1925-1935_annual_report_4th_year?fr=sM2ZhYTU4Njg0NTI',
+        icon: 'dark'
       }
     ]
   },
@@ -443,18 +437,18 @@ export default [
     year: '1928',
     yearEnd: '1929',
     category: 'leadership',
-    header: 'General Allison Owen, Chair of the Board',
-    body: [
-      'QUESTION: 2nd image here was a link on the name, 1st was separate - do i use both, is one supposed to be a link?'
-    ],
+    header: 'Chair of the Board, General Allison Owen',
+    body: [],
     images: [
       {
-        description: '',
-        url: 'https://www.dropbox.com/s/dt728e9g8gycwqh/General%20Allison%20Owen%20%281927%29.jpg?dl=0'
+        description: 'General Allison Owen, 1927',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/General-Allison-Owen-1927.jpg'
       },
       {
-        description: '',
-        url: 'https://www.dropbox.com/s/c3lggfo9xa73mr9/General%20Allison%20Owen%20_Annual%20Report%201929.pdf?dl=0'
+        description: 'General Allison Owen, Annual Report 1929',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/General-Allison-Owen-_Annual-Report-1929.jpg',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/General-Allison-Owen-_Annual-Report-1929.pdf',
+        icon: 'dark'
       }
     ]
   },
@@ -464,14 +458,13 @@ export default [
     year: '1929',
     category: 'action',
     header: 'Community Chest Annual Report',
-    body: [
-      'Embed link - <div style="position:relative;padding-top:max(60%,326px);height:0;width:100%"><iframe allow="clipboard-write" sandbox="allow-top-navigation allow-top-navigation-by-user-activation allow-downloads allow-scripts allow-same-origin allow-popups allow-modals allow-popups-to-escape-sandbox allow-forms" allowfullscreen="true" style="position:absolute;border:none;width:100%;height:100%;left:0;right:0;top:0;bottom:0;" src="https://e.issuu.com/embed.html?d=annual_report_1925-1935_5th_year&hideIssuuLogo=true&hideShareButton=true&logoImageUrl=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fs4yppl0pr5nvbda%2FGNOF_CentennialLogo_RGB_Full%2520Color.png%3Fdl%3D0&pageLayout=singlePage&u=greaterneworleansfoundation"></iframe></div>',
-      'Full Screen Issuu link -  https://issuu.com/greaterneworleansfoundation/docs/annual_report_1925-1935_5th_year?fr=sZTNiZDU4Njg0NTI'
-    ],
+    body: [],
     images: [
       {
-        description: 'PDF',
-        url: 'https://www.dropbox.com/s/eae5rszkowttf68/Annual%20Report%201925-1935%205th%20year.pdf?dl=0'
+        description: '1929 Community Chest Annual Report',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Annual-Report-1925-1935-5th-year-1.png',
+        clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/annual_report_1925-1935_5th_year?fr=sZTNiZDU4Njg0NTI',
+        icon: 'dark'
       }
     ]
   },
@@ -481,14 +474,12 @@ export default [
     year: '1929',
     yearEnd: '1930',
     category: 'leadership',
-    header: 'E. Newton Kearny, Chair of the Board',
-    body: [
-      ''
-    ],
+    header: 'Chair of the Board, E. Newton Kearny',
+    body: [],
     images: [
       {
-        description: '',
-        url: 'https://www.dropbox.com/s/iqkxfgl0pi2dspo/E%20Newton%20Kearny.png?dl=0'
+        description: 'E. Newton Kearny',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/E-Newton-Kearny.png'
       }
     ]
   },
@@ -498,14 +489,12 @@ export default [
     year: '1930',
     yearEnd: '1932',
     category: 'leadership',
-    header: 'Parham Werlein, Chair of the Board',
-    body: [
-      ''
-    ],
+    header: 'Chair of the Board, Parham Werlein',
+    body: [],
     images: [
       {
-        description: '',
-        url: 'https://www.dropbox.com/s/pc3fgokaeiu5yf2/Parham%20Werlein%201930-1932.jpg?dl=0'
+        description: 'Parham Werlein',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Parham-Werlein-1930-1932.jpg'
       }
     ]
   },
@@ -515,14 +504,14 @@ export default [
     year: '1930',
     yearEnd: '1957',
     category: 'leadership',
-    header: 'Julius Goldman Executive Director of the Community Chest.',
+    header: 'Executive Director of the Community Chest, Julius Goldman',
     body: [
       'Julius Goldman took over the directorship of the Community Chest after the sudden death of its first director, Sherman Conrad. Shortly before he took office, the stock market crash of 1929 plunged the country into depression.'
     ],
     images: [
       {
-        description: '',
-        url: 'https://www.dropbox.com/s/6z8ck3v3bpb9csr/Julius%20Goldman%20%281%29.png?dl=0'
+        description: 'Julius Goldman',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Julius-Goldman-1.png'
       }
     ]
   },
@@ -531,14 +520,12 @@ export default [
     day: '',
     year: '1932',
     category: 'leadership',
-    header: 'John X. Wegmann, Chair of the Board',
-    body: [
-      ''
-    ],
+    header: 'Chair of the Board, John X. Wegmann',
+    body: [],
     images: [
       {
-        description: '',
-        url: 'https://www.dropbox.com/s/xxczbjex1wqiv1v/John%20Xavier%20Wegmann%201934-1935.jpg?dl=0'
+        description: 'John Xavier Wegmann',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/John-Xavier-Wegmann-1934-1935.jpg'
       }
     ]
   },
@@ -547,14 +534,12 @@ export default [
     day: '',
     year: '1933',
     category: 'leadership',
-    header: 'General L. Kemper Williams, Chair of the Board',
-    body: [
-      ''
-    ],
+    header: 'Chair of the Board, General L. Kemper Williams',
+    body: [],
     images: [
       {
-        description: '',
-        url: 'https://www.dropbox.com/s/mkeg5rk5bjekluu/General%20L%20Kemper%201933.png?dl=0'
+        description: 'General L. Kemper',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/General-L-Kemper-1933.png'
       }
     ]
   },
@@ -563,18 +548,20 @@ export default [
     day: '1',
     year: '1933',
     category: 'philanthropy',
-    header: '',
+    header: 'Community Chest in Crisis After Funds Frozen',
     body: [
       'As poverty and unemployment spread, resources for chest support dwindled. On March 1, 1933, Community Chest and agency funds were frozen, along with assets in banks nationwide. Again in a crisis, the Community Chest Developed closed working relationships with governmental organizations, especially the newly created City Department of Public Welfare.'
     ],
     images: [
       {
         description: '1933 Community Chest Annual Report | The Community Chest in the Ninth Year | For Human Needs',
-        url: 'https://www.dropbox.com/s/7vfg6904bbnmw2c/1925-1935%20Annual%20Report%2011th%20%20year.pdf?dl=0'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/1925-1935-Annual-Report-11th-year-1.png',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/1925-1935-Annual-Report-11th-year.pdf',
+        icon: 'dark'
       },
       {
         description: '1936 Community Chest Annual Report | The Community Chest in the 12th Year | Business Improvement',
-        url: 'https://www.dropbox.com/s/31ee7izijqj15sl/community%20chest%20annual%20report%201936.jpg?dl=0'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/community-chest-annual-report-1936.jpg'
       }
     ]
   },
@@ -583,14 +570,12 @@ export default [
     day: '',
     year: '1934',
     category: 'leadership',
-    header: 'Nicholas Bauer, Chair of the Board',
-    body: [
-      ''
-    ],
+    header: 'Chair of the Board, Nicholas Bauer',
+    body: [],
     images: [
       {
-        description: '',
-        url: 'https://www.dropbox.com/s/o551no4k8ken3be/Nicholas%20Bauer.png?dl=0'
+        description: 'Nicholas Bauer',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Nicholas-Bauer.png'
       }
     ]
   },
@@ -599,14 +584,12 @@ export default [
     day: '',
     year: '1935',
     category: 'leadership',
-    header: 'Joseph Haspel, Chair of the Board',
-    body: [
-      ''
-    ],
+    header: 'Chair of the Board, Joseph Haspel',
+    body: [],
     images: [
       {
-        description: '',
-        url: 'https://www.dropbox.com/s/ghuf53pip5pyhi6/Joseph%20Haspel.jpg?dl=0'
+        description: 'Joseph Haspel',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Joseph-Haspel.jpg'
       }
     ]
   },
@@ -615,14 +598,14 @@ export default [
     day: '',
     year: '1935',
     category: 'philanthropy',
-    header: 'The Community Chest Celebrates 10 years',
-    body: [
-      ''
-    ],
+    header: 'The Community Chest Celebrates 10 Years',
+    body: [],
     images: [
       {
         description: '1935 Annual Report | The Community Chest - The First Decade',
-        url: 'https://www.dropbox.com/s/nniqwhvjm8xlrwo/1925-1935%2010th%20year.pdf?dl=0'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/1925-1935-10th-year-1.png',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/1925-1935-10th-year.pdf',
+        icon: 'dark'
       }
     ]
   },
@@ -631,14 +614,12 @@ export default [
     day: '',
     year: '1936',
     category: 'leadership',
-    header: 'Theodore M. Simmons, Chair of the Board',
-    body: [
-      ''
-    ],
+    header: 'Chair of the Board, Theodore M. Simmons',
+    body: [],
     images: [
       {
-        description: '',
-        url: 'https://www.dropbox.com/s/y5ad1nnbugsx3yk/Theodore%20M%20Simmons.png?dl=0'
+        description: 'Theodore M. Simmons',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Theodore-M-Simmons.png'
       }
     ]
   },
@@ -647,14 +628,12 @@ export default [
     day: '',
     year: '1937',
     category: 'leadership',
-    header: 'George S. Clarke, Chair of the Board',
-    body: [
-      ''
-    ],
+    header: 'Chair of the Board, George S. Clarke',
+    body: [],
     images: [
       {
-        description: '',
-        url: 'https://www.dropbox.com/s/ta2bmgj3um75mb9/George%20S%20Clarke.png?dl=0'
+        description: 'George S. Clarke',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/George-S-Clarke.png'
       }
     ]
   },
@@ -663,14 +642,12 @@ export default [
     day: '',
     year: '1938',
     category: 'leadership',
-    header: 'James Gilly, Jr., Chair of the Board',
-    body: [
-      ''
-    ],
+    header: 'Chair of the Board, James Gilly, Jr.',
+    body: [],
     images: [
       {
-        description: '',
-        url: 'https://www.dropbox.com/s/epoygdcc3mzcpo6/James%20Gilly.png?dl=0'
+        description: 'James Gilly, Jr.',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/James-Gilly.png'
       }
     ]
   },
@@ -679,62 +656,269 @@ export default [
     day: '',
     year: '1939',
     category: 'leadership',
-    header: 'William G. Zetzmann, Chair of the Board',
-    body: [
-      ''
-    ],
+    header: 'Chair of the Board, William G. Zetzman',
+    body: [],
     images: [
       {
-        description: '',
-        url: 'https://www.dropbox.com/s/y3p31224me7yc0j/William%20G.%20Zetzmann%20%281944%29%20.jpg?dl=0'
+        description: 'William G. Zetzman',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/William-G.-Zetzmann-1944-.jpg'
       }
     ]
   },
   {
     month: '',
     day: '',
-    year: '',
-    category: '',
-    header: '',
-    body: [
-      ''
-    ],
+    year: '1940',
+    category: 'leadership',
+    header: 'Chair of the Board, C. Ellis Henican',
+    body: [],
     images: [
       {
-        description: '',
-        url: ''
+        description: 'C. Ellis Henican',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/C-Ellis-Henican.png'
       }
     ]
   },
   {
     month: '',
     day: '',
-    year: '',
-    category: '',
+    year: '1940',
+    category: 'philanthropy',
     header: '',
     body: [
-      ''
+      'The Community Chest received a bequest of Mrs. Fannie Levy Mayer, widow of Norman Mayer, in the sum of $150,000 for the purchase or construction of a building to be known as the Norman Mayer Memorial Building. The will stipulated that the building was to be used for the offices of the Community Chest and affiliated organizations.'
     ],
     images: [
       {
-        description: '',
-        url: ''
+        description: 'Excerpt from 1940 Annual Report of the Community Chest',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Mayer-Bequest-Exerpt-1940-Annual-Report.png',
+        size: 'full',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Mayer-Bequest-Exerpt-1940-Annual-Report.pdf',
+        icon: 'dark'
       }
     ]
   },
   {
     month: '',
     day: '',
-    year: '',
-    category: '',
-    header: '',
+    year: '1941',
+    category: 'leadership',
+    header: 'Chair of the Board, Louis G. Lemle',
+    body: [],
+    images: [
+      {
+        description: 'Louis G. Lemle',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Louis-G.-Lemle.png'
+      }
+    ]
+  },
+  {
+    month: '',
+    day: '',
+    year: '1942',
+    category: 'leadership',
+    header: 'Chair of the Board, Lawrence M. Williams',
+    body: [],
+    images: [
+      {
+        description: 'Lawrence M. Williams',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Lawrence-M-Williams.png'
+      }
+    ]
+  },
+  {
+    month: '',
+    day: '',
+    year: '1942',
+    category: 'philanthropy',
+    header: 'Community Chest Relocates to Tulane-Newcomb Building',
     body: [
-      ''
+      'The Community Chest relocated to the Tulane-Newcomb building at 211 Camp Street. The building was occupied by the Community Chest along with other Red Feather agencies for 40 years.'
     ],
     images: [
       {
-        description: '',
-        url: ''
+        description: 'Picture from 1940 Community Chest Annual Report',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Norman-Mayer-Building-Dedication.png',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Norman-Mayer-Building-Dedication.pdf',
+        icon: 'dark'
+      }
+    ]
+  },
+  {
+    month: '',
+    day: '',
+    year: '1942',
+    category: 'action',
+    header: 'Community Chest Becomes Host Agency for United Community and War Chest',
+    body: [
+      'The Community Chest established and became the “host” agency for the United Community and War Chest to consolidate appeals into one campaign.'
+    ],
+    images: [
+      {
+        description: 'Article from Times-Picayune about the need of the War Chest (Dec. 23, 1942)',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/War-Chest-Ad.png',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/War-Chest-Ad.pdf',
+        icon: 'dark'
+      },
+      {
+        description: 'Board of Directors, First Meeting of the United Community and War Chest',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/1942-Board-of-Directors-First-Meeting-of-United-Community-War-Chest.png',
+        clickThrough: '',
+        icon: 'dark'
+      }
+    ]
+  },
+  {
+    month: '',
+    day: '',
+    year: '1943',
+    category: 'leadership',
+    header: 'Chair of the Board, Joseph M. Rault',
+    body: [],
+    images: [
+      {
+        description: 'Joseph M. Rault',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Joseph-M.-Rault-1951.jpg'
+      }
+    ]
+  },
+  {
+    month: '',
+    day: '',
+    year: '1944',
+    category: 'leadership',
+    header: 'Chair of the Board, George Soule',
+    body: [],
+    images: [
+      {
+        description: 'George Soule',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/George-Soule-1944.jpg'
+      }
+    ]
+  },
+  {
+    month: '',
+    day: '',
+    year: '1945',
+    category: 'leadership',
+    header: 'Chair of the Board, Leon Heymann',
+    body: [],
+    images: [
+      {
+        description: 'Leon Heymann',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Leon-Heymann-Loving-Cup.png',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Leon-Heymann-Loving-Cup.pdf',
+        icon: 'dark'
+      }
+    ]
+  },
+  {
+    month: '',
+    day: '',
+    year: '1945',
+    category: 'action',
+    header: 'Red Feather Symbol Officially Adopted',
+    body: [
+      'The Red Feather symbol was officially adopted by Community Chests and Councils, Inc.'
+    ],
+    images: [
+      {
+        description: 'Red Feather Logo Change 1945',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Red-Feather-Logo-Change-1945.png',
+        size: 'full',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Red-Feather-Logo-Change-1945.pdf',
+        icon: 'dark'
+      }
+    ]
+  },
+  {
+    month: '',
+    day: '',
+    year: '1946',
+    category: 'leadership',
+    header: 'Chair of the Board, Thomas F. Regan',
+    body: [],
+    images: [
+      {
+        description: 'Thomas F. Regan',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Regan.png'
+      }
+    ]
+  },
+  {
+    month: '',
+    day: '',
+    year: '1946',
+    category: 'action',
+    header: 'Final Year of the United Community and War Chest',
+    body: [
+      '1946 marked the final year of the United Community and War Chest, organized and developed as a war-time service by the Community Chest leaders and administered by the Community Chest staff. The United Community and War Chest in its four campaigns raised and administered over $6 million.'
+    ],
+    images: [
+      {
+        description: '1946 United Community and War Chest campaign poster',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/1946-War-Campaign-Poster.png',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/1946-War-Campaign-Poster.pdf',
+        icon: 'light'
+      }
+    ]
+  },
+  {
+    month: '',
+    day: '',
+    year: '1947',
+    category: 'leadership',
+    header: 'Chair of the Board, C.C. Walther',
+    body: [],
+    images: [
+      {
+        description: 'C.C. Walther',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/C.C-Walther-1950.jpg'
+      }
+    ]
+  },
+  {
+    month: '',
+    day: '',
+    year: '1948',
+    category: 'leadership',
+    header: 'Chair of the Board, Clifford F. Favrot, Sr.',
+    body: [],
+    images: [
+      {
+        description: 'Clifford F. Favrot, Sr.',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Clifford-Freret-Favrot.jpg'
+      }
+    ]
+  },
+  {
+    month: '',
+    day: '',
+    year: '1949',
+    category: 'leadership',
+    header: 'Chair of the Board, Joseph H. Epstein, Sr.',
+    body: [],
+    images: [
+      {
+        description: 'Joseph H. Epstein, Sr.',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Joseph-Epstein-1949-pt-2.png',
+        size: 'full'
+      }
+    ]
+  },
+  {
+    month: '',
+    day: '',
+    year: '1949',
+    category: 'action',
+    header: 'The Community Chest Turns 25',
+    body: [],
+    images: [
+      {
+        description: 'Twenty-fifth Anniversary Dinner Program | Tuesday, October 4, 1949',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/25th-anniversary-of-the-community-chest-1.png',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/25th-anniversary-of-the-community-chest.pdf',
+        icon: 'dark'
       }
     ]
   },
