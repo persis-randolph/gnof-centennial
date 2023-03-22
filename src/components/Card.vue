@@ -46,9 +46,16 @@
             <br v-if="card.body.length - 1 > i">
           </div>
         </div>
+        <span
+          v-if="!card.body.length && isExpanded"
+          class="expand-link"
+          @click="toggleExpand"
+        >
+          Close
+        </span>
         <div class="body" v-else>
           <div class="collapsed-text"><span>{{ card.body[0] }}</span></div>
-          <br><span @click="toggleExpand" class="expand-link">View more...</span>
+          <br v-if="card.body.length"><span @click="toggleExpand" class="expand-link">View more...</span>
         </div>
       </div>
     </div>

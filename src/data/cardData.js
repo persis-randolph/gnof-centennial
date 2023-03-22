@@ -4,7 +4,7 @@ export default [
     day: '31',
     year: '1914',
     category: 'leadership',
-    header: 'Founding of the Federation of Non-sectarion Charity and Philanthropy in New Orleans',
+    header: 'Founding of the Federation of Non-sectarian Charity and Philanthropy in New Orleans',
     body: [
       'Long before the concept of the Foundation and the Community Chest, there were social service organizations that nursed the sick, raised funds, and organized resources to combat epidemics. These charitable organizations in New Orleans, each charged with raising their own charitable funds, were led by religious groups, ethnic groups, and non-sectarian orders.',
       'Following the devastation of the Civil War and the onset of the first World War, a group of prominent New Orleans civic leaders implemented a community organization called the Federation of Non-sectarian Charity and Philanthropy of New Orleans. This would be a true umbrella agency that would combine efforts at raising charitable funds to grant aid and assistance to needy groups.',
@@ -81,14 +81,16 @@ export default [
     day: '1',
     year: '1915',
     category: 'leadership',
-    header: '',
+    header: 'Federation Calls Special Meeting to Discuss Funding',
     body: [
       'Mr. Alvin P. Howard, the president of the Federation, called an executive committee meeting to discuss dissolving the Federation due to the inability to collect sufficient funds to pay current expenses. It was decided that the executive committee would call a special meeting with the Board of Directors to discuss the topic.'
     ],
     images: [
       {
         description: 'Executive Committee to discuss Initial Dissolution of the Federation of Non-sectarian Charity and Philanthropy of New Orleans',
-        url: 'https://www.dropbox.com/s/8mi8yp7a11bi1dp/Initial%20Dissolution%20Meeting.pdf?dl=0'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Initial-Dissolution-Meeting.jpg',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Initial-Dissolution-Meeting.pdf',
+        icon: 'dark'
       }
     ]
   },
@@ -97,22 +99,22 @@ export default [
     day: '4',
     year: '1915',
     category: 'leadership',
-    header: '',
+    header: 'Special Meeting Held to Consider Federation Dissolution',
     body: [
       'A special meeting of the Board of Directors was held to consider the recommendation of the Executive Committee that the Federation be dissolved. With more than the necessary 2/3 majority of those present, it was decided that in accordance with the Charter and by-laws The Federation of Non-Sectarian Charity and Philanthropy was dissolved. A.P. Howard, Leon Godchaux Jr., and C.H. Behre were named the liquidators of the affairs of the Federation.'
     ],
     images: [
       {
         description: 'Special Meeting Vote, Dissolution of the Federation of Non-sectarian Charity and Philanthropy of New Orleans',
-        url: 'https://www.dropbox.com/s/za5ofbsxirxdwhy/Dissolution%20Special%20Meeting%20Vote.pdf?dl=0'
-      },
-      {
-        description: 'Special Meeting Vote, Dissolution of the Federation of Non-sectarian Charity and Philanthropy of New Orleans',
-        url: 'https://www.dropbox.com/s/v92rwgvodv31o85/Dissolution%20Special%20Meeting%20Vote.tif?dl=0'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Dissolution-Special-Meeting-Vote.jpg',
+        size: 'full',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Dissolution-Special-Meeting-Vote.pdf',
+        icon: 'dark'
       },
       {
         description: '600 Godchaux Building',
-        url: 'https://www.dropbox.com/s/ef53wj3zetwz94x/Godchauxs%201920%20to%201923%20527%20537%20canal%20street.jpg?dl=0'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Godchauxs-1920-to-1923-527-537-canal-street.jpg',
+        size: 'full'
       }
     ]
   },
@@ -121,18 +123,22 @@ export default [
     day: '6',
     year: '1915',
     category: 'leadership',
-    header: '',
+    header: 'Dissolution Letter Sent',
     body: [
       'A letter was sent to each of the member organizations in the Federation of Non-sectarian Charity and Philanthropy of New Orleans notifying them of its dissolution.'
     ],
     images: [
       {
         description: 'Lack of Support Causes Death of Federation, Times-Picayune, September 6, 1915',
-        url: 'https://www.dropbox.com/s/vurkri7m6jdkku8/Lack_Of_Support_Causes_Death_Of_Federation_Non-__Times-Picayune_published_as_The_Times-Picayune.___September_6_1915__p5.pdf?dl=0'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Lack_Of_Support_Causes_Death_Of_Federation_Non-__Times-Picayune_published_as_The_Times-Picayune.___September_6_1915__p5.jpg',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Lack_Of_Support_Causes_Death_Of_Federation_Non-__Times-Picayune_published_as_The_Times-Picayune.___September_6_1915__p5.pdf',
+        icon: 'dark'
       },
       {
         description: 'Letter to member organizations of the Federation of Non-sectarian Charity and Philanthropy of New Orleans',
-        url: 'https://www.dropbox.com/s/medz2p9c95uabf5/Dissolution%20Letter%20to%20Member%20Orgs2%20%281%29.tif?dl=0'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Dissolution-Letter-to-Member-Orgs2-1.jpg',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Dissolution-Letter-to-Member-Orgs2-1.pdf',
+        icon: 'dark'
       }
     ]
   },
@@ -141,22 +147,27 @@ export default [
     day: '17',
     year: '1924',
     category: 'leadership',
-    header: '',
+    header: 'Community Chest Founded',
     body: [
       'After the first World War there was tremendous necessity to raise funds to continue the social work programs developed during the War. The various war chests around the country demonstrated that successful fundraising could be done through one united campaign. The Committee on Philanthropy of the Association of the Association of Commerce of New Orleans gave its support to the idea of a Community Chest. All welfare agencies in the city of New Orleans were invited to go under the umbrella of the Community Chest. The Community Chest would establish standards to regulate the responsible management and recordkeeping of the agencies, and it would require all agencies to pledge that they would not solicit funds without the explicit approval of the Community Chest. The first organizational meeting of the Community Chest was held in the Science Building on the Tulane University Campus. Rabbi Emil W. Leipziger presided, Lloyd Adams recorded the minutes, and seven board members were elected. QUESTION: There is a link provided to "Science Building" with an image. Should this actually be presented as a link or just pictured with the rest? URL is https://www.dropbox.com/s/6fxh0hce7n2xhyb/New%20Science%20Building%20Dinwiddie%20Hall%201923.jpg?dl=0'
     ],
     images: [
       {
         description: 'Leaders of New Orleans Life Working for the Community Chest ',
-        url: 'https://www.dropbox.com/s/e1ijxrdxwfpaccj/Legacy%20Photos.png?dl=0'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/F_Legacy-Photos-2.jpg',
+        size: 'full'
       },
       {
         description: 'Minutes from the 1st Organizational Meeting of the Community Chest',
-        url: 'https://www.dropbox.com/s/gd0boachpwsy186/First%20meeting%201924.pdf?dl=0'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/First-meeting-1924.jpg',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/First-meeting-1924.pdf',
+        icon: 'dark'
       },
       {
         description: 'First Board Members of the Community Chest',
-        url: 'https://www.dropbox.com/s/cxwdcexedv2x509/first%20directors%20of%20community%20chest.pdf?dl=0'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/first-directors-of-community-chest.jpg',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/first-directors-of-community-chest.pdf',
+        icon: 'dark'
       }
     ]
   },
@@ -165,14 +176,14 @@ export default [
     day: '1',
     year: '1924',
     category: 'leadership',
-    header: '',
-    body: [
-      'Community Chest Charter presented to Board of Directors QUESTION: Should things like this be a header instead of body text?'
-    ],
+    header: 'Community Chest Charter presented to Board of Directors',
+    body: [],
     images: [
       {
         description: '',
-        url: 'https://www.dropbox.com/s/0yq02js4t5144uu/articles%20of%20incorporation%201924.pdf?dl=0'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/articles-of-incorporation-1924-1.jpg',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/articles-of-incorporation-1924.pdf',
+        icon: 'dark'
       }
     ]
   },
