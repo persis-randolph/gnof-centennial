@@ -47,7 +47,7 @@
       <!-- need the card key to be unique, maybe fix this to be better later -->
       <Card
         v-for="(card, i) in cardData"
-        :key="i + card.year + card.category"
+        :key="i + card.year + card.category + card.header"
         :card="card"
         class="card"
         @set-current-card="setCurrentCard"

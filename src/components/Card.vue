@@ -15,24 +15,16 @@
           :class="halfImageWidth ? 'half-width' : 'full-width'"
           v-if="card.images.length && isExpanded"
         >
-          <div v-for="(image) in card.images" :key="image.category + image.header">
-            <!-- EACH IMAGE -->
-            <div class="single-image-container">
-              <a :href="image.clickThrough" target="_blank">
-                <img :src="image.url" :class="image.rightMargin ? 'image-half-left' : 'image'" :alt="image.description">
-              </a>
-              <!-- OPTIONAL ICON -->
-              <!-- TODO: center if i have time -->
-              <a :href="image.clickThrough" target="_blank" v-if="image.icon">
-                <img v-if="image.icon === 'dark'" src="../assets/pdf_dark.svg" class="icon">
-                <img v-if="image.icon === 'light'" src="../assets/pdf_light.svg" class="icon">
-              </a>
-            </div>
+          <div v-for="(image, i) in card.images" :key="i + image.url">
+            <Image
+              :image="image"
+              :key="i + image.url"
+            />
           </div>  
         </div>
         <!-- CARD PARAGRAPHS -->
         <div v-if="isExpanded && card.body.length">
-          <div v-for="(paragraph, i) of card.body" :key="i">
+          <div v-for="(paragraph, i) of card.body" :key="i + card.header">
             <p class="body">
               {{ paragraph }}
               <span
@@ -66,8 +58,10 @@
 
 <script>
 import { computed, ref } from 'vue'
+import Image from '../components/Image.vue'
 
 export default {
+  components: { Image },
   props: {
     card: Object // contains month, year, category, header, imageUrl, and body
   },
@@ -211,10 +205,6 @@ export default {
   min-width: 430px;
 }
 
-.single-image-container {
-  position: relative;
-  /* text-align: center; */
-}
 .philanthropy-highlight {
   background-color: #1D428A;
 }
@@ -242,26 +232,6 @@ export default {
 .collapsed-text {
   max-height: 40px;
   overflow: hidden;
-}
-
-.image {
-  border: 0.5px solid #dedada;
-  margin-bottom: 5px;
-  display: block;
-}
-
-.image-half-left {
-  border: 0.5px solid #dedada;
-  margin-bottom: 5px;
-  margin-right: 5px;
-  display: block;
-}
-
-.icon {
-  position: absolute;
-  bottom: 5px;
-  left: 0;
-  width: 50px;
 }
 
 .expand-link {
