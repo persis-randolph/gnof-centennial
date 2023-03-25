@@ -1,5 +1,6 @@
 <template>
   <!-- width="560" height="315" -->
+  <!-- TODO: make proportionally reactive to the screen width -->
   <div id="container">
     <iframe
       src="https://www.youtube.com/embed/3JHBlzGwIZE?autoplay=1&mute=1&color=white&modestbranding=1"
