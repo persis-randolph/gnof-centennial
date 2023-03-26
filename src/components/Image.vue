@@ -47,14 +47,30 @@ export default {
     border: 0.5px solid #dedada;
     margin-bottom: 5px;
     display: block;
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
 }
 
 .image-half-left {
     border: 0.5px solid #dedada;
     margin-bottom: 5px;
-    margin-right: 5px;
+    /* margin-right: 5px; */
     display: block;
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
 }
+
+@media only screen and (max-width: 700px)  {
+  .image-half-left {
+    border: 0.5px solid #dedada;
+    margin-bottom: 5px;
+    margin-right: 0;
+    display: block;
+  }
+}
+
 .single-image-container {
     position: relative;
 }

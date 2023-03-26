@@ -132,6 +132,13 @@ export default {
   border-radius: 8px;
   position: relative;
 }
+
+@media only screen and (max-width: 700px)  {
+  .card {
+    padding: 20px 55px 20px 40px;
+  }
+}
+
 .color-highlight {
   background-color: #04307e;
   color: #ffffff;
@@ -201,12 +208,19 @@ export default {
 
 .half-width {
   max-width: 215px;
-  min-width: 215px;
 }
 
 .full-width {
   max-width: 430px;
-  min-width: 430px;
+}
+
+@media only screen and (min-width: 700px)  {
+  .half-width {
+    min-width: 215px;
+}
+  .full-width {
+    min-width: 430px;
+  }
 }
 
 .philanthropy-highlight {
