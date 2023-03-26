@@ -1,10 +1,17 @@
+<!-- current youtube player options:
+  only suggests videos from gnof channel (cannot disable completely)
+  autoplay on
+  automatically mutes
+  white load bar (default is red)
+  modest youtube branding is on -->
+  
 <template>
   <div class="wrapper">
     <div class="h_iframe">
       <!-- transparent image -->
       <img class="ratio" src="http://placehold.it/16x9"/>
       <iframe
-        src="https://www.youtube.com/embed/3JHBlzGwIZE?autoplay=1&mute=1&color=white&modestbranding=1"
+        src="https://www.youtube.com/embed/3JHBlzGwIZE?rel=0&autoplay=1&mute=1&color=white&modestbranding=1"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
