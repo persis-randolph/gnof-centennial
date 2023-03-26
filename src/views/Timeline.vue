@@ -84,6 +84,7 @@ export default {
     }
 
     onUpdated(() => {
+      // on reselection or window resize - re-map card heights for dynamic timeline
       const cards = document.getElementsByClassName('card')
       for (let member in topYearMap) delete topYearMap[member]
       for (let member in reverseMap) delete reverseMap[member]
@@ -222,9 +223,9 @@ export default {
   color: #04307e;
   display: flex;
   flex-direction: row;
-  position: relative;
+  /* position: relative; */
 }
-#first-year, #last-year {
+/* #first-year, #last-year {
   position: absolute;
   font-weight: 300;
 }
@@ -233,7 +234,7 @@ export default {
 }
 #last-year {
   right: -40px;
-}
+} */
 #filters {
   color: #04307e;
   display: flex;
@@ -241,9 +242,9 @@ export default {
   padding-bottom: 5px;
 }
 .year-div {
+  position: relative;
   flex-grow: 1;
   height: 100%;
-  min-width: 20px;
 }
 .year-div:first-of-type {
   border-radius: 10px 0 0 10px;
@@ -256,13 +257,14 @@ export default {
 }
 .tooltip, .tooltip-arrow {
   position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .tooltip {
   padding: 5px 10px;
   color: white;
-  top: 30px;
-  transform: translateX(-10px);
   background-color: #1D428A;
+  top: 150%;
 }
 .tooltip-arrow {
   height: 0;
@@ -271,8 +273,7 @@ export default {
   border-right: 5px solid transparent;
   border-bottom: 10px solid #1D428A;
   z-index: 7;
-  top: 20px;
-  transform: translateX(12px);
+  top: 100%;
 }
 .filter {
   padding: 0 10px;
