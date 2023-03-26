@@ -41,7 +41,7 @@ export default {
 
 <style scoped>
 .menu {
-    z-index: 4;
+    z-index: 9;
     display: block;
     position: absolute;
     right: 0;

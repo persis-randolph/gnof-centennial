@@ -57,7 +57,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 4;
+  z-index: 8;
 }
 .logo {
   height: 60px;

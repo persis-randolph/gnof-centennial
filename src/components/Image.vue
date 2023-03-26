@@ -60,21 +60,21 @@ export default {
 }
 
 .caption {
-    z-index: 6;
+    z-index: 4;
     font-size: 12px;
     color: white;
     padding: 10px;
 }
 
 .caption-with-icon {
-    z-index: 6;
+    z-index: 4;
     font-size: 12px;
     color: white;
     padding: 10px 10px 10px 55px;
 }
 
 .caption-background {
-    z-index: 5;
+    z-index: 3;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -87,6 +87,6 @@ export default {
     bottom: 5px;
     left: 0;
     width: 50px;
-    z-index: 7;
+    z-index: 5;
 }
 </style>

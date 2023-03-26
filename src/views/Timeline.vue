@@ -207,7 +207,7 @@ export default {
   color: white;
   position: sticky;
   top: 100px;
-  z-index: 2;
+  z-index: 6;
   padding: 15px 0 50px 0;
 }
 #timeline {
@@ -269,7 +269,7 @@ export default {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-bottom: 10px solid #1D428A;
-  z-index: 3;
+  z-index: 7;
   top: 20px;
   transform: translateX(12px);
 }
