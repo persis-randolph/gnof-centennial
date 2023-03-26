@@ -743,7 +743,7 @@ export default [
     images: [
       {
         description: 'Picture from 1940 Community Chest Annual Report',
-        url: '',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Norman-Mayer-Building-Dedication-1.png',
         clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Norman-Mayer-Building-Dedication.pdf',
         icon: 'dark'
       }
@@ -812,8 +812,8 @@ export default [
     images: [
       {
         description: 'Leon Heymann',
-        url: '',
-        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Leon-Heymann-Loving-Cup.pdf',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Leon-Heymann-Loving-Cup-1.png',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Leon-Heymann-Loving-Cup-1.pdf',
         icon: 'dark'
       }
     ]
