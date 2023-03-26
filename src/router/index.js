@@ -12,6 +12,11 @@ const routes = [
     path: '/timeline',
     name: 'Timeline',
     component: Timeline
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'Not Found',
+    component: Home
   }
 ]
 
