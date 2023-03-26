@@ -159,7 +159,17 @@ export default {
       uniqueYears.value = new Set(years.value)
     }, { deep: true })
 
+    const preloadImages = () => {
+      for (let card of cardData.value) {
+        for (let image of card.images) {
+          let imageToLoad = new Image()
+          imageToLoad.src = image.url
+        }
+      }
+    }
+
     onMounted(() => {
+      preloadImages()
       nextTick(() => {
         window.addEventListener('scroll', onScroll)
         window.addEventListener('resize', onResize)
