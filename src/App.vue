@@ -31,7 +31,7 @@ p {
   font-size: 16px;
   font-weight: 300;
 }
-a, a:link, a:visited, a:hover, a:active {
+/* a, a:link, a:visited, a:hover, a:active {
     color: blue;
-  }
+} */
 </style>

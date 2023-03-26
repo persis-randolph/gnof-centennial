@@ -36,6 +36,7 @@
           @click="onClick(year)"
         >
           <!-- tooltip -->
+          <!-- TODO: center the year dynamically based upon the bar width? -->
           <div class="tooltip-arrow" v-if="currentCard === year"></div>
           <div class="tooltip" v-if="currentCard === year">{{ currentCard }}</div>
         </div>
@@ -44,7 +45,6 @@
     </div>
     <!-- card display -->
     <div id="card-section">
-      <!-- need the card key to be unique, maybe fix this to be better later -->
       <Card
         v-for="(card, i) in cardData"
         :key="i + card.year + card.category + card.header"

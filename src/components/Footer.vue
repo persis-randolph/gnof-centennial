@@ -16,7 +16,7 @@
           </div>
           <div id="online">
             <h3 id="online-header">ONLINE</h3>
-            <a href="http://www.gnof.org">www.gnof.org</a>
+            <a href="http://www.gnof.org" target="_blank">www.gnof.org</a>
             <div id="icons">
               <a href="https://www.facebook.com/greaterneworleansfoundation/" target="_blank">
                 <img src="../assets/Icon_awesome-facebook-f.png" class="icon">
@@ -47,6 +47,10 @@ export default {
 </script>
 
 <style scoped>
+a, a:link, a:visited, a:hover, a:active {
+  color: white;
+  text-decoration: none;
+}
 #footer-head {
   display: flex;
   width: 100%;
@@ -121,17 +125,13 @@ address, a {
     display: none;
   }
   #online {
-  margin: 0 0 20px 20px;
+    margin: 0 0 20px 20px;
   }
   #contact {
     margin: 20px 0 0 20px;
   }
   #color-logo {
     margin: 20px;
-  }
-  a, a:link, a:visited, a:hover, a:active {
-    color: white;
-    text-decoration: none;
   }
 }
 </style>
