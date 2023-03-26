@@ -6,21 +6,21 @@
         <div class="filter" id="philanthropy" @click="toggleFilter('philanthropy')">
           <font-awesome-icon
             :icon="selectedFiltersObj['philanthropy'] ? 'fas fa-square-check' : 'fas fa-square'"
-            class="icon"
+            class="icon philanthropy"
           />
           Philanthropy
         </div>
         <div class="filter" id="leadership" @click="toggleFilter('leadership')">
           <font-awesome-icon
             :icon="selectedFiltersObj['leadership'] ? 'fas fa-square-check' : 'fas fa-square'"
-            class="icon"
+            class="icon leadership"
           />
           Leadership
         </div>
         <div class="filter" id="action" @click="toggleFilter('action')">
           <font-awesome-icon
             :icon="selectedFiltersObj['action'] ? 'fas fa-square-check' : 'fas fa-square'"
-            class="icon"
+            class="icon action"
           />
           Action
         </div>
@@ -277,5 +277,15 @@ export default {
 }
 .filter {
   padding: 0 10px;
+}
+
+.philanthropy {
+  color: #1D428A;
+}
+.leadership {
+  color: #8DB9CA;
+}
+.action {
+  color: #00A9E0;
 }
 </style>
