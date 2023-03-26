@@ -10,7 +10,6 @@
             <div :class="image.icon ? 'caption-with-icon' : 'caption'">{{ image.description }}</div>
         </div>
         <!-- OPTIONAL ICON -->
-        <!-- TODO: center if i have time -->
         <a :href="image.clickThrough" target="_blank" v-if="image.icon">
             <img v-if="image.icon === 'dark'" src="../assets/pdf_dark.svg" class="icon">
             <img v-if="image.icon === 'light'" src="../assets/pdf_light.svg" class="icon">

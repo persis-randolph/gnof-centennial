@@ -36,7 +36,6 @@
           @click="onClick(year)"
         >
           <!-- tooltip -->
-          <!-- TODO: center the year dynamically based upon the bar width? -->
           <div class="tooltip-arrow" v-if="currentCard === year"></div>
           <div class="tooltip" v-if="currentCard === year">{{ currentCard }}</div>
         </div>
