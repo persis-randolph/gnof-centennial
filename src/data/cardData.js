@@ -1088,10 +1088,10 @@ export default [
     month: '',
     day: '',
     year: '1957',
-    yearEnd: '1962 - 1964',
+    alternateYearDisplay: '1957, 1962 - 1964',
     category: 'leadership',
     header: 'Chair of the Board, Wood Brown',
-    body: ['TODO: NEED TO DO SOMETHING ABOUT THIS YEAR END FORMAT'],
+    body: [],
     images: [
       {
         description: 'Wood Brown',
@@ -2224,7 +2224,8 @@ export default [
         description: 'Creating the Spirit of Charity Innovation District report',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Sirit-of-Charity-Innovation-District-Report-_-2019.12-Impact-Newsletter-Year-in-Review-1-11.png',
         clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Sirit-of-Charity-Innovation-District-Report-_-2019.12-Impact-Newsletter-Year-in-Review-1-11.pdf',
-        icon: 'dark'
+        icon: 'dark',
+        rightMargin: true
       },
       {
         description: 'Creating the Spirit of Charity Innovation District report',
@@ -2245,7 +2246,7 @@ export default [
     ],
     images: [
       {
-        description: 'Impact Newsletter 2019',
+        description: 'Impact Newsletter 2019 TODO: RESIZE NEEDED',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/1st-Celebration-of-Black-Philanthropy-2019.12-Impact-Newsletter-Year-in-Review-9.png',
         size: 'full',
         clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/1st-Celebration-of-Black-Philanthropy-2019.12-Impact-Newsletter-Year-in-Review-9.pdf',
@@ -2347,7 +2348,7 @@ export default [
     ],
     images: [
       {
-        description: 'The State of Nonprofits in Southeast Louisiana: The Impact of COVID-19',
+        description: 'The State of Nonprofits in Southeast Louisiana: The Impact of COVID-19 TODO: RESIZE FOR PHOTO',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-4.51.22-PM.png',
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/nonprofit_survey',
         icon: 'light'
@@ -2387,7 +2388,7 @@ export default [
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-4.56.47-PM.png',
         size: 'full',
         clickThrough: 'https://www.gnof.org/stormwater-opportunities-report/',
-        icon: 'light'
+        icon: 'dark'
       },
       {
         description: 'Stormwater Opportunities: Spirit of Charity, Lafitte Greenway, Armstrong Park',
@@ -2431,7 +2432,7 @@ export default [
         description: '',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-5.01.34-PM.png',
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/nle_survey_report_-_full_5',
-        icon: 'dark'
+        icon: 'light'
       },
       {
         description: 'TODO: GET VIDEO DARK ICON WORKING, ADD DESCRIPTIONS FOR THESE',
@@ -2452,7 +2453,7 @@ export default [
     body: [],
     images: [
       {
-        description: 'Robert A. Bories',
+        description: 'Robert A. Bories TODO: PHOTO NEEDS RESIZE',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/R.Bories-_-GNOF_23-23_Gratitude-Report-final-for-real-61.png',
         size: 'full',
         clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/R.Bories-_-GNOF_23-23_Gratitude-Report-final-for-real-61.pdf',
@@ -2475,7 +2476,7 @@ export default [
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-5.01.40-PM.png',
         size: 'full',
         clickThrough: 'https://www.gnof.org/foundation-announces-1-million-grant-to-community-lighthouse-project/',
-        icon: 'light'
+        icon: 'dark'
       }
     ]
   }

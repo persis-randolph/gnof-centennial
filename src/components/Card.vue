@@ -38,12 +38,12 @@
             <br v-if="card.body.length - 1 > i">
           </div>
         </div>
-        <div v-else-if="isExpanded && !card.body.length">
+        <div v-else-if="isExpanded && !card.body.length && card.images.length">
           <span class="expand-link" @click="toggleExpand">
             Close
           </span>
         </div>
-        <div class="body" v-else>
+        <div class="body" v-else-if="!isExpanded">
           <div class="collapsed-text"><span>{{ card.body[0] }}</span></div>
           <br v-if="card.body.length && !isExpanded"><span @click="toggleExpand" class="expand-link">View more...</span>
         </div>
@@ -66,7 +66,8 @@ export default {
     card: Object // contains month, year, category, header, imageUrl, and body
   },
   setup(props) {
-    const isExpanded = ref(false)
+    const isExpanded = ref(true) // TODO: change back to false after done checking
+    // TODO: maybe add an option to expand all?
     const toggleExpand = () => {
       isExpanded.value = !isExpanded.value
     }
@@ -75,6 +76,9 @@ export default {
     const headerColor = ref(props.card.category + '-header')
 
     const cardDateDisplay = computed(() => {
+      if (props.card.alternateYearDisplay) {
+        return props.card.alternateYearDisplay
+      }
       return `${props.card.month ? props.card.month + ' ' : ''}
       ${props.card.day ? props.card.day + ', ' : ''}
       ${props.card.year}

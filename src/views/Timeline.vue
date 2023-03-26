@@ -40,7 +40,7 @@
           <div class="tooltip-arrow" v-if="currentCard === year"></div>
           <div class="tooltip" v-if="currentCard === year">{{ currentCard }}</div>
         </div>
-        <span id="last-year">{{ lastYear }}</span>
+        <!-- <span id="last-year">{{ lastYear }}</span> -->
       </div>
     </div>
     <!-- card display -->
