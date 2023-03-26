@@ -1957,19 +1957,525 @@ export default [
   {
     month: '',
     day: '',
-    year: '',
-    yearEnd: '',
-    category: '',
-    header: '',
+    year: '2010',
+    category: 'action',
+    header: 'Foundation and Idea Village Launch "Water Challenge"',
     body: [
-      ''
+      'In order to encourage the development of local entrepreneurial ventures in creative water management, the Greater New Orleans Foundation and The Idea Village launched the "Water Challenge." Awarding $50,000 for the best idea each year.'
+    ],
+    images: [
+      {
+        description: 'Impact Newsletter Winter 2010',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Living-with-Water-Impact-Winter2010-Final-3.png',
+        size: 'full',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Living-with-Water-Impact-Winter2010-Final-3.pdf',
+        icon: 'dark'
+      }
+    ]
+  },
+  {
+    month: '',
+    day: '',
+    year: '2011',
+    yearEnd: '2013',
+    category: 'leadership',
+    header: 'Chair of the Board, Dr. Anthony Recasner',
+    body: [],
+    images: [
+      {
+        description: 'Dr. Anthony Recasner',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/A-Recasner_Screenshot-2023-03-16-210228.png',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/A-Recasner_Screenshot-2023-03-16-210228.pdf',
+        icon: 'light'
+      }
+    ]
+  },
+  {
+    month: '',
+    day: '',
+    year: '2012',
+    category: 'philanthropy',
+    header: "Foundation Launches Impact 100, a Women's Giving Circle",
+    body: [
+      "In 2012, the Foundation launched Impact 100, a women's giving circle, which awards a $100,000 transformative grant to the winning nonprofit. The first winner was the Youth Empowerment Project. To date more than $1M has been granted to local nonprofits."
+    ],
+    images: [
+      {
+        description: 'Picture from 2017 Pitch Event',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Gigsy-2017-10-26-GNOF-Impact-100-046.jpg',
+        size: 'full',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-4.30.37-PM.png',
+        icon: 'dark'
+      },
+      {
+        description: 'TODO: ADD GOOD DESCRIPTION, GET LIGHT VIDEO ICON WORKING',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-4.30.37-PM.png',
+        size: 'full',
+        clickThrough: 'https://vimeo.com/756649589',
+        icon: 'video-light'
+      }
+    ]
+  },
+  {
+    month: '',
+    day: '',
+    year: '2012',
+    category: 'action',
+    header: 'Organizational Effectiveness Initiative Launched',
+    body: [
+      'In response to the rapid growth of the nonprofit sector in the New Orleans area since Hurricane Katrina, the Foundation launched its Organizational Effectiveness initiative in early 2012. The Organizational Effectiveness initiative, now known as Nonprofit Leadership & Effectiveness, offers workshops and training to help nonprofit leaders build the effectiveness of their own organizations by learning new ways to work with boards, conduct fundraising campaigns, and manage communications.'
+    ],
+    images: [
+      {
+        description: 'Impact Newsletter 2011',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Organizational-Effectiveness_-GNOF_Impact_2011_Winter_Spreads-2.png',
+        size: 'full',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Organizational-Effectiveness_-GNOF_Impact_2011_Winter_Spreads-2.pdf',
+        icon: 'light'
+      }
+    ]
+  },
+  {
+    month: '',
+    day: '',
+    year: '2012',
+    category: 'action',
+    header: 'Over $220,000 Awarded to 18 Nonprofits Through Pitch It! Challenge',
+    body: [
+      'Since 2012, the Greater New Orleans Foundation has awarded over $220,000 to 18 nonprofits through The Pitch It! Innovation Challenge. The purpose of this challenge is to support breakthrough ideas in the nonprofit field by encouraging nonprofits to rethink, reframe, and reimagine how they do their business.'
+    ],
+    images: [
+      {
+        description: 'Pitch It! First Year Winner',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/First-Pitch-It-AR-2013-2014-21.png',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/First-Pitch-It-AR-2013-2014-21.pdf',
+        icon: 'light'
+      }
+    ]
+  },
+  {
+    month: '',
+    day: '',
+    year: '2013',
+    category: 'philanthropy',
+    header: 'GiveNOLA Day, a 24-Hour Giving Day Launched',
+    body: [
+      "To join the national trend of community foundations hosting giving days, the Foundation created its very own giving day in 2013. Called GiveNOLA Day, the online, community-wide, 24-hour giving day shattered all goals and raised a staggering $2.3 million for over 150 nonprofits with 19,000 donations. It was a true testament to the generosity of our region's giving community. To date GiveNOLA Day has raised over $43M for regional nonprofits."
+    ],
+    images: [
+      {
+        description: 'Graphics for GiveNOLA Day',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/GNOF-Impact-Spring2014-_GiveNOLA-Day-Inagural-Year-1.png',
+        size: 'full',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/GNOF-Impact-Spring2014-_GiveNOLA-Day-Inagural-Year.pdf',
+        icon: 'dark'
+      }
+    ]
+  },
+  {
+    month: '',
+    day: '',
+    year: '2013',
+    yearEnd: '2015',
+    category: 'leadership',
+    header: 'Chair of the Board, Ludovico Feoli, Ph.D.',
+    body: [],
+    images: [
+      {
+        description: 'Ludovico Feoli, Ph.D.',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Ludovico-Feoli-PhD_.png',
+        size: 'full',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Ludovico-Feoli-PhD_.pdf',
+        icon: 'light'
+      }
+    ]
+  },
+  {
+    month: '',
+    day: '',
+    year: '2014',
+    category: 'leadership',
+    header: "Groundbreaking Set for Foundation's Center for Philanthropy",
+    body: [],
+    images: [
+      {
+        description: 'Invitation for Groundbreaking | May 28, 2014',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/GNOF-Impact-Spring2014-3.png',
+        size: 'full',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/GNOF-Impact-Spring2014-3.pdf',
+        icon: 'light'
+      }
+    ]
+  },
+  {
+    month: '',
+    day: '',
+    year: '2015',
+    yearEnd: '2017',
+    category: '',
+    header: 'Chair of the Board, Cheryl M. Teamer',
+    body: [
+      "Cheryl Teamer served on the Greater New Orleans Foundation Board from 2005 to 2019 and served as board chair from 2015 to 2017. Teamer's leadership came during a time of great impact. Not only did she chair nearly every committee the Foundation had during her tenure as a trustee, but she gave her heart and soul and generous spirit to everything we did. From GiveNOLADay to Impact 100 to leading bus tours visiting grantees, she did it all with a joyful and infectious smile. Teamer was a strong proponent of public service and was active in a variety of civic and charitable organizations. She also served on a variety of boards during her life, including the Louisiana Legislative Black Caucus Foundation, Second Harvest, and Chamber of Commerce for New Orleans."
+    ],
+    images: [
+      {
+        description: 'Cheryl M. Teamer',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Cheryl-Teamer-_2015-2016-Annual-Report.png',
+      }
+    ]
+  },
+  {
+    month: '',
+    day: '',
+    year: '2016',
+    category: 'leadership',
+    header: 'President & CEO, Andy Kopplin Named',
+    body: [
+      `The board of trustees named Andy Kopplin as the Foundation's new president & CEO. Andy was the former first deputy mayor and chief administrative officer under City of New Orleans Mayor Mitch Landrieu. He also served as chief of staff under two Louisiana governors - Democrat Governor Kathleen Blanco and Republican Governor M.J. "Mike" Foster.`
+    ],
+    images: [
+      {
+        description: 'Andy Kopplin',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Andy-Kopplin.jpg',
+      }
+    ]
+  },
+  {
+    month: '',
+    day: '',
+    year: '2016',
+    category: 'leadership',
+    header: 'Foundation Opens Center for Philanthropy',
+    body: [
+      'The Foundation opened its Center for Philanthropy, the physical and symbolic home for strategic philanthropy in the Greater New Orleans area. The Foundation for the first time in its 30+ year history now had a place to call home, to conduct weekly workshops for nonprofits, and to convene partners and donors to identify challenges and forge solutions. Erected on historic Lee Circle at 919 St. Charles Avenue, the building was designed by local architects Waggonner & Ball and constructed by F.H. Myers Construction Corp. in 18 months. The total cost of the 22,000 square foot building was $13 million that was entirely paid for with private donations during a multi-year capital campaign that was chaired by former Foundation board chairs Phyllis M. Taylor and Cleland M. Powell.'
+    ],
+    images: [
+      {
+        description: 'Greater New Orleans Foundation Building',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/GNOF-Facts-Sheet-1.png',
+        size: 'full',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/GNOF-Facts-Sheet-1.pdf',
+        icon: 'light'
+      }
+    ]
+  },
+  {
+    month: '',
+    day: '',
+    year: '2016',
+    category: 'philanthropy',
+    header: 'Foundation Launches LGBTQ+ Fund',
+    body: [
+      '"The Greater New Orleans Foundation has announced the launch of a fund that will channel charitable contributions to local organizations working to improve the quality of life for members of the lesbian, gay, bisexual and transgender community." - Philanthropy News Digest'
+    ],
+    images: [
+      {
+        description: 'Philanthropy News Digest',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-4.29.12-PM.png',
+        clickThrough: 'http://philanthropynewsdigest.org/news/greater-new-orleans-foundation-launches-lgbt-fund',
+        icon: 'dark'
+      }
+    ]
+  },
+  {
+    month: '',
+    day: '',
+    year: '2016',
+    category: 'philanthropy',
+    header: 'Foundation Launched LGBTQ+ Fund',
+    body: [
+      'The Foundation launched the LGBTQ Fund. The fund was established to ensure a perennial source of funding for local nonprofits led by and serving the LGBTQ community.'
+    ],
+    images: [
+      {
+        description: 'LGBTQ Fund Booklet',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-4.41.00-PM.png',
+        clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/gnof-lgbtq-fund-singlepages',
+        icon: 'light'
+      }
+    ]
+  },
+  {
+    month: '',
+    day: '',
+    year: '2017',
+    yearEnd: '2019',
+    category: 'leadership',
+    header: 'Chair of the Board, Christian T. Brown',
+    body: [],
+    images: [
+      {
+        description: 'Christian T. Brown',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Christy-Brown-Board-Chair-Picture.png',
+      }
+    ]
+  },
+  {
+    month: '',
+    day: '',
+    year: '2018',
+    category: 'action',
+    header: 'Creating the Spirit of Charity Innovation District Report Published',
+    body: [
+      'The Greater New Orleans Foundation publishes the Creating the Spirit of Charity Innovation District report.'
+    ],
+    images: [
+      {
+        description: 'Creating the Spirit of Charity Innovation District report',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Sirit-of-Charity-Innovation-District-Report-_-2019.12-Impact-Newsletter-Year-in-Review-1-11.png',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Sirit-of-Charity-Innovation-District-Report-_-2019.12-Impact-Newsletter-Year-in-Review-1-11.pdf',
+        icon: 'dark'
+      },
+      {
+        description: 'Creating the Spirit of Charity Innovation District report',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-4.44.50-PM.png',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2022/07/Spirit-of-Charity-Innovation-District-Strategic-Plan.pdf',
+        icon: 'dark'
+      }
+    ]
+  },
+  {
+    month: '',
+    day: '',
+    year: '2019',
+    category: 'philanthropy',
+    header: 'Foundations Holds First Celebration of Black Philanthropy',
+    body: [
+      'In 2019, the Greater New Orleans Foundation held its first Celebration of Black Philanthropy. To help shine a light on the history and present philanthropic investments of African Americans that rarely show up in the traditional philanthropy dialogue, the Foundation welcomed Dr. Charles Teamer, Sr. - Fundholder and former Board Chairman; Mr. Ellis Marsalis, Fundholder and Legendary Musician; Ms. Deborah Elam, President & CEO of Corporate Playbook, former President & CEO of the GE Foundation, and Member of a Divine Nine Sorority; and Attorney Elroy James, President of the Zulu Social Aid & Pleasure Club; and Greater New Orleans Foundation Board Member and local realtor Ms. Monika McKay moderated this powerful panel.'
+    ],
+    images: [
+      {
+        description: 'Impact Newsletter 2019',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/1st-Celebration-of-Black-Philanthropy-2019.12-Impact-Newsletter-Year-in-Review-9.png',
+        size: 'full',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/1st-Celebration-of-Black-Philanthropy-2019.12-Impact-Newsletter-Year-in-Review-9.pdf',
+        icon: 'dark'
+      }
+    ]
+  },
+  {
+    month: '',
+    day: '',
+    year: '2019',
+    category: 'action',
+    header: 'Taking Steps on Equity & Climate Change Report Published',
+    body: [
+      "The Greater New Orleans Foundation, the Administration of Mayor LaToya Cantrell, Deep South Center for Environmental Justice, advocates and community members released a report - Taking Steps on Equity & Climate Change: A Report by and for New Orleanians. This project's mission is to implement the City of New Orleans' Climate Action Strategy in ways that achieve equitable results across all neighborhoods."
+    ],
+    images: [
+      {
+        description: 'Impact Newsletter Year in Review - Taking Steps Together on Equity & Climate Change',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Climate-Equity-2019.12-Impact-Newsletter-Year-in-Review-1-10.png',
+        size: 'full',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Climate-Equity-2019.12-Impact-Newsletter-Year-in-Review-1-10.pdf',
+        icon: 'dark'
+      },
+      {
+        description: 'Taking Steps Together on Equity & Climate Change - Report',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-4.46.35-PM.png',
+        clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/2019.08.30_-_climate_action_equity_report_-_web',
+        icon: 'dark'
+      }
+    ]
+  },
+  {
+    month: '',
+    day: '',
+    year: '2019',
+    category: 'action',
+    header: 'New Orleans School Partnership Study Published',
+    body: [
+      'The Greater New Orleans Foundation released the New Orleans School Partnership Study: What Our Students Need and How We Can Help. In partnership with NOLA Public Schools and with funding support from the W.K. Kellogg Foundation and Baptist Community Ministries.'
+    ],
+    images: [
+      {
+        description: 'Impact Newsletter Year in Review - What Our Students Need and How We Can Help',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/New-Orleans-Schools-Partnership-Study_-2019.12-Impact-Newsletter-Year-in-Review-1-17.png',
+        size: 'full',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/New-Orleans-Schools-Partnership-Study_-2019.12-Impact-Newsletter-Year-in-Review-1-17.pdf',
+        icon: 'dark'
+      },
+      {
+        description: 'New Orleans School Partnership Study',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-4.49.14-PM.png',
+        clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/opsb_condensed_report',
+        icon: 'light'
+      }
+    ]
+  },
+  {
+    month: '',
+    day: '',
+    year: '2019',
+    yearEnd: '2021',
+    category: 'leadership',
+    header: 'Chair of the Board, Leann O. Moses',
+    body: [],
+    images: [
+      {
+        description: 'Leann O. Moses',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Leann-O-Moses-_-2019.12-Impact-Newsletter-Year-in-Review-2.png',
+        size: 'full',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Leann-O-Moses-_-2019.12-Impact-Newsletter-Year-in-Review-2.pdf',
+        icon: 'dark'
+      }
+    ]
+  },
+  {
+    month: '',
+    day: '',
+    year: '2020',
+    category: 'philanthropy',
+    header: 'Foundation Raises $10 Million in New Discretionary Funds and Launched Four New Programs',
+    body: [
+      'The Foundation raised $10 million in New Discretionary Funds and Launched four New Programs: TODO: ENSURE BULLET POINTS LOOK GOOD',
+      '- COVID-19 Disaster Fund',
+      '- Family Assistance Program',
+      '- Greater Together Fund for Racial Equity',
+      '- Strategic Partnerships & Mergers Fund'
+    ],
+    images: []
+  },
+  {
+    month: 'Jun',
+    day: '',
+    year: '2020',
+    category: 'action',
+    header: 'State of Nonprofits, COVID-19 Study Published',
+    body: [
+      'The Foundation Releases Study on the State of Nonprofits in Southeast Louisiana Amidst COVID-19.'
+    ],
+    images: [
+      {
+        description: 'The State of Nonprofits in Southeast Louisiana: The Impact of COVID-19',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-4.51.22-PM.png',
+        clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/nonprofit_survey',
+        icon: 'light'
+      }
+    ]
+  },
+  {
+    month: 'Oct',
+    day: '',
+    year: '2020',
+    category: 'philanthropy',
+    header: 'Dr. Isidore Cohn Jr. Bequests $1.4M to Foundation',
+    body: [
+      'The Greater New Orleans Foundation has been chosen for a $1.4 million bequest from Dr. Isidore Cohn Jr. and his late wife, Marianne, that will support annual grants as port of the newly established Cohn | GNOF | NOLA Arts Awards.'
+    ],
+    images: [
+      {
+        description: 'Time Picayune Announcement, October 7, 2020',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/GNOF-plans-to-use-donation-to-finance-arts-award-program-1.png',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/GNOF-plans-to-use-donation-to-finance-arts-award-program.pdf',
+        icon: 'dark'
+      }
+    ]
+  },
+  {
+    month: 'Oct',
+    day: '',
+    year: '2020',
+    category: 'action',
+    header: 'Stormwater Opportunities Report Published',
+    body: [
+      'Greater New Orleans Foundation Releases "Stormwater Opportunities: Spirit of Charity, Lafitte Greenway, and Armstrong Park" Study Prepared by Waggonner & Ball'
+    ],
+    images: [
+      {
+        description: 'Stormwater Opportunities Report - gnof.org',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-4.56.47-PM.png',
+        size: 'full',
+        clickThrough: 'https://www.gnof.org/stormwater-opportunities-report/',
+        icon: 'light'
+      },
+      {
+        description: 'Stormwater Opportunities: Spirit of Charity, Lafitte Greenway, Armstrong Park',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-4.56.49-PM.png',
+        size: 'full',
+        clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/gnof_stormwater_report',
+        icon: 'light'
+      }
+    ]
+  },
+  {
+    month: 'Nov',
+    day: '',
+    year: '2020',
+    category: 'action',
+    header: 'Greater Together Fund for Racial Equity Established',
+    body: [
+      'The Foundation established a Greater Together Fund for Racial Equity. A Commitment to raise $3 million to make large, sustained investments in a number of nonprofits leading on racial equity whose work has scalable local, regional, and even statewide impact.'
+    ],
+    images: [
+      {
+        description: 'Announcement of Fund during 2020 Celebration of Black Philanthropy',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-5.00.41-PM.png',
+        size: 'full',
+        clickThrough: 'https://www.youtube.com/watch?v=a1p3lSatdN4&t=55s',
+        icon: 'video-light'
+      }
+    ]
+  },
+  {
+    month: 'Dec',
+    day: '',
+    year: '2021',
+    category: 'action',
+    header: 'Study on the State of Nonprofits in SE Louisiana Published',
+    body: [
+      'Greater New Orleans Foundation Releases Study on The State of Nonprofits in Southeast Louisiana 2021 - Adaptability And Racial Equity in Year One of the COVID-19 Pandemic'
     ],
     images: [
       {
         description: '',
-        url: '',
-        clickThrough: '',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-5.01.34-PM.png',
+        clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/nle_survey_report_-_full_5',
         icon: 'dark'
+      },
+      {
+        description: 'TODO: GET VIDEO DARK ICON WORKING, ADD DESCRIPTIONS FOR THESE',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-5.01.37-PM.png',
+        size: 'full',
+        clickThrough: 'https://www.youtube.com/watch?v=PVFrFAOUxtY',
+        icon: 'video-dark'
+      }
+    ]
+  },
+  {
+    month: '',
+    day: '',
+    year: '2021',
+    yearEnd: '2023',
+    category: 'leadership',
+    header: 'Chair of the Board, Robert A. Bories',
+    body: [],
+    images: [
+      {
+        description: 'Robert A. Bories',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/R.Bories-_-GNOF_23-23_Gratitude-Report-final-for-real-61.png',
+        size: 'full',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/R.Bories-_-GNOF_23-23_Gratitude-Report-final-for-real-61.pdf',
+        icon: 'dark'
+      }
+    ]
+  },
+  {
+    month: 'May',
+    day: '',
+    year: '2022',
+    category: 'action',
+    header: 'Foundation Announces $1M Grant to Community Lighthouse Project',
+    body: [
+      "Foundation Announces $1 million grant to Community Lighthouse Project. The award is the Foundation's largest single grant from its disaster response and restoration fund and will build commercial-scale solar power and back-up battery capacity for nonprofits that respond to disasters across the region."
+    ],
+    images: [
+      {
+        description: 'Foundation announces $1M grant to Community Lighthouse Project',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-5.01.40-PM.png',
+        size: 'full',
+        clickThrough: 'https://www.gnof.org/foundation-announces-1-million-grant-to-community-lighthouse-project/',
+        icon: 'light'
       }
     ]
   }
