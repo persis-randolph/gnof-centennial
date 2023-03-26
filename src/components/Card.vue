@@ -66,7 +66,7 @@ export default {
     card: Object // contains month, year, category, header, imageUrl, and body
   },
   setup(props) {
-    const isExpanded = ref(true) // TODO: change back to false after done checking
+    const isExpanded = ref(false) // TODO: change back to false after done checking
     // TODO: maybe add an option to expand all?
     const toggleExpand = () => {
       isExpanded.value = !isExpanded.value

@@ -243,6 +243,7 @@ export default {
 .year-div {
   flex-grow: 1;
   height: 100%;
+  min-width: 20px;
 }
 .year-div:first-of-type {
   border-radius: 10px 0 0 10px;
