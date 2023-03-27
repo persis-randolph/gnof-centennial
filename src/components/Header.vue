@@ -13,7 +13,7 @@
       </router-link>
     </div>
     <div class="dropdown-menu">
-      <img src="../assets/hamburger.svg" class="icon" @click="toggleMenu">
+      <img src="../assets/Icons_Hamburger_Light.svg" class="icon" @click="toggleMenu">
       <Dropdown v-if="menuOpen" :options="['/home', '/timeline']" :selectedOption="selectedView" @toggle-menu="toggleMenu" />
     </div>
   </div>
