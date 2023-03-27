@@ -1,71 +1,83 @@
 <template>
-    <div class="menu">
-        <div v-for="(option, i) in options" :key="option" class="option">
-            <router-link
-                class="nav-link"
-                :to="option"
-                :class="selectedOption !== option ? 'active-link' : 'inactive-link'"
-                @click="toggleMenu"
-            >
-                {{ option.slice(1).toUpperCase() }}
-            </router-link>
-            <hr v-if="i !== options.length - 1">
-        </div>
+  <div class="menu">
+    <div v-for="(option) in options" :key="option" class="option">
+      <router-link
+        class="nav-link"
+        :to="option"
+        :class="selectedOption !== option ? 'active-link' : 'inactive-link'"
+        @click="toggleMenu"
+      >
+        {{ option.slice(1).toUpperCase() }}
+      </router-link>
     </div>
+  </div>
+  <div id="modal-background" @click="toggleMenu"></div>
 </template>
 
 <script>
 export default {
-    name: 'Dropdown',
-    props: {
-        options: {
-            type: Array
-        },
-        selectedOption: {
-            type: String
-        }
+  name: "Dropdown",
+  props: {
+    options: {
+      type: Array,
     },
-    emits: ['toggle-menu'],
-    setup (_, { emit }) {
-        const toggleMenu = () => {
-            emit('toggle-menu')
-        }
-
-        return {
-            toggleMenu
-        }
+    selectedOption: {
+      type: String,
     }
+  },
+  emits: ["toggle-menu"],
+  setup(_, { emit }) {
+    const toggleMenu = () => {
+      emit("toggle-menu")
+    }
+
+    return {
+      toggleMenu,
+    }
+  }
 }
 </script>
 
 
 <style scoped>
 .menu {
-    z-index: 9;
-    display: block;
-    position: absolute;
-    right: 0;
-    background-color: white;
-    border: 1px solid #b0a9a0;
-    border-radius: 8px;
-    padding: 10px;
-    /* box-shadow: 2px 2px 2px #b0a9a0;
-    -moz-box-shadow: 2px 2px 3px #b0a9a0;
-    -webkit-box-shadow: 2px 2px 3px #b0a9a0; */
+  z-index: 9;
+  position: absolute;
+  top: 68px;
+  left: -73px;
+  background-color: #1d428a;
+  text-align: left;
+}
+
+.active-link {
+  text-decoration: none;
 }
 
 .inactive-link {
   cursor: default;
-  text-decoration: none;
-}
-
-.active-link {
   font-weight: bold;
-  text-decoration: none;
-  /* text-decoration: underline; */
+  text-decoration: underline;
 }
 
 .nav-link {
-    color: #041e42;
+  color: #ffffff;
+}
+
+.option:first-of-type {
+  padding: 10px 60px 5px 20px;
+  border-bottom: 1px solid #ffffff;
+}
+
+.option:last-of-type {
+  padding: 5px 60px 10px 20px;
+}
+
+#modal-background {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 8;
 }
 </style>
