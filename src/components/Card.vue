@@ -27,25 +27,29 @@
           <div v-for="(paragraph, i) of card.body" :key="i + card.header">
             <p class="body">
               {{ paragraph }}
-              <span
+              <!-- <span
                 v-if="card.body.length - 1 === i"
                 class="expand-link"
                 @click="toggleExpand"
-              >
-                <br><br>Close
-              </span>
+              > -->
+              <br><br>
+              <button @click="toggleExpand">Close</button>
+              <!-- </span> -->
             </p>
             <br v-if="card.body.length - 1 > i">
           </div>
         </div>
         <div v-else-if="isExpanded && !card.body.length && card.images.length">
-          <span class="expand-link" @click="toggleExpand">
+          <button @click="toggleExpand">Close</button>
+          <!-- <span class="expand-link" @click="toggleExpand">
             Close
-          </span>
+          </span> -->
         </div>
         <div class="body" v-else-if="!isExpanded">
           <div class="collapsed-text"><span>{{ card.body[0] }}</span></div>
-          <br v-if="card.body.length && !isExpanded"><span @click="toggleExpand" class="expand-link">View more...</span>
+          <br v-if="card.body.length && !isExpanded">
+          <!-- <span @click="toggleExpand" class="expand-link">View more...</span> -->
+          <button @click="toggleExpand">View More...</button>
         </div>
       </div>
     </div>
@@ -268,6 +272,16 @@ export default {
 
 .expand-link:hover {
   color: #041e42;
+  cursor: pointer;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  font: inherit;
+  color: #ffffff;
+  background-color: #1d428a;
+  border-radius: 8px;
   cursor: pointer;
 }
 
