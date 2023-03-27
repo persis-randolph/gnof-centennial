@@ -2008,7 +2008,7 @@ export default [
         icon: 'dark'
       },
       {
-        description: 'TODO: ADD GOOD DESCRIPTION, GET LIGHT VIDEO ICON WORKING',
+        description: 'GNOF: Impact 100 Ten Year Anniversary - Video',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-4.30.37-PM.png',
         size: 'full',
         clickThrough: 'https://vimeo.com/756649589',
@@ -2435,7 +2435,7 @@ export default [
         icon: 'light'
       },
       {
-        description: 'TODO: GET VIDEO DARK ICON WORKING, ADD DESCRIPTIONS FOR THESE',
+        description: 'TODO: ADD DESCRIPTIONS FOR THESE',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-5.01.37-PM.png',
         size: 'full',
         clickThrough: 'https://www.youtube.com/watch?v=PVFrFAOUxtY',

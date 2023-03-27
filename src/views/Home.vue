@@ -1,3 +1,5 @@
+<!-- TODO: scroll needs to reset to 0 when navigating to the homepage -->
+
 <template>
   <div>
     <Animation />

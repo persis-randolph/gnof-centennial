@@ -7,12 +7,14 @@
         <!-- CAPTION BACKGROUND -->
         <div class="caption-background" v-if="hover">
             <!-- CAPTION -->
-            <div :class="image.icon ? 'caption-with-icon' : 'caption'">{{ image.description }}</div>
+            <div class="caption">{{ image.description }}</div>
         </div>
         <!-- OPTIONAL ICON -->
         <a :href="image.clickThrough" target="_blank" v-if="image.icon">
-            <img v-if="image.icon === 'dark'" src="../assets/pdf_dark.svg" class="icon">
-            <img v-if="image.icon === 'light'" src="../assets/pdf_light.svg" class="icon">
+            <img v-if="image.icon === 'dark'" src="../assets/Icons_Search_Dark.svg" class="icon">
+            <img v-if="image.icon === 'light'" src="../assets/Icons_Search_Light.svg" class="icon">
+            <img v-if="image.icon === 'video-dark'" src="../assets/Icons_Play_Dark.svg" class="icon">
+            <img v-if="image.icon === 'video-light'" src="../assets/Icons_Play_Light.svg" class="icon">
         </a>
     </div>
 </template>
@@ -81,13 +83,6 @@ export default {
     padding: 10px;
 }
 
-.caption-with-icon {
-    z-index: 4;
-    font-size: 12px;
-    color: white;
-    padding: 10px 10px 10px 55px;
-}
-
 .caption-background {
     z-index: 3;
     position: absolute;
@@ -99,8 +94,8 @@ export default {
 
 .icon {
     position: absolute;
-    bottom: 5px;
-    left: 0;
+    top: 10px;
+    left: 10px;
     width: 50px;
     z-index: 5;
 }
