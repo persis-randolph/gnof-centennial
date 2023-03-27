@@ -57,13 +57,19 @@
 </template>
 
 <script>
-import { computed, ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import Image from '../components/Image.vue'
 
 export default {
   components: { Image },
   props: {
-    card: Object // contains month, year, category, header, imageUrl, and body
+    card: {
+      type: Object // contains month, year, category, header, imageUrl, and body
+    },
+    allCardsExpanded: {
+      type: Boolean,
+      default: false
+    }
   },
   setup(props) {
     const isExpanded = ref(false)
@@ -98,6 +104,10 @@ export default {
         return true
       }
       return false
+    })
+
+    watch(props, () => {
+      isExpanded.value = props.allCardsExpanded
     })
 
     return {

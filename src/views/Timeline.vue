@@ -3,26 +3,44 @@
     <div id="timeline-container">
       <!-- timeline filters -->
       <div id="filters">
-        <div class="filter" id="philanthropy" @click="toggleFilter('philanthropy')">
-          <font-awesome-icon
-            :icon="selectedFiltersObj['philanthropy'] ? 'fas fa-square-check' : 'fas fa-square'"
-            class="icon philanthropy"
-          />
-          Philanthropy
+        <div id="topic-filters">
+          <div class="filter" id="philanthropy" @click="toggleFilter('philanthropy')">
+            <font-awesome-icon
+              :icon="selectedFiltersObj['philanthropy'] ? 'fas fa-square-check' : 'fas fa-square'"
+              class="icon philanthropy"
+            />
+            Philanthropy
+          </div>
+          <div class="filter" id="leadership" @click="toggleFilter('leadership')">
+            <font-awesome-icon
+              :icon="selectedFiltersObj['leadership'] ? 'fas fa-square-check' : 'fas fa-square'"
+              class="icon leadership"
+            />
+            Leadership
+          </div>
+          <div class="filter" id="action" @click="toggleFilter('action')">
+            <font-awesome-icon
+              :icon="selectedFiltersObj['action'] ? 'fas fa-square-check' : 'fas fa-square'"
+              class="icon action"
+            />
+            Action
+          </div>
         </div>
-        <div class="filter" id="leadership" @click="toggleFilter('leadership')">
-          <font-awesome-icon
-            :icon="selectedFiltersObj['leadership'] ? 'fas fa-square-check' : 'fas fa-square'"
-            class="icon leadership"
-          />
-          Leadership
-        </div>
-        <div class="filter" id="action" @click="toggleFilter('action')">
-          <font-awesome-icon
-            :icon="selectedFiltersObj['action'] ? 'fas fa-square-check' : 'fas fa-square'"
-            class="icon action"
-          />
-          Action
+        <div id="expand-collapse-options">
+          <div class="filter" id="expand-all" @click="toggleExpansion('expand')">
+            <font-awesome-icon
+              :icon="allCardsExpanded ? 'fas fa-square-check' : 'fas fa-square'"
+              class="icon"
+            />
+            Expand All
+          </div>
+          <div class="filter" id="collapse-all" @click="toggleExpansion('collapse')">
+            <font-awesome-icon
+              :icon="!allCardsExpanded ? 'fas fa-square-check' : 'fas fa-square'"
+              class="icon"
+            />
+            Collapse All
+          </div>
         </div>
       </div>
       <!-- interactive timeline bar -->
@@ -50,6 +68,7 @@
         :card="card"
         class="card"
         @set-current-card="setCurrentCard"
+        :allCardsExpanded="allCardsExpanded"
       />
     </div>
   </div>
@@ -159,6 +178,16 @@ export default {
       uniqueYears.value = new Set(years.value)
     }, { deep: true })
 
+    const allCardsExpanded = ref(false)
+    const toggleExpansion = (option) => {
+      if (option === 'expand' && !allCardsExpanded.value) {
+        allCardsExpanded.value = true
+      }
+      if (option === 'collapse' && allCardsExpanded.value) {
+        allCardsExpanded.value = false
+      }
+    }
+
     const preloadImages = () => {
       for (let card of cardData.value) {
         for (let image of card.images) {
@@ -190,11 +219,13 @@ export default {
       cardData,
       currentCard,
       firstYear,
+      allCardsExpanded,
       lastYear,
       selectedFiltersObj,
       uniqueYears,
       onClick,
       setCurrentCard,
+      toggleExpansion,
       toggleFilter
     }
   }
@@ -247,9 +278,18 @@ export default {
 #filters {
   color: #04307e;
   display: flex;
-  justify-content: center;
-  padding-bottom: 5px;
+  justify-content: space-between;
+  padding: 0 120px 5px 120px;
 }
+#topic-filters {
+  display: flex;
+}
+#expand-collapse-options {
+  display: flex;
+}
+/* #expand-all, #collapse-all {
+  background-color: white;
+} */
 .year-div {
   position: relative;
   flex-grow: 1;
