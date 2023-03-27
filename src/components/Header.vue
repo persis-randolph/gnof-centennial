@@ -88,12 +88,12 @@ a, a:link, a:visited, a:hover, a:active {
   color: white;
 }
 
-.inactive-link {
-  cursor: default;
+.active-link {
   text-decoration: none;
 }
 
-.active-link {
+.inactive-link {
+  cursor: default;
   font-weight: bold;
   text-decoration: underline;
 }
