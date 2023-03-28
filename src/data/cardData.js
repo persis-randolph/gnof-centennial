@@ -15,28 +15,35 @@ export default [
       {
         description: 'Leaders of New Orleans Life Working for Community Chest',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/F_Legacy-Photos-2.jpg',
-        size: 'full'
+        size: 'full',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Legacy-Photos.png',
+        icon: 'dark'
       },
       {
         description: 'Charter, Federation of Non-sectarian Charity and Philanthropy of New Orleans',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/H_L_Charter-1.jpg',
-        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Charter.pdf',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Charter-1.pdf',
         icon: 'dark',
         rightMargin: true
       },
       {
         description: 'Officers, Federation of Non-sectarian Charity and Philanthropy of New Orleans',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/H_1914_Officers-FedNonSectarian.jpg',
-
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/1914_Officers-FedNonSectarian.tif',
+        icon: 'dark'
       },
       {
         description: 'Membership, Federation of Non-sectarian Charity and Philanthropy of New Orleans (1914)',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/H_1914-_Letterhead-Membership-List-FedNonSectarian.jpg',
-        rightMargin: true
+        rightMargin: true,
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/1914-_Letterhead-Membership-List-FedNonSectarian.tif',
+        icon: 'dark'
       },
       {
         description: 'Pledge Card, Federation of Non-sectarian Charity and Philanthropy of New Orleans',
-        url: 'https://www.gnof.org/wp-content/uploads/2023/03/H_20221223_133215.jpg'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/H_20221223_133215.jpg',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/20221223_133215.pdf',
+        icon: 'dark'
       }
     ]
   },
@@ -150,7 +157,7 @@ export default [
     category: 'leadership',
     header: 'Community Chest Founded',
     body: [
-      'After the first World War there was tremendous necessity to raise funds to continue the social work programs developed during the War. The various war chests around the country demonstrated that successful fundraising could be done through one united campaign. The Committee on Philanthropy of the Association of the Association of Commerce of New Orleans gave its support to the idea of a Community Chest. All welfare agencies in the city of New Orleans were invited to go under the umbrella of the Community Chest. The Community Chest would establish standards to regulate the responsible management and recordkeeping of the agencies, and it would require all agencies to pledge that they would not solicit funds without the explicit approval of the Community Chest. The first organizational meeting of the Community Chest was held in the Science Building on the Tulane University Campus. Rabbi Emil W. Leipziger presided, Lloyd Adams recorded the minutes, and seven board members were elected. QUESTION: There is a link provided to "Science Building" with an image. Should this actually be presented as a link or just pictured with the rest? URL is https://www.dropbox.com/s/6fxh0hce7n2xhyb/New%20Science%20Building%20Dinwiddie%20Hall%201923.jpg?dl=0'
+      'After the first World War there was tremendous necessity to raise funds to continue the social work programs developed during the War. The various war chests around the country demonstrated that successful fundraising could be done through one united campaign. The Committee on Philanthropy of the Association of the Association of Commerce of New Orleans gave its support to the idea of a Community Chest. All welfare agencies in the city of New Orleans were invited to go under the umbrella of the Community Chest. The Community Chest would establish standards to regulate the responsible management and recordkeeping of the agencies, and it would require all agencies to pledge that they would not solicit funds without the explicit approval of the Community Chest. The first organizational meeting of the Community Chest was held in the Science Building on the Tulane University Campus. Rabbi Emil W. Leipziger presided, Lloyd Adams recorded the minutes, and seven board members were elected.'
     ],
     images: [
       {
@@ -170,6 +177,11 @@ export default [
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/first-directors-of-community-chest.jpg',
         clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/first-directors-of-community-chest.pdf',
         icon: 'dark'
+      },
+      {
+        description: "Science Building - Tulane University Campus",
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/New-Science-Building-Dinwiddie-Hall-1923.jpg',
+        size: 'full'
       }
     ]
   },
@@ -2266,7 +2278,7 @@ export default [
     images: [
       {
         description: 'Impact Newsletter Year in Review - Taking Steps Together on Equity & Climate Change',
-        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Climate-Equity-2019.12-Impact-Newsletter-Year-in-Review-1-10.png',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Climate-Equity-2019.12-Impact-Newsletter-Year-in-Review-1-10-1.png',
         size: 'full',
         clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Climate-Equity-2019.12-Impact-Newsletter-Year-in-Review-1-10.pdf',
         icon: 'dark'
@@ -2348,10 +2360,10 @@ export default [
     ],
     images: [
       {
-        description: 'The State of Nonprofits in Southeast Louisiana: The Impact of COVID-19 TODO: RESIZE FOR PHOTO',
-        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-4.51.22-PM.png',
+        description: 'The State of Nonprofits in Southeast Louisiana: The Impact of COVID-19',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-4.51.22-PM-1.png',
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/nonprofit_survey',
-        icon: 'light'
+        icon: 'dark'
       }
     ]
   },
@@ -2453,8 +2465,8 @@ export default [
     body: [],
     images: [
       {
-        description: 'Robert A. Bories TODO: PHOTO NEEDS RESIZE',
-        url: 'https://www.gnof.org/wp-content/uploads/2023/03/R.Bories-_-GNOF_23-23_Gratitude-Report-final-for-real-61.png',
+        description: 'Robert A. Bories',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/R.Bories-_-GNOF_23-23_Gratitude-Report-final-for-real-61-1.png',
         size: 'full',
         clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/R.Bories-_-GNOF_23-23_Gratitude-Report-final-for-real-61.pdf',
         icon: 'dark'
