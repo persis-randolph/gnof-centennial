@@ -1,9 +1,11 @@
 <template>
   <div id="header">
-    <img
-      class="logo"
-      src="../assets/GNOF_CentennialLogo_RGB_White.png"
-    />
+    <router-link to="/home" id="logo-link">
+      <img
+        class="logo"
+        src="../assets/GNOF_CentennialLogo_RGB_White.png"
+      />
+    </router-link>
     <div class="link-container">
       <router-link class="nav-link" to="/home" :class="selectedView !== '/home' ? 'active-link' : 'inactive-link'">
         HOME
@@ -61,7 +63,11 @@ export default {
 }
 .logo {
   height: 60px;
+}
+
+#logo-link {
   margin-left: 10%;
+  height: 60px;
 }
 .link-container {
   display: flex;
