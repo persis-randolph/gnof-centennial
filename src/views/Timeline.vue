@@ -238,6 +238,9 @@ export default {
   top: 100px;
   z-index: 6;
   padding: 15px 0 50px 0;
+  box-shadow: 2px 2px 2px #b0a9a0;
+  -moz-box-shadow: 2px 2px 3px #b0a9a0;
+  -webkit-box-shadow: 2px 2px 3px #b0a9a0;
 }
 #timeline {
   background-color: #1D428A;

@@ -24,11 +24,11 @@
         <!-- CARD PARAGRAPHS -->
         <div v-if="isExpanded && card.body.length">
           <div v-for="(paragraph, i) of card.body" :key="i + card.header">
-            <p class="body">
-              {{ paragraph }}
+            <div class="body">
+              <p v-html="paragraph"></p>
               <br v-if="card.body.length - 1 === i"><br v-if="card.body.length - 1 === i">
               <button @click="toggleExpand" v-if="card.body.length - 1 === i">Close</button>
-            </p>
+            </div>
             <br v-if="card.body.length - 1 > i">
           </div>
         </div>

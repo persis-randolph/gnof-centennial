@@ -7,7 +7,7 @@
         <!-- CAPTION BACKGROUND -->
         <div class="caption-background" v-if="hover">
             <!-- CAPTION -->
-            <div class="caption">{{ image.description }}</div>
+            <div class="caption" v-html="image.description"></div>
         </div>
         <!-- OPTIONAL ICON -->
         <a :href="image.clickThrough" target="_blank" v-if="image.icon">

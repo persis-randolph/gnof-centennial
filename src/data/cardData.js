@@ -1779,7 +1779,7 @@ export default [
     body: [],
     images: [
       {
-        description: 'Description from “Windows of Opportunity: 2001 Annual Report” TODO: ITALICS ON QUOTED WORDS HERE',
+        description: 'Description from <em>“Windows of Opportunity: 2001 Annual Report”</em>',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/J.-Bennett-Johnson-Science-Foundation.png',
         clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/J.-Bennett-Johnson-Science-Foundation.pdf',
         icon: 'dark'
@@ -1831,7 +1831,7 @@ export default [
     ],
     images: [
       {
-        description: 'The Rockefeller Foundation “New Orleans & The Birth of Urban Resilience” TODO: QUOTES IN ITALICS',
+        description: 'The Rockefeller Foundation <em>“New Orleans & The Birth of Urban Resilience”</em>',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Rockefeller-Foundation-New-Orleans-The-Birth-of-Urban-Resilience-1.png',
         clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Rockefeller-Foundation-New-Orleans-The-Birth-of-Urban-Resilience.pdf',
         icon: 'dark'
@@ -1902,7 +1902,7 @@ export default [
     ],
     images: [
       {
-        description: 'Candid “Philanthropy News” Article “Post-Katrina Grantmaking by Greater New Orleans Foundation Tops $41 Million” TODO: LAST QUOTES PART IN ITALICS',
+        description: 'Candid “Philanthropy News” Article <em>“Post-Katrina Grantmaking by Greater New Orleans Foundation Tops $41 Million”</em>',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Post-Katrina-Grantmaking-by-Greater-New-Orleans-Foundation-Tops-41-Million.png',
         size: 'full',
         clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Post-Katrina-Grantmaking-by-Greater-New-Orleans-Foundation-Tops-41-Million.pdf',
@@ -1918,7 +1918,7 @@ export default [
     category: 'leadership',
     header: 'Chair of the Board, Dr. Myron E. Moorehead',
     body: [
-      "Dr. Myron Moorehead came to New Orleans for the first time to watch the Super Bowl on New Year's Day 1978. The temperature hovered around 60 degrees while he vacationed in the Crescent City. A few days later, Moorehead flew home to Columbus, Ohio, where it was 15-below when he stepped off the airplane. Moorehead moved to New Orleans later that year and has been here ever since. He is now on several community boards, including the Greater New Orleans Foundation since 2000. He took over as chairman of the GNOF board in May and will serve in that capacity for two years. The Zanesville, Ohio, native earned his medical degree in 1962 from Meharry Medical College in Nashville, Tenn. He served in the U.S. Air Force from 1963 to 1970 and was a resident at Walter Reed General Hospital in Washington, D.C. Moorehead entered private practice in obstetrics and gynecology in 1970. He is now a staff physician at Kenner Regional Medical Center and director of the Women's Laser Institute and the Fibroid Center of New Orleans. * City Business, July 24, 2007, Moorehead revels in GNOF chair. TODO: LAST PART HERE SHOULD BE ITALICS"
+      "Dr. Myron Moorehead came to New Orleans for the first time to watch the Super Bowl on New Year's Day 1978. The temperature hovered around 60 degrees while he vacationed in the Crescent City. A few days later, Moorehead flew home to Columbus, Ohio, where it was 15-below when he stepped off the airplane. Moorehead moved to New Orleans later that year and has been here ever since. He is now on several community boards, including the Greater New Orleans Foundation since 2000. He took over as chairman of the GNOF board in May and will serve in that capacity for two years. The Zanesville, Ohio, native earned his medical degree in 1962 from Meharry Medical College in Nashville, Tenn. He served in the U.S. Air Force from 1963 to 1970 and was a resident at Walter Reed General Hospital in Washington, D.C. Moorehead entered private practice in obstetrics and gynecology in 1970. He is now a staff physician at Kenner Regional Medical Center and director of the Women's Laser Institute and the Fibroid Center of New Orleans. *<em>City Business, July 24, 2007, Moorehead revels in GNOF chair.</em>"
     ],
     images: [
       {
@@ -2341,11 +2341,12 @@ export default [
     category: 'philanthropy',
     header: 'Foundation Raises $10 Million in New Discretionary Funds and Launched Four New Programs',
     body: [
-      'The Foundation raised $10 million in New Discretionary Funds and Launched four New Programs: TODO: ENSURE BULLET POINTS LOOK GOOD',
-      '- COVID-19 Disaster Fund',
-      '- Family Assistance Program',
-      '- Greater Together Fund for Racial Equity',
-      '- Strategic Partnerships & Mergers Fund'
+      'The Foundation raised $10 million in New Discretionary Funds and Launched four New Programs:',
+      '<ul>',
+      '<li>COVID-19 Disaster Fund</li>',
+      '<li>Family Assistance Program</li>',
+      '<li>Greater Together Fund for Racial Equity</li>',
+      '<li>Strategic Partnerships & Mergers Fund</li></ul>'
     ],
     images: []
   },
