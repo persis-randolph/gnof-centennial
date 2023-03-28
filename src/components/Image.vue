@@ -25,7 +25,7 @@ import { ref } from 'vue'
 export default {
     name: 'Image',
     props: {
-        // has possible keys of description, url, clickThrough, size, and icon
+        // has possible keys of description, url, clickThrough, size, and icon, rightMargin
         image: {
             type: Object
         },

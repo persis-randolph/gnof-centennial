@@ -1,6 +1,5 @@
 <template>
   <div class="card" :id="card.year + card.header">
-    <!-- <div class="line"></div> -->
     <div class="text">
       <!-- CARD DATE -->
       <span class="date" :class="headerColor">
@@ -27,29 +26,19 @@
           <div v-for="(paragraph, i) of card.body" :key="i + card.header">
             <p class="body">
               {{ paragraph }}
-              <!-- <span
-                v-if="card.body.length - 1 === i"
-                class="expand-link"
-                @click="toggleExpand"
-              > -->
               <br v-if="card.body.length - 1 === i"><br v-if="card.body.length - 1 === i">
               <button @click="toggleExpand" v-if="card.body.length - 1 === i">Close</button>
-              <!-- </span> -->
             </p>
             <br v-if="card.body.length - 1 > i">
           </div>
         </div>
         <div v-else-if="isExpanded && !card.body.length && card.images.length">
           <button @click="toggleExpand">Close</button>
-          <!-- <span class="expand-link" @click="toggleExpand">
-            Close
-          </span> -->
         </div>
         <div class="body" v-else-if="!isExpanded">
           <div class="collapsed-text"><span>{{ card.body[0] }}</span></div>
           <br v-if="card.body.length && !isExpanded">
-          <!-- <span @click="toggleExpand" class="expand-link">View more...</span> -->
-          <button @click="toggleExpand">View More...</button>
+          <button @click="toggleExpand">View More</button>
         </div>
       </div>
     </div>
@@ -68,7 +57,10 @@ export default {
   components: { Image },
   props: {
     card: {
-      type: Object // contains month, year, category, header, imageUrl, and body
+      // contains required: year, category, header, body (Array, can be empty),
+      // optional: yearEnd, month (3-letter abbrev.), day, images (Array, can be empty), alternateYearDisplay (in case need to display date in a different format)
+      // for each image in images array - REQ: url, description, OPT: size, rightMargin (boolean - defaults to false), clickThrough (url string), icon (light, dark, video-light, video-dark)
+      type: Object
     },
     allCardsExpanded: {
       type: Boolean,
@@ -77,7 +69,6 @@ export default {
   },
   setup(props) {
     const isExpanded = ref(false)
-    // TODO: maybe add an option to expand all?
     const toggleExpand = () => {
       isExpanded.value = !isExpanded.value
     }
@@ -168,14 +159,6 @@ export default {
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
 }
-/* .line {
-  width: 3px;
-  height: 40px;
-  background-color: white;
-  position: absolute;
-  transform: rotate(90deg) translateX(30px) translateY(40px);
-  -webkit-transform: rotate(90deg) translateX(30px) translateY(40px);
-} */
 .text {
   display: flex;
   flex-direction: column;

@@ -1570,7 +1570,7 @@ export default [
     category: 'action',
     header: 'Foundation Helps to Establish the Local Initiative Support Corporation',
     body: [
-      'The Foundation helped to establish the Local Initiative Support Corporation (LISC) in New Orleans. Originally a concept of the Ford Foundation, LISC operated independently as a national financial resource to create national financial resources to create local affordable housing through neighborhood based Community Development Organizations. The Foundation incubated the local LISC program in its offices, using its staff and facilities until LISC was ready to spin out on its own. TODO: SHOULD THERE BE AN IMAGE HERE? LISTED BUT NOT LINKED'
+      'The Foundation helped to establish the Local Initiative Support Corporation (LISC) in New Orleans. Originally a concept of the Ford Foundation, LISC operated independently as a national financial resource to create national financial resources to create local affordable housing through neighborhood based Community Development Organizations. The Foundation incubated the local LISC program in its offices, using its staff and facilities until LISC was ready to spin out on its own.'
     ],
     images: []
   },
@@ -2258,7 +2258,7 @@ export default [
     ],
     images: [
       {
-        description: 'Impact Newsletter 2019 TODO: RESIZE NEEDED',
+        description: 'Impact Newsletter 2019',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/1st-Celebration-of-Black-Philanthropy-2019.12-Impact-Newsletter-Year-in-Review-9.png',
         size: 'full',
         clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/1st-Celebration-of-Black-Philanthropy-2019.12-Impact-Newsletter-Year-in-Review-9.pdf',
@@ -2441,13 +2441,13 @@ export default [
     ],
     images: [
       {
-        description: '',
+        description: 'State of Nonprofits in Southeast Louisiana 2021 - Full Report',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-5.01.34-PM.png',
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/nle_survey_report_-_full_5',
         icon: 'light'
       },
       {
-        description: 'TODO: ADD DESCRIPTIONS FOR THESE',
+        description: 'Adaptability and Racial Equity in Year One of the COVID-19 Pandemic - Video',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-5.01.37-PM.png',
         size: 'full',
         clickThrough: 'https://www.youtube.com/watch?v=PVFrFAOUxtY',

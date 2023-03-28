@@ -37,6 +37,7 @@
         </div>
       </div>
       <!-- interactive timeline bar -->
+      <!-- TODO: hover on year div should show year tooltip -->
       <div id="timeline">
         <!-- <span id="first-year">{{ firstYear }}</span> -->
         <div
@@ -250,7 +251,6 @@ export default {
   color: #04307e;
   display: flex;
   flex-direction: row;
-  /* position: relative; */
 }
 /* #first-year, #last-year {
   position: absolute;
