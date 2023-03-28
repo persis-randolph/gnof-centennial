@@ -28,12 +28,12 @@
           </div>
         </div>
         <div id="expand-collapse-options">
-          Collapse All
+          <span :class="!allCardsExpanded ? 'strong' : 'weak'">Collapse All</span>
           <label class="switch">
             <input type="checkbox" :value="allCardsExpanded" @click="toggleExpansion()">
             <span class="slider round"></span>
           </label>
-          Expand All
+          <span :class="allCardsExpanded ? 'strong' : 'weak'">Expand All</span>
         </div>
       </div>
       <!-- interactive timeline bar -->
@@ -418,5 +418,12 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.strong {
+  font-weight: 400;
+}
+.weak {
+  font-weight: 300;
 }
 </style>
