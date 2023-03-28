@@ -1,5 +1,5 @@
 <template>
-  <div class="card" :id="card.year">
+  <div class="card" :id="card.year + card.header">
     <!-- <div class="line"></div> -->
     <div class="text">
       <!-- CARD DATE -->
@@ -7,7 +7,7 @@
         {{ cardDateDisplay }}
       </span>
       <!-- CARD HEADER (if exists) -->
-      <span class="header">{{ displayHeader }}</span>
+      <span class="header">{{ card.header }}</span>
       <div :class="card.images.length ? 'image-text-container' : ''">
         <!-- IMAGES (if exist & non-collapsed) -->
         <div
@@ -32,8 +32,8 @@
                 class="expand-link"
                 @click="toggleExpand"
               > -->
-              <br><br>
-              <button @click="toggleExpand">Close</button>
+              <br v-if="card.body.length - 1 === i"><br v-if="card.body.length - 1 === i">
+              <button @click="toggleExpand" v-if="card.body.length - 1 === i">Close</button>
               <!-- </span> -->
             </p>
             <br v-if="card.body.length - 1 > i">
@@ -95,13 +95,6 @@ export default {
       ${props.card.yearEnd ? ' - ' + props.card.yearEnd : ''}`
     })
 
-    const displayHeader = computed(() => {
-      // if (props.card.header.length > 40) {
-      //   return props.card.header.slice(0, 39) + '...'
-      // }
-      return props.card.header
-    })
-
     // if a single half-width image - half image container width
     const halfImageWidth = computed(() => {
       if (props.card.images.length === 1 && !props.card.images[0].size) {
@@ -116,7 +109,6 @@ export default {
 
     return {
       cardDateDisplay,
-      displayHeader,
       halfImageWidth,
       highlightColor,
       headerColor,
@@ -279,6 +271,7 @@ button {
   padding: 10px;
   border: none;
   font: inherit;
+  font-weight: 400;
   color: #ffffff;
   background-color: #1d428a;
   border-radius: 8px;

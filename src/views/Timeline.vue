@@ -3,6 +3,7 @@
     <div id="timeline-container">
       <!-- timeline filters -->
       <div id="filters">
+        <!-- TODO: need to make these filters look slightly different for mobile -->
         <div id="topic-filters">
           <div class="filter" id="philanthropy" @click="toggleFilter('philanthropy')">
             <font-awesome-icon
@@ -27,20 +28,12 @@
           </div>
         </div>
         <div id="expand-collapse-options">
-          <div class="filter" id="expand-all" @click="toggleExpansion('expand')">
-            <font-awesome-icon
-              :icon="allCardsExpanded ? 'fas fa-square-check' : 'fas fa-square'"
-              class="icon"
-            />
-            Expand All
-          </div>
-          <div class="filter" id="collapse-all" @click="toggleExpansion('collapse')">
-            <font-awesome-icon
-              :icon="!allCardsExpanded ? 'fas fa-square-check' : 'fas fa-square'"
-              class="icon"
-            />
-            Collapse All
-          </div>
+          Collapse All
+          <label class="switch">
+            <input type="checkbox" :value="allCardsExpanded" @click="toggleExpansion()">
+            <span class="slider round"></span>
+          </label>
+          Expand All
         </div>
       </div>
       <!-- interactive timeline bar -->
@@ -179,13 +172,8 @@ export default {
     }, { deep: true })
 
     const allCardsExpanded = ref(false)
-    const toggleExpansion = (option) => {
-      if (option === 'expand' && !allCardsExpanded.value) {
-        allCardsExpanded.value = true
-      }
-      if (option === 'collapse' && allCardsExpanded.value) {
-        allCardsExpanded.value = false
-      }
+    const toggleExpansion = () => {
+      allCardsExpanded.value = !allCardsExpanded.value
     }
 
     const preloadImages = () => {
@@ -241,7 +229,6 @@ export default {
 #card-section {
   width: 80%;
   margin: 0 auto;
-  /* padding: 15px 0; */
 }
 #timeline-container {
   background-color: #ffffff;
@@ -279,17 +266,38 @@ export default {
   color: #04307e;
   display: flex;
   justify-content: space-between;
-  padding: 0 120px 5px 120px;
+  width: 80%;
+  padding-bottom: 5px;
+  margin: 0 auto;
 }
+
+@media only screen and (max-width: 750px)  {
+  #filters {
+    display: block;
+    justify-content: left;
+  }
+}
+
 #topic-filters {
   display: flex;
 }
+
+@media only screen and (max-width: 750px)  {
+  #topic-filters {
+    justify-content: space-evenly;
+  }
+}
+
 #expand-collapse-options {
   display: flex;
 }
-/* #expand-all, #collapse-all {
-  background-color: white;
-} */
+
+@media only screen and (max-width: 750px)  {
+  #expand-collapse-options {
+    justify-content: center;
+  }
+}
+
 .year-div {
   position: relative;
   flex-grow: 1;
@@ -328,6 +336,16 @@ export default {
   padding: 0 10px;
 }
 
+@media only screen and (max-width: 750px)  {
+  .filter:first-of-type {
+    padding: 0 10px 0 0;
+  }
+
+  .filter {
+    padding-bottom: 5px;
+  }
+}
+
 .philanthropy {
   color: #1D428A;
 }
@@ -336,5 +354,69 @@ export default {
 }
 .action {
   color: #00A9E0;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 16px;
+  margin: auto 5px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 1px;
+  bottom: 1px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #04307e;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #04307e;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(14px);
+  -ms-transform: translateX(14px);
+  transform: translateX(14px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 </style>

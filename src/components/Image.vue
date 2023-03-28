@@ -56,7 +56,7 @@ export default {
 .image-half-left {
     border: 0.5px solid #dedada;
     margin-bottom: 5px;
-    /* margin-right: 5px; */
+    margin-right: 5px;
     display: block;
     max-width: 100%;
     height: auto;
