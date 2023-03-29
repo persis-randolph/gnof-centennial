@@ -26,12 +26,12 @@
           <div v-for="(paragraph, i) of card.body" :key="i + card.header">
             <div class="body">
               <p v-html="paragraph"></p>
-              <br v-if="card.body.length - 1 === i"><br v-if="card.body.length - 1 === i">
-              <button @click="toggleExpand" v-if="card.body.length - 1 === i">Close</button>
+              <button @click="toggleExpand" v-if="card.body.length - 1 === i" class="close-button-margin-top">Close</button>
             </div>
             <br v-if="card.body.length - 1 > i">
           </div>
         </div>
+        <!-- if card is expanded with no body text, but has images -->
         <div v-else-if="isExpanded && !card.body.length && card.images.length">
           <button @click="toggleExpand">Close</button>
         </div>
@@ -259,6 +259,10 @@ button {
   background-color: #1d428a;
   border-radius: 8px;
   cursor: pointer;
+}
+
+.close-button-margin-top {
+  margin-top: 20px;
 }
 
 </style>

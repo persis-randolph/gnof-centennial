@@ -1732,6 +1732,7 @@ export default [
       {
         description: 'Richard West Freeman Endowment Challenge | 1999 Annual Report',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Richard-West-Freeman-Endowment-Challenge-Planning-_1999.png',
+        size: 'full',
         clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Richard-West-Freeman-Endowment-Challenge-Planning-_1999.pdf',
         icon: 'dark'
       }
@@ -1749,6 +1750,7 @@ export default [
       {
         description: 'James. M. Cain',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/James-M.-Cain-1999-2001.png',
+        size: 'full',
         clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/James-M.-Cain-1999-2001.pdf',
         icon: 'dark'
       }
@@ -2184,6 +2186,7 @@ export default [
       {
         description: 'Philanthropy News Digest',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-4.29.12-PM.png',
+        size: 'full',
         clickThrough: 'http://philanthropynewsdigest.org/news/greater-new-orleans-foundation-launches-lgbt-fund',
         icon: 'dark'
       }
@@ -2342,11 +2345,7 @@ export default [
     header: 'Foundation Raises $10 Million in New Discretionary Funds and Launched Four New Programs',
     body: [
       'The Foundation raised $10 million in New Discretionary Funds and Launched four New Programs:',
-      '<ul>',
-      '<li>COVID-19 Disaster Fund</li>',
-      '<li>Family Assistance Program</li>',
-      '<li>Greater Together Fund for Racial Equity</li>',
-      '<li>Strategic Partnerships & Mergers Fund</li></ul>'
+      '<ul><li>COVID-19 Disaster Fund</li><li>Family Assistance Program</li><li>Greater Together Fund for Racial Equity</li><li>Strategic Partnerships & Mergers Fund</li></ul>'
     ],
     images: []
   },
@@ -2442,17 +2441,17 @@ export default [
     ],
     images: [
       {
-        description: 'State of Nonprofits in Southeast Louisiana 2021 - Full Report',
-        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-5.01.34-PM.png',
-        clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/nle_survey_report_-_full_5',
-        icon: 'light'
-      },
-      {
         description: 'Adaptability and Racial Equity in Year One of the COVID-19 Pandemic - Video',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-5.01.37-PM.png',
         size: 'full',
         clickThrough: 'https://www.youtube.com/watch?v=PVFrFAOUxtY',
         icon: 'video-dark'
+      },
+      {
+        description: 'State of Nonprofits in Southeast Louisiana 2021 - Full Report',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-5.01.34-PM.png',
+        clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/nle_survey_report_-_full_5',
+        icon: 'light'
       }
     ]
   },
