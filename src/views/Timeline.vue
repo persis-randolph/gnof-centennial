@@ -37,19 +37,21 @@
         </div>
       </div>
       <!-- interactive timeline bar -->
-      <!-- TODO: hover on year div should show year tooltip -->
       <div id="timeline">
         <!-- <span id="first-year">{{ firstYear }}</span> -->
         <div
           v-for="year in uniqueYears"
           :key="year"
-          class="year-div"
+          class="year-div hoverable"
           :class="currentCard === year ? 'selected' : ''"
           @click="onClick(year)"
         >
-          <!-- tooltip -->
+          <!-- perma tooltip -->
           <div class="tooltip-arrow" v-if="currentCard === year"></div>
           <div class="tooltip" v-if="currentCard === year">{{ currentCard }}</div>
+          <!-- hover tooltip -->
+          <div class="react-to-hover-tooltip-arrow"></div>
+          <div class="react-to-hover-tooltip">{{ year }}</div>
         </div>
         <!-- <span id="last-year">{{ lastYear }}</span> -->
       </div>
@@ -324,6 +326,7 @@ export default {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 7;
 }
 .tooltip {
   padding: 5px 10px;
@@ -337,8 +340,36 @@ export default {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-bottom: 10px solid #1D428A;
-  z-index: 7;
   top: 100%;
+}
+
+.react-to-hover-tooltip, .react-to-hover-tooltip-arrow {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  z-index: 8;
+}
+
+.react-to-hover-tooltip {
+  padding: 5px 10px;
+  color: white;
+  background-color: #00A9E0;
+  top: 150%;
+}
+.react-to-hover-tooltip-arrow {
+  height: 0;
+  width: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid #00A9E0;
+  top: 100%;
+}
+.hoverable:hover .react-to-hover-tooltip {
+  display: block;
+}
+.hoverable:hover .react-to-hover-tooltip-arrow {
+  display: block;
 }
 .filter {
   padding: 0 10px;
