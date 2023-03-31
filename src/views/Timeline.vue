@@ -322,48 +322,41 @@ export default {
 .selected {
   background-color: #00A9E0;
 }
-.tooltip, .tooltip-arrow {
+.tooltip, .tooltip-arrow, .react-to-hover-tooltip, .react-to-hover-tooltip-arrow {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+}
+.tooltip, .tooltip-arrow {
   z-index: 7;
 }
-.tooltip {
+.tooltip, .react-to-hover-tooltip {
   padding: 5px 10px;
   color: white;
-  background-color: #1D428A;
   top: 150%;
 }
-.tooltip-arrow {
+.tooltip {
+  background-color: #1D428A;
+}
+.tooltip-arrow, .react-to-hover-tooltip-arrow {
   height: 0;
   width: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-bottom: 10px solid #1D428A;
   top: 100%;
 }
-
+.tooltip-arrow {
+  border-bottom: 10px solid #1D428A;
+}
 .react-to-hover-tooltip, .react-to-hover-tooltip-arrow {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   display: none;
   z-index: 8;
 }
-
 .react-to-hover-tooltip {
-  padding: 5px 10px;
-  color: white;
   background-color: #00A9E0;
-  top: 150%;
 }
 .react-to-hover-tooltip-arrow {
-  height: 0;
-  width: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
   border-bottom: 10px solid #00A9E0;
-  top: 100%;
 }
 .hoverable:hover .react-to-hover-tooltip {
   display: block;
