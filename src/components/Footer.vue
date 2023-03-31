@@ -133,5 +133,9 @@ address, a {
   #color-logo {
     margin: 20px;
   }
+  #copyright-text {
+    display: block;
+    padding: 10px;
+  }
 }
 </style>
