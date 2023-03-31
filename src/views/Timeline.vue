@@ -358,11 +358,13 @@ export default {
 .react-to-hover-tooltip-arrow {
   border-bottom: 10px solid #00A9E0;
 }
-.hoverable:hover .react-to-hover-tooltip {
-  display: block;
-}
-.hoverable:hover .react-to-hover-tooltip-arrow {
-  display: block;
+@media (hover: hover) {
+  .hoverable:hover .react-to-hover-tooltip {
+    display: block;
+  }
+  .hoverable:hover .react-to-hover-tooltip-arrow {
+    display: block;
+  }
 }
 .filter {
   padding: 0 10px;

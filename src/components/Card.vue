@@ -241,15 +241,6 @@ export default {
   overflow: hidden;
 }
 
-.expand-link {
-  color: #5a87c6;
-}
-
-.expand-link:hover {
-  color: #041e42;
-  cursor: pointer;
-}
-
 button {
   padding: 10px;
   border: none;
