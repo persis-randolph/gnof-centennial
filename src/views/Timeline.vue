@@ -309,6 +309,11 @@ export default {
 .year-div:first-of-type {
   border-radius: 10px 0 0 10px;
 }
+@media only screen and (max-width: 650px)  {
+  .year-div:first-of-type, .year-div:last-of-type {
+    width: 3px;
+  }
+}
 .year-div:last-of-type {
   border-radius: 0 10px 10px 0;
 }
