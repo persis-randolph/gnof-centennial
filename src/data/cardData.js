@@ -2180,6 +2180,7 @@ export default [
     category: 'philanthropy',
     header: 'Foundation Launches LGBTQ+ Fund',
     body: [
+      'The Foundation launches the LGBTQ Fund. The fund was established to ensure a perennial source of funding for local nonprofits led by and serving the LGBTQ community.',
       '"The Greater New Orleans Foundation has announced the launch of a fund that will channel charitable contributions to local organizations working to improve the quality of life for members of the lesbian, gay, bisexual and transgender community." - Philanthropy News Digest'
     ],
     images: [
@@ -2189,19 +2190,7 @@ export default [
         size: 'full',
         clickThrough: 'http://philanthropynewsdigest.org/news/greater-new-orleans-foundation-launches-lgbt-fund',
         icon: 'dark'
-      }
-    ]
-  },
-  {
-    month: '',
-    day: '',
-    year: '2016',
-    category: 'philanthropy',
-    header: 'Foundation Launched LGBTQ+ Fund',
-    body: [
-      'The Foundation launched the LGBTQ Fund. The fund was established to ensure a perennial source of funding for local nonprofits led by and serving the LGBTQ community.'
-    ],
-    images: [
+      },
       {
         description: 'LGBTQ Fund Booklet',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-4.41.00-PM.png',
