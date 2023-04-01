@@ -1,16 +1,16 @@
 <template>
   <section id="container">
     <div class="figure">
-      <h2>1800+</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <h2>1100+</h2>
+      <p>Number of Funds</p>
     </div>
     <div class="figure">
-      <h2>$10 Million</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <h2>$23 million</h2>
+      <p>Largest Grantmaking Fund - for affordable housing and community development in New Orleans</p>
     </div>
     <div class="figure">
-      <h2>2,401</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <h2>$466,250,698</h2>
+      <p>Total Assets</p>
     </div>
   </section>
 </template>
@@ -32,12 +32,12 @@ export default {
 }
 
 .figure {
-  width: 300px;
+  width: 375px;
   margin: 0 auto;
   padding: 50px 30px;
 }
 
-@media only screen and (max-width: 800px)  {
+@media only screen and (max-width: 1000px)  {
   #container {
     display: flex;
     flex-direction: column;
