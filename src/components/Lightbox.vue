@@ -5,9 +5,11 @@
             @click="closeLightbox"
         ></div>
         <div class="lightbox">
-            <button @click="closeLightbox">Close</button>
-            <img :src="imageUrl" />
-            <div class="caption">{{ captionText }}</div>
+            <!-- <button @click="closeLightbox">Close</button> -->
+            <div class="image-wrapper">
+                <img :src="imageUrl" />
+                <div class="caption" v-html="captionText"></div>
+            </div>
         </div>
     </div>
 </template>
@@ -38,13 +40,12 @@ export default {
 
 <style scoped>
 img {
-    border: 0.5px solid #dedada;
+    /* border: 0.5px solid #dedada; */
     margin-bottom: 5px;
     display: block;
     max-width: 100%;
     height: auto;
     width: auto\9; /* ie8 */
-    margin: 10px auto;
 }
 .lightbox {
     position: fixed;
@@ -54,8 +55,8 @@ img {
     background-color: #04307e;
     color: #ffffff;
     z-index: 10;
-    padding: 10px;
     border-radius: 8px;
+    padding: 5px;
 }
 .modal-background {
     position: fixed;
@@ -65,5 +66,15 @@ img {
     width: 100%;
     z-index: 8;
     background-color: rgba(0, 0, 0, 0.6);
+}
+.caption {
+    z-index: 11;
+    font-size: 14px;
+    color: white;
+    padding: 5px 0;
+}
+.image-wrapper {
+    position: relative;
+    text-align: left;
 }
 </style>
