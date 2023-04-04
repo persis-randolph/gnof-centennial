@@ -18,6 +18,7 @@
             <Image
               :image="image"
               :key="i + image.url"
+              @open-lightbox="openLightbox()"
             />
           </div>  
         </div>

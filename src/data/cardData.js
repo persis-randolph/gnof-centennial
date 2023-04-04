@@ -734,11 +734,11 @@ export default [
     day: '',
     year: '1942',
     category: 'leadership',
-    header: 'Chair of the Board, Lawrence M. Williams',
+    header: 'Chair of the Board, Laurence M. Williams',
     body: [],
     images: [
       {
-        description: 'Lawrence M. Williams',
+        description: 'Laurence M. Williams',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Lawrence-M-Williams.png'
       }
     ]
@@ -1572,7 +1572,14 @@ export default [
     body: [
       'The Foundation helped to establish the Local Initiative Support Corporation (LISC) in New Orleans. Originally a concept of the Ford Foundation, LISC operated independently as a national financial resource to create national financial resources to create local affordable housing through neighborhood based Community Development Organizations. The Foundation incubated the local LISC program in its offices, using its staff and facilities until LISC was ready to spin out on its own.'
     ],
-    images: []
+    images: [
+      {
+        description: 'Local Initiative Support Corporation',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/04/LISC.png',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/04/LISC.pdf',
+        icon: 'dark'
+      }
+    ]
   },
   {
     month: '',

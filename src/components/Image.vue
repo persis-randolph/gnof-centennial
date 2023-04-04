@@ -1,21 +1,28 @@
 <template>
     <!-- EACH IMAGE -->
     <div class="single-image-container" @mouseover="hover = true" @mouseleave="hover = false">
-        <a :href="image.clickThrough" target="_blank">
-            <img :src="image.url" :class="image.rightMargin ? 'image-half-left' : 'image'" :alt="image.description">
-        </a>
+        <!-- <a :href="image.clickThrough" target="_blank"> -->
+        <img
+            :src="image.url"
+            :class="image.rightMargin ? 'image-half-left' : 'image'"
+            :alt="image.description"
+            @click="openLightbox(image.clickThrough)"
+        >
+        <!-- </a> -->
         <!-- CAPTION BACKGROUND -->
         <div class="caption-background" v-if="hover">
             <!-- CAPTION -->
             <div class="caption" v-html="image.description"></div>
         </div>
         <!-- OPTIONAL ICON -->
-        <a :href="image.clickThrough" target="_blank" v-if="image.icon">
+        <!-- <a :href="image.clickThrough" target="_blank" v-if="image.icon"> -->
+        <div @click="openLightbox(image.clickThrough)">
             <img v-if="image.icon === 'dark'" src="../assets/Icons_Search_Dark.svg" class="icon">
             <img v-if="image.icon === 'light'" src="../assets/Icons_Search_Light.svg" class="icon">
             <img v-if="image.icon === 'video-dark'" src="../assets/Icons_Play_Dark.svg" class="icon">
             <img v-if="image.icon === 'video-light'" src="../assets/Icons_Play_Light.svg" class="icon">
-        </a>
+        </div>
+        <!-- </a> -->
     </div>
 </template>
 
@@ -33,11 +40,19 @@ export default {
             type: String
         }
     },
-    setup () {
+    emits: ['open-lightbox'],
+    setup (_, { emit }) {
         const hover = ref(false)
 
+        const openLightbox = (linkToImage) => {
+            if (linkToImage) {
+                emit('open-lightbox', linkToImage)
+            }
+        }
+
         return {
-            hover
+            hover,
+            openLightbox
         }
     }
 }

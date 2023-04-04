@@ -10,13 +10,22 @@
     <div class="h_iframe">
       <!-- transparent image -->
       <img class="ratio" src="http://placehold.it/16x9"/>
+      <!-- <video
+        allow="fullscreen"
+        frameBorder="0"
+        controls
+        autoplay
+        controlsList="nodownload"
+      >
+        <source src="https://gnof-centennial.s3.us-east-2.amazonaws.com/GNOF+LOGOS_v04.mp4" />
+      </video> -->
       <iframe
         src="https://www.youtube.com/embed/3JHBlzGwIZE?rel=0&autoplay=1&mute=1&color=white&modestbranding=1"
-        title="YouTube video player"
+        title="GNOF Logo Through the Years - Video Player"
         frameborder="0"
+        id="animation"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
         allowfullscreen
-        id="animation"
       ></iframe>
     </div>
   </div>

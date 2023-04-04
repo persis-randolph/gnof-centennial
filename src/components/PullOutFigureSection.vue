@@ -1,15 +1,15 @@
 <template>
   <section id="container">
     <div class="figure">
-      <h2>1100+</h2>
+      <h2>1,100+</h2>
       <p>Number of Funds</p>
     </div>
     <div class="figure">
-      <h2>$23 million</h2>
-      <p>Largest Grantmaking Fund - for affordable housing and community development in New Orleans</p>
+      <h2>$23 Million</h2>
+      <p>Largest Grantmaking Fund, for Affordable Housing & Community Development in New Orleans</p>
     </div>
     <div class="figure">
-      <h2>$466,250,698</h2>
+      <h2>$466+ Million</h2>
       <p>Total Assets</p>
     </div>
   </section>
