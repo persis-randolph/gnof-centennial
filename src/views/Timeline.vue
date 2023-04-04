@@ -1,5 +1,11 @@
 <template>
   <div id="container">
+    <Lightbox
+      v-if="lightboxUrl"
+      :imageUrl="lightboxUrl"
+      :captionText="captionText"
+      @close-lightbox="closeLightbox"
+    />
     <div id="timeline-container">
       <!-- timeline filters -->
       <div id="filters">
@@ -65,6 +71,7 @@
         class="card"
         @set-current-card="setCurrentCard"
         :allCardsExpanded="allCardsExpanded"
+        @open-lightbox="openLightbox"
       />
     </div>
   </div>
@@ -72,12 +79,13 @@
 
 <script>
 import Card from '../components/Card.vue'
+import Lightbox from '../components/Lightbox.vue'
 import { computed, reactive, ref, onMounted, onBeforeUnmount, nextTick, watch, onUpdated } from 'vue'
 import data from '../data/cardData'
 
 export default {
   name: 'Timeline',
-  components: { Card },
+  components: { Card, Lightbox },
   setup () {
     const cardData = ref(data)
     const currentCard = ref(data[0].year)
@@ -179,6 +187,19 @@ export default {
       allCardsExpanded.value = !allCardsExpanded.value
     }
 
+    const lightboxUrl = ref(null)
+    const captionText = ref(null)
+    const openLightbox = (payload) => {
+      console.log('OPENING LIGHTBOX - URL IS: ', payload.linkToImage, ' CAPTION: ', payload.captionText)
+      lightboxUrl.value = payload.linkToImage
+      captionText.value = payload.captionText
+    }
+    const closeLightbox = () => {
+      console.log('CLOSING LIGHTBOX')
+      lightboxUrl.value = null
+      captionText.value = null
+    }
+
     const preloadImages = () => {
       for (let card of cardData.value) {
         for (let image of card.images) {
@@ -207,14 +228,18 @@ export default {
     })
 
     return {
+      captionText,
       cardData,
       currentCard,
       firstYear,
       allCardsExpanded,
       lastYear,
+      lightboxUrl,
       selectedFiltersObj,
       uniqueYears,
+      closeLightbox,
       onClick,
+      openLightbox,
       setCurrentCard,
       toggleExpansion,
       toggleFilter

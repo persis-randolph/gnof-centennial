@@ -18,7 +18,7 @@
             <Image
               :image="image"
               :key="i + image.url"
-              @open-lightbox="openLightbox()"
+              @open-lightbox="openLightbox"
             />
           </div>  
         </div>
@@ -68,7 +68,8 @@ export default {
       default: false
     }
   },
-  setup(props) {
+  emits: ['open-lightbox'],
+  setup(props, { emit }) {
     const isExpanded = ref(false)
     const toggleExpand = () => {
       isExpanded.value = !isExpanded.value
@@ -99,12 +100,17 @@ export default {
       isExpanded.value = props.allCardsExpanded
     })
 
+    const openLightbox = (payload) => {
+      emit('open-lightbox', payload)
+    }
+
     return {
       cardDateDisplay,
       halfImageWidth,
       highlightColor,
       headerColor,
       isExpanded,
+      openLightbox,
       toggleExpand
     }
   }
