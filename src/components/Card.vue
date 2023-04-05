@@ -160,7 +160,7 @@ export default {
   writing-mode: vertical-lr;
   right: 3px;
   color: #ffffff;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 18px;
   text-align: center;
   transform: rotate(180deg);
