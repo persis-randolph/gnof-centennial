@@ -29,14 +29,14 @@ export default [
       {
         description: 'Officers, Federation of Non-sectarian Charity and Philanthropy of New Orleans',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/H_1914_Officers-FedNonSectarian.jpg',
-        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/1914_Officers-FedNonSectarian.tif',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/04/1914_Officers-FedNonSectarian.png',
         icon: 'dark'
       },
       {
         description: 'Membership, Federation of Non-sectarian Charity and Philanthropy of New Orleans (1914)',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/H_1914-_Letterhead-Membership-List-FedNonSectarian.jpg',
         rightMargin: true,
-        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/1914-_Letterhead-Membership-List-FedNonSectarian.tif',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/04/1914-_Letterhead-Membership-List-FedNonSectarian.png',
         icon: 'dark'
       },
       {
