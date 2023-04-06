@@ -10,11 +10,15 @@
                 <!-- <div id="wrap">
                     <iframe id="scaled-frame" :src="imageUrl"></iframe>
                 </div> -->
-                <embed
+                <!-- <vue-pdf-embed :source="imageUrl" /> -->
+                <iframe
+                    v-if="getFileType(imageUrl) === 'pdf'"
                     :src="imageUrl"
                     type="application/pdf"
-                    :style="{ width: '1000px', height: '1000px' }"
-                >
+                    width="100%"
+                    height="500px"
+                />
+                <img :src="imageUrl" :id="imageUrl" v-if="getFileType(imageUrl) === 'image'">
                 <!-- <img :src="imageUrl" /> -->
                 <!-- <div class="wrapper">
                     <div class="h_iframe">
@@ -47,12 +51,25 @@ export default {
         }
     },
     emits: ['close-lightbox'],
-    setup (_, { emit }) {
+    setup (props, { emit }) {
         const closeLightbox = () => {
             emit('close-lightbox')
         }
 
+        const getFileType = (imageUrl) => {
+            const last3Chars = imageUrl.slice(-3)
+            console.log(last3Chars)
+            switch (last3Chars) {
+                case 'png':
+                case 'jpg':
+                    return 'image'
+                case 'pdf':
+                    return 'pdf'
+            }
+        }
+
         return {
+            getFileType,
             closeLightbox
         }
     }
@@ -126,8 +143,22 @@ embed {
     /* text-align: left; */
 }
 .image-wrapper {
-    position: relative;
-    text-align: left;
+    /* position: relative; */
+    /* text-align: left; */
+    /* width: 600px; */
+    /* height: 390px; */
+    max-width: 80vw;
+    max-height: 80vh;
+    padding: 0;
+    overflow: hidden;
+}
+iframe {
+    /* transform: scale(0.5); */
+}
+
+img {
+    max-width: 80vw;
+    max-height: 80vh;
 }
 
 /* #wrap {

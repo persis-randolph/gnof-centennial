@@ -18,7 +18,6 @@
         ></iframe>
       </div>
       <!-- <script src="https://player.vimeo.com/api/player.js"></script> -->
-      <!-- <script src="https://player.vimeo.com/api/player.js"></script> -->
       <!-- transparent image -->
       <!-- <img class="ratio" src="http://placehold.it/16x7"/> -->
       <!-- <video

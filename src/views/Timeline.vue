@@ -190,12 +190,10 @@ export default {
     const lightboxUrl = ref(null)
     const captionText = ref(null)
     const openLightbox = (payload) => {
-      console.log('OPENING LIGHTBOX - URL IS: ', payload.linkToImage, ' CAPTION: ', payload.captionText)
       lightboxUrl.value = payload.linkToImage
       captionText.value = payload.captionText
     }
     const closeLightbox = () => {
-      console.log('CLOSING LIGHTBOX')
       lightboxUrl.value = null
       captionText.value = null
     }
