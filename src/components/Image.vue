@@ -41,7 +41,7 @@ export default {
         const hover = ref(false)
 
         const openLightbox = () => {
-            if (props.image.url) {
+            if (props.image.clickThrough) {
                 emit('open-lightbox', props.image)
             }
         }

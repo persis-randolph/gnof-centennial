@@ -313,7 +313,8 @@ export default [
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/1925-1935-Annual-Report-2nd-year-1.png',
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/1925-1935_annual_report_2nd_year?fr=sYzNlZTU4Njg0NTI',
         icon: 'dark',
-        type: 'embed'
+        type: 'embed',
+        issuuEmbed: 'https://e.issuu.com/embed.html?d=1925-1935_annual_report_1st_year&hideShareButton=true&logoImageUrl=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fs4yppl0pr5nvbda%2FGNOF_CentennialLogo_RGB_Full%2520Color.png%3Fdl%3D0&pageLayout=singlePage&u=greaterneworleansfoundation'
       }
     ]
   },
@@ -364,7 +365,8 @@ export default [
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/1925-1935-Annual-report-3rd-year-1.png',
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/1925-1935_annual_report_3rd_year?fr=sZTFkMDU4Njg0NTI',
         icon: 'dark',
-        type: 'embed'
+        type: 'embed',
+        issuuEmbed: 'https://e.issuu.com/embed.html?d=1925-1935_annual_report_3rd_year&hideIssuuLogo=true&hideShareButton=true&logoImageUrl=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fs4yppl0pr5nvbda%2FGNOF_CentennialLogo_RGB_Full%2520Color.png%3Fdl%3D0&pageLayout=singlePage&u=greaterneworleansfoundation'
       }
     ]
   },
@@ -447,7 +449,7 @@ export default [
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/1925-1935-Annual-Report-4th-year-1.png',
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/1925-1935_annual_report_4th_year?fr=sM2ZhYTU4Njg0NTI',
         icon: 'dark',
-        type: 'embed'
+        issuuEmbed: 'https://e.issuu.com/embed.html?d=1925-1935_annual_report_4th_year&hideIssuuLogo=true&hideShareButton=true&logoImageUrl=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fs4yppl0pr5nvbda%2FGNOF_CentennialLogo_RGB_Full%2520Color.png%3Fdl%3D0&pageLayout=singlePage&u=greaterneworleansfoundation'
       }
     ]
   },
@@ -487,7 +489,7 @@ export default [
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/annual_report_1925-1935_5th_year?fr=sZTNiZDU4Njg0NTI',
         icon: 'dark',
         type: 'embed',
-        issuuLink: ''
+        issuuLink: 'https://e.issuu.com/embed.html?d=annual_report_1925-1935_5th_year&hideIssuuLogo=true&hideShareButton=true&logoImageUrl=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fs4yppl0pr5nvbda%2FGNOF_CentennialLogo_RGB_Full%2520Color.png%3Fdl%3D0&pageLayout=singlePage&u=greaterneworleansfoundation'
       }
     ]
   },
@@ -2207,7 +2209,7 @@ export default [
         icon: 'dark'
       },
       {
-        description: 'LGBTQ Fund Booklet',
+        description: 'LGBTQ Fund Booklet: TODO: MISSING ISSUU EMBED',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-4.41.00-PM.png',
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/gnof-lgbtq-fund-singlepages',
         icon: 'light'
@@ -2291,7 +2293,7 @@ export default [
         icon: 'dark'
       },
       {
-        description: 'Taking Steps Together on Equity & Climate Change - Report',
+        description: 'Taking Steps Together on Equity & Climate Change - Report TODO: Missing Issuu Embed Link',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-4.46.35-PM.png',
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/2019.08.30_-_climate_action_equity_report_-_web',
         icon: 'dark'
@@ -2316,7 +2318,7 @@ export default [
         icon: 'dark'
       },
       {
-        description: 'New Orleans School Partnership Study',
+        description: 'New Orleans School Partnership Study TODO: Missing issuu embed link',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-4.49.14-PM.png',
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/opsb_condensed_report',
         icon: 'light'
@@ -2364,7 +2366,7 @@ export default [
     ],
     images: [
       {
-        description: 'The State of Nonprofits in Southeast Louisiana: The Impact of COVID-19',
+        description: 'The State of Nonprofits in Southeast Louisiana: The Impact of COVID-19 TODO: missing Issuu embed link',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-4.51.22-PM-1.png',
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/nonprofit_survey',
         icon: 'dark'
@@ -2407,7 +2409,7 @@ export default [
         icon: 'dark'
       },
       {
-        description: 'Stormwater Opportunities: Spirit of Charity, Lafitte Greenway, Armstrong Park',
+        description: 'Stormwater Opportunities: Spirit of Charity, Lafitte Greenway, Armstrong Park TODO: missing issuu embed link',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-4.56.49-PM.png',
         size: 'full',
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/gnof_stormwater_report',
@@ -2430,7 +2432,8 @@ export default [
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-5.00.41-PM.png',
         size: 'full',
         clickThrough: 'https://www.youtube.com/watch?v=a1p3lSatdN4&t=55s',
-        icon: 'video-light'
+        icon: 'video-light',
+        youTubeEmbed: 'https://www.youtube.com/embed/a1p3lSatdN4'
       }
     ]
   },
@@ -2449,7 +2452,8 @@ export default [
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-5.01.37-PM.png',
         size: 'full',
         clickThrough: 'https://www.youtube.com/watch?v=PVFrFAOUxtY',
-        icon: 'video-dark'
+        icon: 'video-dark',
+        youTubeEmbed: 'https://www.youtube.com/embed/PVFrFAOUxtY'
       },
       {
         description: 'State of Nonprofits in Southeast Louisiana 2021 - Full Report',

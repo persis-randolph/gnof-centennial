@@ -20,13 +20,24 @@
                     ></iframe>
                 </div>
                 <!-- IF VIMEO EMBED -->
-                <div v-if="image.vimeonEmbed" class="embed-wrapper">
+                <div v-if="image.vimeoEmbed" class="embed-wrapper">
                     <iframe
                         :src="image.vimeoEmbed"
                         width="640"
                         height="360"
                         frameborder="0"
                         allow="autoplay; fullscreen; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <!-- IF YOUTUBE EMBED -->
+                <div v-if="image.youTubeEmbed">
+                    <iframe
+                        width="560" height="315"
+                        :src="image.youTubeEmbed + '?rel=0&modestbranding=1'"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
                         allowfullscreen>
                     </iframe>
                 </div>
@@ -42,7 +53,7 @@
                         height="1000px"
                     />
                 </div>
-                <img :src="image.clickThrough" :id="image.clickThrough" v-if="getFileType(image.url) === 'image'">
+                <img :src="image.clickThrough" :id="image.clickThrough" v-if="getFileType(image.clickThrough) === 'image'">
                 <!-- <img :src="imageUrl" /> -->
                 <!-- <div class="wrapper">
                     <div class="h_iframe">
