@@ -281,6 +281,7 @@ export default {
   display: flex;
   flex-direction: row;
   max-width: 1000px;
+  cursor: pointer;
 }
 /* #first-year, #last-year {
   position: absolute;
@@ -394,6 +395,7 @@ export default {
 }
 .filter {
   padding: 0 10px;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 750px)  {

@@ -1,33 +1,29 @@
 <template>
     <!-- EACH IMAGE -->
     <div class="single-image-container" @mouseover="hover = true" @mouseleave="hover = false">
-        <!-- <a :href="image.clickThrough" target="_blank"> -->
         <img
             :src="image.url"
-            :class="image.rightMargin ? 'image-half-left' : 'image'"
+            :class="imageClasses"
             :alt="image.description"
             @click="openLightbox(image.clickThrough, image.description)"
         >
-        <!-- </a> -->
         <!-- CAPTION BACKGROUND -->
         <div class="caption-background" v-if="hover">
             <!-- CAPTION -->
             <div class="caption" v-html="image.description"></div>
         </div>
         <!-- OPTIONAL ICON -->
-        <!-- <a :href="image.clickThrough" target="_blank" v-if="image.icon"> -->
         <div @click="openLightbox(image.clickThrough, image.description)">
             <img v-if="image.icon === 'dark'" src="../assets/Icons_Search_Dark.svg" class="icon">
             <img v-if="image.icon === 'light'" src="../assets/Icons_Search_Light.svg" class="icon">
             <img v-if="image.icon === 'video-dark'" src="../assets/Icons_Play_Dark.svg" class="icon">
             <img v-if="image.icon === 'video-light'" src="../assets/Icons_Play_Light.svg" class="icon">
         </div>
-        <!-- </a> -->
     </div>
 </template>
 
 <script>
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 
 export default {
     name: 'Image',
@@ -41,7 +37,7 @@ export default {
         }
     },
     emits: ['open-lightbox'],
-    setup (_, { emit }) {
+    setup (props, { emit }) {
         const hover = ref(false)
 
         const openLightbox = (linkToImage, captionText) => {
@@ -50,8 +46,16 @@ export default {
             }
         }
 
+        const imageClasses = computed(() => {
+            let classStr = ''
+            classStr += props.image.rightMargin ? 'image-half-left ' : 'image '
+            classStr += props.image.clickThrough ? 'add-cursor' : ''
+            return classStr
+        })
+
         return {
             hover,
+            imageClasses,
             openLightbox
         }
     }
@@ -68,10 +72,14 @@ export default {
     width: auto\9; /* ie8 */
 }
 
+.add-cursor {
+    cursor: pointer;
+}
+
 .image-half-left {
     border: 0.5px solid #dedada;
     margin-bottom: 5px;
-    margin-right: 5px;
+    margin-right: 3px;
     display: block;
     max-width: 100%;
     height: auto;
@@ -89,6 +97,7 @@ export default {
 
 .single-image-container {
     position: relative;
+    /* border: 0.5px solid #dedada; */
 }
 
 .caption {
