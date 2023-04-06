@@ -12,13 +12,15 @@
                 </div> -->
                 <!-- <vue-pdf-embed :source="imageUrl" /> -->
                 <img src="../assets/Icons_X_Light.svg" class="icon" @click="closeLightbox">
-                <iframe
-                    v-if="getFileType(imageUrl) === 'pdf'"
-                    :src="imageUrl"
-                    type="application/pdf"
-                    width="100%"
-                    height="500px"
-                />
+                <div>
+                    <iframe
+                        v-if="getFileType(imageUrl) === 'pdf'"
+                        :src="imageUrl"
+                        type="application/pdf"
+                        width="100%"
+                        height="500px"
+                    />
+                </div>
                 <img :src="imageUrl" :id="imageUrl" v-if="getFileType(imageUrl) === 'image'">
                 <!-- <img :src="imageUrl" /> -->
                 <!-- <div class="wrapper">
