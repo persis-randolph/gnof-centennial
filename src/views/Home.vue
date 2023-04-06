@@ -2,7 +2,9 @@
 
 <template>
   <div>
-    <Animation />
+    <div :style="{ backgroundColor: 'black' }">
+      <Animation />
+    </div>
     <PullOutFigureSection />
     <!-- <hr> -->
     <OurStory />

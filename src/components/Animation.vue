@@ -8,7 +8,7 @@
 <template>
   <div class="wrapper">
     <div class="h_iframe">
-      <div style="padding: 56.25% 0 0 0; position: relative">
+      <div class="inner-wrapper">
         <iframe
           src="https://player.vimeo.com/video/815437038?h=358b0141c0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
           frameborder="0"
@@ -46,15 +46,24 @@ iframe {
   position: absolute;
   top: 0;
   left: 0;
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
   width: 100%;
   height: 100%;
+  max-height: 600px;
 }
-/* .wrapper {
-  width: 100%;
-  height: 100%;
+.inner-wrapper {
+  padding: 56.25% 0 0 0;
+  position: relative;
+}
+.wrapper {
+  width: 90%;
+  height: 90%;
+  max-height: 600px;
   margin: 0 auto;
-  color: white;
-} */
+  background-color: black;
+}
 /* .h_iframe {
   position: relative;
 } */
@@ -62,9 +71,8 @@ iframe {
 /* .h_iframe .ratio {
   display: block;
   width: 100%;
-  height: auto; */
-/* filter: brightness(0) invert(1); */
-/* } */
+  height: auto;
+} */
 /* .h_iframe iframe {
   position: absolute;
   top: 50%;
