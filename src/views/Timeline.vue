@@ -256,6 +256,7 @@ export default {
 }
 #card-section {
   width: 80%;
+  max-width: 1000px;
   margin: 0 auto;
 }
 #timeline-container {
@@ -281,6 +282,7 @@ export default {
   color: #04307e;
   display: flex;
   flex-direction: row;
+  max-width: 1000px;
 }
 /* #first-year, #last-year {
   position: absolute;
@@ -297,6 +299,7 @@ export default {
   display: flex;
   justify-content: space-between;
   width: 80%;
+  max-width: 1000px;
   padding-bottom: 5px;
   margin: 0 auto;
 }

@@ -90,11 +90,12 @@ address, a {
   background-color: white;
   width: 50%;
   text-align: right;
+  vertical-align: center;
+  margin: auto 20px;
 }
 #color-logo {
   width: 200px;
   display: inline-block;
-  margin: 20px 20px 0 0;
 }
 #copyright {
   width: 100%;
@@ -129,9 +130,6 @@ address, a {
   }
   #contact {
     margin: 20px 0 0 20px;
-  }
-  #color-logo {
-    margin: 20px;
   }
   #copyright-text {
     display: block;

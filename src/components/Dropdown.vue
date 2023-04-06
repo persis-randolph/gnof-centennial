@@ -43,8 +43,9 @@ export default {
 .menu {
   z-index: 9;
   position: absolute;
-  top: 68px;
-  left: -73px;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-48%);
   background-color: #1d428a;
   text-align: left;
 }

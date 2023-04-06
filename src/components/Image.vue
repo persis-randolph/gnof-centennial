@@ -111,7 +111,7 @@ export default {
     position: absolute;
     top: 10px;
     left: 10px;
-    width: 40px;
+    width: 35px;
     z-index: 5;
 }
 </style>
