@@ -11,6 +11,7 @@
                     <iframe id="scaled-frame" :src="imageUrl"></iframe>
                 </div> -->
                 <!-- <vue-pdf-embed :source="imageUrl" /> -->
+                <img src="../assets/Icons_X_Light.svg" class="icon" @click="closeLightbox">
                 <iframe
                     v-if="getFileType(imageUrl) === 'pdf'"
                     :src="imageUrl"
@@ -151,6 +152,8 @@ embed {
     max-height: 80vh;
     padding: 0;
     overflow: hidden;
+    /* display: flex;
+    flex-direction: column; */
 }
 iframe {
     /* transform: scale(0.5); */
@@ -177,5 +180,11 @@ img {
 
 #scaled-frame {
   /* transform: scale(0.5); */
+}
+.icon {
+    width: 20px;
+    float: right;
+    margin-bottom: 2px;
+    cursor: pointer;
 }
 </style>
