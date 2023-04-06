@@ -254,14 +254,16 @@ export default [
     day: '',
     year: '1925',
     category: 'action',
-    header: 'Community Chest Annual Report',
+    header: '1st Annual Report of the Community Chest',
     body: [],
     images: [
       {
         description: '1925 Community Chest Annual Report',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/1925-1935-Annual-Report-1st-year-1.png',
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/1925-1935_annual_report_1st_year?fr=sZWI5MTU4Njg0NTI',
-        icon: 'dark'
+        icon: 'dark',
+        type: 'embed',
+        issuuEmbed: 'https://e.issuu.com/embed.html?d=1925-1935_annual_report_2nd_year&hideIssuuLogo=true&hideShareButton=true&logoImageUrl=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fs4yppl0pr5nvbda%2FGNOF_CentennialLogo_RGB_Full%2520Color.png%3Fdl%3D0&pageLayout=singlePage&u=greaterneworleansfoundation'
       }
     ]
   },
@@ -310,7 +312,8 @@ export default [
         description: '1926 Community Chest Annual Report',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/1925-1935-Annual-Report-2nd-year-1.png',
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/1925-1935_annual_report_2nd_year?fr=sYzNlZTU4Njg0NTI',
-        icon: 'dark'
+        icon: 'dark',
+        type: 'embed'
       }
     ]
   },
@@ -360,7 +363,8 @@ export default [
         description: '1927 Community Chest Annual Report',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/1925-1935-Annual-report-3rd-year-1.png',
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/1925-1935_annual_report_3rd_year?fr=sZTFkMDU4Njg0NTI',
-        icon: 'dark'
+        icon: 'dark',
+        type: 'embed'
       }
     ]
   },
@@ -442,7 +446,8 @@ export default [
         description: '1928 Community Chest Annual Report',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/1925-1935-Annual-Report-4th-year-1.png',
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/1925-1935_annual_report_4th_year?fr=sM2ZhYTU4Njg0NTI',
-        icon: 'dark'
+        icon: 'dark',
+        type: 'embed'
       }
     ]
   },
@@ -480,7 +485,9 @@ export default [
         description: '1929 Community Chest Annual Report',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Annual-Report-1925-1935-5th-year-1.png',
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/annual_report_1925-1935_5th_year?fr=sZTNiZDU4Njg0NTI',
-        icon: 'dark'
+        icon: 'dark',
+        type: 'embed',
+        issuuLink: ''
       }
     ]
   },
@@ -613,13 +620,13 @@ export default [
   {
     month: '',
     day: '',
-    year: '1935',
+    year: '1934',
     category: 'philanthropy',
     header: 'The Community Chest Celebrates 10 Years',
     body: [],
     images: [
       {
-        description: '1935 Annual Report | The Community Chest - The First Decade',
+        description: '1934 Annual Report | The Community Chest - The First Decade',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/1925-1935-10th-year-1.png',
         clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/1925-1935-10th-year.pdf',
         icon: 'dark'
@@ -2033,7 +2040,8 @@ export default [
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-4.30.37-PM.png',
         size: 'full',
         clickThrough: 'https://vimeo.com/756649589',
-        icon: 'video-light'
+        icon: 'video-light',
+        vimeoEmbed: 'https://player.vimeo.com/video/756649589?h=9036ad6907&portrait=0'
       }
     ]
   },

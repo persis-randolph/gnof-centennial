@@ -1,9 +1,8 @@
 <template>
   <div id="container">
     <Lightbox
-      v-if="lightboxUrl"
-      :imageUrl="lightboxUrl"
-      :captionText="captionText"
+      v-if="image?.url"
+      :image="image"
       @close-lightbox="closeLightbox"
     />
     <div id="timeline-container">
@@ -187,15 +186,12 @@ export default {
       allCardsExpanded.value = !allCardsExpanded.value
     }
 
-    const lightboxUrl = ref(null)
-    const captionText = ref(null)
+    const image = ref(null)
     const openLightbox = (payload) => {
-      lightboxUrl.value = payload.linkToImage
-      captionText.value = payload.captionText
+      image.value = payload
     }
     const closeLightbox = () => {
-      lightboxUrl.value = null
-      captionText.value = null
+      image.value = null
     }
 
     const preloadImages = () => {
@@ -226,13 +222,12 @@ export default {
     })
 
     return {
-      captionText,
+      allCardsExpanded,
       cardData,
       currentCard,
       firstYear,
-      allCardsExpanded,
+      image,
       lastYear,
-      lightboxUrl,
       selectedFiltersObj,
       uniqueYears,
       closeLightbox,

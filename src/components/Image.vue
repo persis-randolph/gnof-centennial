@@ -5,7 +5,7 @@
             :src="image.url"
             :class="imageClasses"
             :alt="image.description"
-            @click="openLightbox(image.clickThrough, image.description)"
+            @click="openLightbox(image)"
         >
         <!-- CAPTION BACKGROUND -->
         <div class="caption-background" v-if="hover">
@@ -13,7 +13,7 @@
             <div class="caption" v-html="image.description"></div>
         </div>
         <!-- OPTIONAL ICON -->
-        <div @click="openLightbox(image.clickThrough, image.description)">
+        <div @click="openLightbox">
             <img v-if="image.icon === 'dark'" src="../assets/Icons_Search_Dark.svg" class="icon">
             <img v-if="image.icon === 'light'" src="../assets/Icons_Search_Light.svg" class="icon">
             <img v-if="image.icon === 'video-dark'" src="../assets/Icons_Play_Dark.svg" class="icon">
@@ -40,9 +40,9 @@ export default {
     setup (props, { emit }) {
         const hover = ref(false)
 
-        const openLightbox = (linkToImage, captionText) => {
-            if (linkToImage) {
-                emit('open-lightbox', { linkToImage, captionText })
+        const openLightbox = () => {
+            if (props.image.url) {
+                emit('open-lightbox', props.image)
             }
         }
 

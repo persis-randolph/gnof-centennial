@@ -5,23 +5,44 @@
             @click="closeLightbox"
         ></div>
         <div class="lightbox">
-            <!-- <button @click="closeLightbox">Close</button> -->
             <div class="image-wrapper">
+                <div class="icon-container">
+                    <img src="../assets/Icons_X_Light.svg" class="icon" @click="closeLightbox">
+                </div>
+                <!-- IF ISSUU EMBED -->
+                <div v-if="image.issuuEmbed" class="embed-wrapper">
+                    <iframe
+                        class="embed-iframe"
+                        allow="clipboard-write"
+                        sandbox="allow-top-navigation allow-top-navigation-by-user-activation allow-downloads allow-scripts allow-same-origin allow-popups allow-modals allow-popups-to-escape-sandbox allow-forms"
+                        allowfullscreen="true"
+                        :src="image.issuuEmbed"
+                    ></iframe>
+                </div>
+                <!-- IF VIMEO EMBED -->
+                <div v-if="image.vimeonEmbed" class="embed-wrapper">
+                    <iframe
+                        :src="image.vimeoEmbed"
+                        width="640"
+                        height="360"
+                        frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
                 <!-- <div id="wrap">
                     <iframe id="scaled-frame" :src="imageUrl"></iframe>
                 </div> -->
-                <!-- <vue-pdf-embed :source="imageUrl" /> -->
-                <img src="../assets/Icons_X_Light.svg" class="icon" @click="closeLightbox">
-                <div>
+                <div v-if="getFileType(image.clickThrough) === 'pdf'">
                     <iframe
-                        v-if="getFileType(imageUrl) === 'pdf'"
-                        :src="imageUrl"
+                        :src="image.clickThrough"
+                        frameborder="1"
                         type="application/pdf"
-                        width="100%"
-                        height="500px"
+                        width="700px"
+                        height="1000px"
                     />
                 </div>
-                <img :src="imageUrl" :id="imageUrl" v-if="getFileType(imageUrl) === 'image'">
+                <img :src="image.clickThrough" :id="image.clickThrough" v-if="getFileType(image.url) === 'image'">
                 <!-- <img :src="imageUrl" /> -->
                 <!-- <div class="wrapper">
                     <div class="h_iframe">
@@ -36,8 +57,8 @@
                     </div>
                 </div> -->
                 <!-- <iframe :src="imageUrl"></iframe> -->
-                <div class="caption" v-html="captionText"></div>
             </div>
+            <div class="caption" v-html="image.description"></div>
         </div>
     </div>
 </template>
@@ -46,11 +67,8 @@
 export default {
     name: 'Lightbox',
     props: {
-        imageUrl: {
-            type: String
-        },
-        captionText: {
-            type: String
+        image: {
+            type: Object
         }
     },
     emits: ['close-lightbox'],
@@ -61,13 +79,14 @@ export default {
 
         const getFileType = (imageUrl) => {
             const last3Chars = imageUrl.slice(-3)
-            console.log(last3Chars)
             switch (last3Chars) {
                 case 'png':
                 case 'jpg':
                     return 'image'
                 case 'pdf':
                     return 'pdf'
+                default:
+                    return null
             }
         }
 
@@ -80,6 +99,24 @@ export default {
 </script>
 
 <style scoped>
+.embed-wrapper {
+    position: relative;
+    padding-top: max(60%, 326px);
+    height: 0;
+    width: 100%;
+}
+.embed-iframe {
+    position: absolute;
+    border: none;
+    width: 100%;
+    height: 100%;
+    max-height: 80vh;
+    max-width: 80vw;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
 /* .wrapper {
   width: 100%;
   height: 100%;
@@ -134,38 +171,28 @@ export default {
     z-index: 8;
     background-color: rgba(0, 0, 0, 0.6);
 }
-embed {
-    /* height: 1000px;
-    width: 1000px; */
-}
 .caption {
     z-index: 11;
     font-size: 14px;
     color: white;
-    padding: 5px 0;
-    /* text-align: left; */
+    padding: 5px;
+    width: 100%;
+    background-color: #04307e;
+    transform: translateX(-5px);
+    border-radius: 0 0 8px 8px;
 }
 .image-wrapper {
-    /* position: relative; */
-    /* text-align: left; */
-    /* width: 600px; */
-    /* height: 390px; */
     max-width: 80vw;
     max-height: 80vh;
     padding: 0;
     overflow: hidden;
-    /* display: flex;
-    flex-direction: column; */
+    display: flex;
+    flex-direction: column;
 }
-iframe {
-    /* transform: scale(0.5); */
-}
-
 img {
     max-width: 80vw;
     max-height: 80vh;
 }
-
 /* #wrap {
   width: 1000px;
   height: 1000px;
@@ -173,19 +200,18 @@ img {
   margin: 0;
   overflow: hidden;
 }
-
 #scaled-frame {
   width: 1000px;
   height: 1500px;
   border: 0px;
 } */
-
-#scaled-frame {
-  /* transform: scale(0.5); */
+.icon-container {
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
 }
 .icon {
     width: 20px;
-    float: right;
     margin-bottom: 2px;
     cursor: pointer;
 }
