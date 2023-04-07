@@ -34,7 +34,7 @@ export default {
   margin: 70px auto;
 }
 .figure {
-  width: 375px;
+  width: 33%;
   margin: 0 auto;
 }
 @media only screen and (max-width: 1000px)  {
@@ -45,6 +45,7 @@ export default {
   }
   .figure {
     margin: 50px auto;
+    width: 80%;
   }
 }
 </style>

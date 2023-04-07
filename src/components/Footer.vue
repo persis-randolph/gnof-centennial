@@ -117,9 +117,10 @@ address, a {
   #logo-container {
     text-align: center;
     width: 100%;
+    margin: 20px 0;
   }
   #contact-container {
-    width: 100%;
+    width: 60%;
     flex-direction: column;
   }
   #online-header {
