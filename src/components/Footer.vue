@@ -120,7 +120,7 @@ address, a {
     margin: 20px 0;
   }
   #contact-container {
-    width: 60%;
+    width: 100%;
     flex-direction: column;
   }
   #online-header {
@@ -130,7 +130,9 @@ address, a {
     margin: 0 0 20px 20px;
   }
   #contact {
-    margin: 20px 0 0 20px;
+    margin: 0;
+    /* width: 100%; */
+    padding: 20px 0 0 20px;
   }
   #copyright-text {
     display: block;

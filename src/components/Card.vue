@@ -129,6 +129,7 @@ export default {
   margin: 15px auto;
   text-align: left;
   padding: 50px 70px 50px 70px;
+  line-height: 1.5;
   background-color: #ffffff;
   box-shadow: 2px 2px 2px #b0a9a0;
   -moz-box-shadow: 2px 2px 3px #b0a9a0;
@@ -244,7 +245,7 @@ export default {
 }
 
 .collapsed-text {
-  max-height: 40px;
+  max-height: 46px;
   overflow: hidden;
 }
 
@@ -258,7 +259,9 @@ button {
   border-radius: 8px;
   cursor: pointer;
 }
-
+button:hover {
+  background-color: #234fa7;
+}
 .close-button-margin-top {
   margin-top: 20px;
 }

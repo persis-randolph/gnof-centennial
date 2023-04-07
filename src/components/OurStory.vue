@@ -51,6 +51,9 @@ button {
   cursor: pointer;
   margin-top: 20px;
 }
+button:hover {
+  background-color: #234fa7;
+}
 a, a:link, a:visited, a:hover, a:active {
   color: white;
   text-decoration: none;
