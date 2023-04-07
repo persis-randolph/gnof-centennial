@@ -8,7 +8,7 @@
 <template>
   <div class="wrapper">
     <div class="h_iframe">
-      <div class="inner-wrapper">>
+      <div class="inner-wrapper">
         <iframe
           src="https://player.vimeo.com/video/815437038?h=358b0141c0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
           frameborder="0"
