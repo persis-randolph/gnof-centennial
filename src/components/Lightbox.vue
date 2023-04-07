@@ -46,7 +46,7 @@
                 </div> -->
                 <div v-if="getFileType(image.clickThrough) === 'pdf'">
                     <iframe
-                        :src="image.clickThrough"
+                        :src="image.clickThrough + '#view=fitH'"
                         frameborder="1"
                         type="application/pdf"
                         width="700px"

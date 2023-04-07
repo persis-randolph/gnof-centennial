@@ -28,19 +28,23 @@ export default {
 #container {
   display: flex;
   flex-direction: row;
-  padding: 20px 40px;
+  /* padding: 20px 40px; */
+  justify-content: space-between;
+  width: 80%;
+  margin: 70px auto;
 }
-
 .figure {
   width: 375px;
   margin: 0 auto;
-  padding: 50px 30px;
 }
-
 @media only screen and (max-width: 1000px)  {
   #container {
     display: flex;
     flex-direction: column;
+    margin: 25px auto;
+  }
+  .figure {
+    margin: 50px auto;
   }
 }
 </style>
