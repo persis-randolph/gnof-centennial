@@ -1,8 +1,10 @@
 <template>
   <div id="container">
+    <!-- v-if="imageArray[imageIndex]?.url" -->
     <Lightbox
-      v-if="image?.url"
-      :image="image"
+      v-if="imageArray && imageArray[imageIndex] && imageArray[imageIndex].clickThrough"
+      :imageIndex="imageIndex"
+      :imageArray="imageArray"
       @close-lightbox="closeLightbox"
     />
     <div id="timeline-container">
@@ -84,7 +86,10 @@ import data from '../data/cardData'
 
 export default {
   name: 'Timeline',
-  components: { Card, Lightbox },
+  components: {
+    Card,
+    Lightbox 
+  },
   setup () {
     const cardData = ref(data)
     const currentCard = ref(data[0].year)
@@ -186,12 +191,15 @@ export default {
       allCardsExpanded.value = !allCardsExpanded.value
     }
 
-    const image = ref(null)
+    const imageIndex = ref(null)
+    const imageArray = ref(null)
     const openLightbox = (payload) => {
-      image.value = payload
+      imageIndex.value = payload.imageIndex
+      imageArray.value = payload.imageArray
     }
     const closeLightbox = () => {
-      image.value = null
+      imageIndex.value = null
+      imageArray.value = null
     }
 
     const preloadImages = () => {
@@ -226,7 +234,8 @@ export default {
       cardData,
       currentCard,
       firstYear,
-      image,
+      imageArray,
+      imageIndex,
       lastYear,
       selectedFiltersObj,
       uniqueYears,

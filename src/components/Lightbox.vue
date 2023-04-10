@@ -10,19 +10,19 @@
                     <img src="../assets/Icons_X_Light.svg" class="icon" @click="closeLightbox">
                 </div>
                 <!-- IF ISSUU EMBED -->
-                <div v-if="image.issuuEmbed" class="embed-wrapper">
+                <div v-if="imageArray[imageIndex].issuuEmbed" class="embed-wrapper">
                     <iframe
                         class="embed-iframe"
                         allow="clipboard-write"
                         sandbox="allow-top-navigation allow-top-navigation-by-user-activation allow-downloads allow-scripts allow-same-origin allow-popups allow-modals allow-popups-to-escape-sandbox allow-forms"
                         allowfullscreen="true"
-                        :src="image.issuuEmbed"
+                        :src="imageArray[imageIndex].issuuEmbed"
                     ></iframe>
                 </div>
                 <!-- IF VIMEO EMBED -->
-                <div v-if="image.vimeoEmbed" class="embed-wrapper">
+                <div v-if="imageArray[imageIndex].vimeoEmbed" class="embed-wrapper">
                     <iframe
-                        :src="image.vimeoEmbed"
+                        :src="imageArray[imageIndex].vimeoEmbed"
                         width="640"
                         height="360"
                         frameborder="0"
@@ -31,59 +31,51 @@
                     </iframe>
                 </div>
                 <!-- IF YOUTUBE EMBED -->
-                <div v-if="image.youTubeEmbed">
+                <div v-if="imageArray[imageIndex].youTubeEmbed">
                     <iframe
                         width="560" height="315"
-                        :src="image.youTubeEmbed + '?rel=0&modestbranding=1'"
+                        :src="imageArray[imageIndex].youTubeEmbed + '?rel=0&modestbranding=1'"
                         title="YouTube video player"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
                         allowfullscreen>
                     </iframe>
                 </div>
-                <!-- <div id="wrap">
-                    <iframe id="scaled-frame" :src="imageUrl"></iframe>
-                </div> -->
-                <div v-if="getFileType(image.clickThrough) === 'pdf'">
+                <div v-if="getFileType(imageArray[imageIndex].clickThrough) === 'pdf'">
                     <iframe
-                        :src="image.clickThrough + '#view=fitH'"
+                        :src="imageArray[imageIndex].clickThrough + '#view=fitH'"
                         frameborder="1"
                         type="application/pdf"
                         width="700px"
                         height="1000px"
                     />
                 </div>
-                <img :src="image.clickThrough" :id="image.clickThrough" v-if="getFileType(image.clickThrough) === 'image'">
-                <!-- <img :src="imageUrl" /> -->
-                <!-- <div class="wrapper">
-                    <div class="h_iframe">
-                    transparent image
-                    <img class="ratio" src="http://via.placeholder.com/640x360"/>
-                    <iframe
-                        :src="imageUrl"
-                        title="CHANGE ME"
-                        frameborder="0"
-                        id="CHANGE ME"
-                    ></iframe>
-                    </div>
-                </div> -->
-                <!-- <iframe :src="imageUrl"></iframe> -->
+                <img :src="imageArray[imageIndex].clickThrough" :id="imageArray[imageIndex].clickThrough" v-if="getFileType(imageArray[imageIndex].clickThrough) === 'image'">
             </div>
-            <div class="caption" v-html="image.description"></div>
+            <div class="caption" v-html="imageArray[imageIndex].description"></div>
         </div>
     </div>
 </template>
 
 <script>
+import { onMounted } from 'vue'
+
 export default {
     name: 'Lightbox',
     props: {
-        image: {
-            type: Object
+        imageIndex: {
+            type: Number
+        },
+        imageArray: {
+            type: Array
         }
     },
     emits: ['close-lightbox'],
     setup (props, { emit }) {
+        onMounted(() => {
+            console.log('PROPS', props)
+        })
+        
         const closeLightbox = () => {
             emit('close-lightbox')
         }

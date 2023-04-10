@@ -19,6 +19,8 @@
               :image="image"
               :key="i + image.url"
               @open-lightbox="openLightbox"
+              :imageIndex="i"
+              :imageArray="card.images"
             />
           </div>  
         </div>

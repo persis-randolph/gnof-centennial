@@ -5,7 +5,7 @@
             :src="image.url"
             :class="imageClasses"
             :alt="image.description"
-            @click="openLightbox(image)"
+            @click="openLightbox"
         >
         <!-- CAPTION BACKGROUND -->
         <div class="caption-background" v-if="hover">
@@ -34,6 +34,12 @@ export default {
         },
         key: {
             type: String
+        },
+        imageIndex: {
+            type: Number
+        },
+        imageArray: {
+            type: Array
         }
     },
     emits: ['open-lightbox'],
@@ -42,7 +48,7 @@ export default {
 
         const openLightbox = () => {
             if (props.image.clickThrough) {
-                emit('open-lightbox', props.image)
+                emit('open-lightbox', { imageIndex: props.imageIndex, imageArray: props.imageArray })
             }
         }
 
