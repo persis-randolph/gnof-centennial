@@ -53,12 +53,16 @@
                 <img :src="imageArray[imageIndex].clickThrough" :id="imageArray[imageIndex].clickThrough" v-if="getFileType(imageArray[imageIndex].clickThrough) === 'image'">
             </div>
             <div class="caption" v-html="imageArray[imageIndex].description"></div>
+            <div class="image-selectors">
+                <div v-if="showLeftArrow" class="image-selector">&lt;</div>
+                <div v-if="showRightArrow" class="image-selector">&gt;</div>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
-import { onMounted } from 'vue'
+import { computed, onMounted } from 'vue'
 
 export default {
     name: 'Lightbox',
@@ -93,9 +97,21 @@ export default {
             }
         }
 
+        const showLeftArrow = computed(() => {
+            const imageCount = props.imageArray.length
+            return imageCount > 1 && props.imageIndex !== 0
+        })
+
+        const showRightArrow = computed(() => {
+            const imageCount = props.imageArray.length
+            return imageCount > 1 && props.imageIndex !== (imageCount - 1)
+        })
+
         return {
             getFileType,
-            closeLightbox
+            closeLightbox,
+            showLeftArrow,
+            showRightArrow
         }
     }
 }
@@ -216,6 +232,15 @@ img {
 .icon {
     width: 20px;
     margin-bottom: 2px;
+    cursor: pointer;
+}
+.image-selectors {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.image-selector {
+    padding: 0 5px;
     cursor: pointer;
 }
 </style>
