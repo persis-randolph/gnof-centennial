@@ -4,7 +4,7 @@
       :selectedView="selectedView"
     />
     <main id="main">
-      <router-view />
+      <router-view @toggle-scroll="toggleScroll"/>
     </main>
     <Footer />
   </div>
@@ -19,8 +19,12 @@ import Header from '../components/Header.vue'
 export default {
   components: { Footer, Header },
   name: 'Index',
-  setup () {
+  setup (_, { emit }) {
     const selectedView = ref('/home')
+
+    const toggleScroll = (payload) => {
+      emit('toggle-scroll', payload)
+    }
 
     router.beforeEach((to, from, next) => {
       if (to.path === '/') {
@@ -35,7 +39,8 @@ export default {
     })
 
     return {
-      selectedView
+      selectedView,
+      toggleScroll
     }
   }
 }

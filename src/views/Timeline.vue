@@ -90,7 +90,8 @@ export default {
     Card,
     Lightbox 
   },
-  setup () {
+  emits: ['toggle-scroll'],
+  setup (_, { emit }) {
     const cardData = ref(data)
     const currentCard = ref(data[0].year)
 
@@ -196,10 +197,12 @@ export default {
     const openLightbox = (payload) => {
       imageIndex.value = payload.imageIndex
       imageArray.value = payload.imageArray
+      emit('toggle-scroll', 'disable')
     }
     const closeLightbox = () => {
       imageIndex.value = null
       imageArray.value = null
+      emit('toggle-scroll', 'enable')
     }
 
     const preloadImages = () => {
@@ -260,6 +263,7 @@ export default {
   width: 80%;
   max-width: 1000px;
   margin: 0 auto;
+  overflow: hidden;
 }
 #timeline-container {
   background-color: #ffffff;

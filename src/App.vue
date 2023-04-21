@@ -1,5 +1,5 @@
 <template>
-  <Index/>
+  <Index @toggle-scroll="toggleScroll"/>
 </template>
 
 <script>
@@ -7,7 +7,20 @@ import Index from './views/index.vue'
 
 export default {
   name: 'App',
-  components: { Index }
+  components: { Index },
+  setup () {
+    const toggleScroll = (payload) => {
+      if (payload === 'enable') {
+        document.body.style.overflowY = ''
+      } else if (payload === 'disable') {
+        document.body.style.overflowY = 'hidden'
+      }
+    }
+
+    return {
+      toggleScroll
+    }
+  }
 }
 </script>
 

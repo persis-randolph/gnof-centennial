@@ -114,7 +114,7 @@ export default {
         }
 
         const indexToShow = ref(props.imageIndex)
-        
+
         const showLeftArrow = computed(() => {
             const imageCount = props.imageArray.length
             return imageCount > 1 && indexToShow.value !== 0
@@ -186,14 +186,15 @@ export default {
     font-size: 14px;
     color: white;
     padding: 5px;
+    margin: 0 20px;
     width: 100%;
     background-color: #04307e;
-    transform: translateX(-5px);
+    transform: translateX(-25px);
 }
 .image-wrapper {
     max-width: 80vw;
     max-height: 80vh;
-    padding: 0;
+    padding: 0 20px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -210,6 +211,7 @@ img {
 .icon {
     width: 20px;
     margin-bottom: 2px;
+    margin-right: -20px;
     cursor: pointer;
 }
 .image-selectors {
@@ -221,8 +223,9 @@ img {
     transform: translateX(-5px);
 }
 .image-selector {
-    padding: 0 5px;
+    padding: 0 10px;
     cursor: pointer;
+    font-size: 24px;
 }
 .bottom {
     border-radius: 0 0 8px 8px;

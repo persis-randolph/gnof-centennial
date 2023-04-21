@@ -22,9 +22,10 @@ export default [
       {
         description: 'Charter, Federation of Non-sectarian Charity and Philanthropy of New Orleans',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/H_L_Charter-1.jpg',
-        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Charter-1.pdf',
+        clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/charter?fr=sNjk5YjU4Njg0NTI',
         icon: 'dark',
-        rightMargin: true
+        rightMargin: true,
+        issuuEmbed: 'https://e.issuu.com/embed.html?d=charter&doAutoflipPages=true&hideIssuuLogo=true&pageLayout=singlePage&u=greaterneworleansfoundation'
       },
       {
         description: 'Officers, Federation of Non-sectarian Charity and Philanthropy of New Orleans',
