@@ -67,14 +67,15 @@
                     class="image-selector"
                     @click="toggleImage(-1)"
                 >
-                    &lt;
+                    <img src="../assets/Icons_ArrowLeft_Light.svg">
                 </div>
+                <span class="image-number">{{ (indexToShow + 1) + '/' + imageArray.length }}</span>
                 <div
                     v-if="showRightArrow"
                     class="image-selector"
                     @click="toggleImage(1)"
                 >
-                    &gt;
+                    <img src="../assets/Icons_ArrowRight_Light.svg">
                 </div>
             </div>
         </div>
@@ -191,6 +192,10 @@ export default {
     background-color: #04307e;
     transform: translateX(-25px);
 }
+.image-number {
+    font-size: 14px;
+    margin: auto 0;
+}
 .image-wrapper {
     max-width: 80vw;
     max-height: 80vh;
@@ -223,9 +228,10 @@ img {
     transform: translateX(-5px);
 }
 .image-selector {
-    padding: 0 10px;
     cursor: pointer;
-    font-size: 24px;
+    width: 14px;
+    height: 14px;
+    margin: 0 5px;
 }
 .bottom {
     border-radius: 0 0 8px 8px;
