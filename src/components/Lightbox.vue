@@ -41,7 +41,7 @@
                         allowfullscreen>
                     </iframe>
                 </div>
-                <div v-if="getFileType(imageArray[indexToShow].clickThrough) === 'pdf'">
+                <div v-if="getFileType(imageArray[indexToShow].clickThrough) === 'pdf' && !imageArray[indexToShow].issuuEmbed">
                     <iframe
                         :src="imageArray[indexToShow].clickThrough + '#view=fitH'"
                         frameborder="1"

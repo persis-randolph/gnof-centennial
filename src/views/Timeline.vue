@@ -10,7 +10,6 @@
     <div id="timeline-container">
       <!-- timeline filters -->
       <div id="filters">
-        <!-- TODO: need to make these filters look slightly different for mobile -->
         <div id="topic-filters">
           <div class="filter" id="philanthropy" @click="toggleFilter('philanthropy')">
             <font-awesome-icon

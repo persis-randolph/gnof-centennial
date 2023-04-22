@@ -198,7 +198,9 @@ export default [
         description: 'Articles of Incorporation, 1924',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/articles-of-incorporation-1924-1.jpg',
         clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/articles-of-incorporation-1924.pdf',
-        icon: 'dark'
+        icon: 'dark',
+        type: 'embed',
+        issuuEmbed: 'https://e.issuu.com/embed.html?d=articles-of-incorporation-1924&hideIssuuLogo=true&hideShareButton=true&u=greaterneworleansfoundation'
       }
     ]
   },
@@ -282,7 +284,9 @@ export default [
         description: 'Minutes from January 5, 1925 Board of Directors of the Community Chest: 1925 Community Chest Budget of member social organizations.',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/1925-member-organizations-1.png',
         clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/1925-member-organizations.pdf',
-        icon: 'dark'
+        icon: 'dark',
+        type: 'embed',
+        issuuEmbed: 'https://e.issuu.com/embed.html?d=1925-member-organizations&hideIssuuLogo=true&hideShareButton=true&u=greaterneworleansfoundation'
       }
     ]
   },
@@ -490,7 +494,7 @@ export default [
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/annual_report_1925-1935_5th_year?fr=sZTNiZDU4Njg0NTI',
         icon: 'dark',
         type: 'embed',
-        issuuLink: 'https://e.issuu.com/embed.html?d=annual_report_1925-1935_5th_year&hideIssuuLogo=true&hideShareButton=true&logoImageUrl=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fs4yppl0pr5nvbda%2FGNOF_CentennialLogo_RGB_Full%2520Color.png%3Fdl%3D0&pageLayout=singlePage&u=greaterneworleansfoundation'
+        issuuEmbed: 'https://e.issuu.com/embed.html?d=annual_report_1925-1935_5th_year&hideIssuuLogo=true&hideShareButton=true&logoImageUrl=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fs4yppl0pr5nvbda%2FGNOF_CentennialLogo_RGB_Full%2520Color.png%3Fdl%3D0&pageLayout=singlePage&u=greaterneworleansfoundation'
       }
     ]
   },
@@ -584,7 +588,9 @@ export default [
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/1925-1935-Annual-Report-11th-year-1.png',
         clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/1925-1935-Annual-Report-11th-year.pdf',
         icon: 'dark',
-        rightMargin: true
+        rightMargin: true,
+        type: 'embed',
+        issuuEmbed: 'https://e.issuu.com/embed.html?d=1933-annual-report-11th-year&hideIssuuLogo=true&hideShareButton=true&pageLayout=singlePage&u=greaterneworleansfoundation'
       },
       {
         description: '1936 Community Chest Annual Report | The Community Chest in the 12th Year | Business Improvement',
@@ -609,20 +615,6 @@ export default [
   {
     month: '',
     day: '',
-    year: '1935',
-    category: 'leadership',
-    header: 'Chair of the Board, Joseph Haspel',
-    body: [],
-    images: [
-      {
-        description: 'Joseph Haspel',
-        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Joseph-Haspel.jpg'
-      }
-    ]
-  },
-  {
-    month: '',
-    day: '',
     year: '1934',
     category: 'philanthropy',
     header: 'The Community Chest Celebrates 10 Years',
@@ -632,7 +624,23 @@ export default [
         description: '1934 Annual Report | The Community Chest - The First Decade',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/1925-1935-10th-year-1.png',
         clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/1925-1935-10th-year.pdf',
-        icon: 'dark'
+        icon: 'dark',
+        type: 'embed',
+        issuuEmbed: 'https://e.issuu.com/embed.html?d=1934-the_first_decade_of_the_community_chest&hideIssuuLogo=true&hideShareButton=true&pageLayout=singlePage&showOtherPublicationsAsSuggestions=true&u=greaterneworleansfoundation'
+      }
+    ]
+  },
+  {
+    month: '',
+    day: '',
+    year: '1935',
+    category: 'leadership',
+    header: 'Chair of the Board, Joseph Haspel',
+    body: [],
+    images: [
+      {
+        description: 'Joseph Haspel',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Joseph-Haspel.jpg'
       }
     ]
   },
@@ -2210,10 +2218,12 @@ export default [
         icon: 'dark'
       },
       {
-        description: 'LGBTQ Fund Booklet: TODO: MISSING ISSUU EMBED',
+        description: 'LGBTQ Fund Booklet',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-4.41.00-PM.png',
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/gnof-lgbtq-fund-singlepages',
-        icon: 'light'
+        icon: 'light',
+        type: 'embed',
+        issuuEmbed: 'https://e.issuu.com/embed.html?d=gnof-lgbtq-fund-singlepages&hideIssuuLogo=true&hideShareButton=true&u=greaterneworleansfoundation'
       }
     ]
   },
@@ -2294,10 +2304,12 @@ export default [
         icon: 'dark'
       },
       {
-        description: 'Taking Steps Together on Equity & Climate Change - Report TODO: Missing Issuu Embed Link',
+        description: 'Taking Steps Together on Equity & Climate Change - Report',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-4.46.35-PM.png',
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/2019.08.30_-_climate_action_equity_report_-_web',
-        icon: 'dark'
+        icon: 'dark',
+        type: 'emmbed',
+        issuuEmbed: 'https://e.issuu.com/embed.html?d=2019.08.30_-_climate_action_equity_report_-_web&hideIssuuLogo=true&hideShareButton=true&u=greaterneworleansfoundation'
       }
     ]
   },
@@ -2319,10 +2331,12 @@ export default [
         icon: 'dark'
       },
       {
-        description: 'New Orleans School Partnership Study TODO: Missing issuu embed link',
+        description: 'New Orleans School Partnership Study',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-4.49.14-PM.png',
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/opsb_condensed_report',
-        icon: 'light'
+        icon: 'light',
+        type: 'embed',
+        issuuEmbed: 'https://e.issuu.com/embed.html?d=opsb_condensed_report&hideIssuuLogo=true&hideShareButton=true&u=greaterneworleansfoundation'
       }
     ]
   },
@@ -2367,10 +2381,12 @@ export default [
     ],
     images: [
       {
-        description: 'The State of Nonprofits in Southeast Louisiana: The Impact of COVID-19 TODO: missing Issuu embed link',
+        description: 'The State of Nonprofits in Southeast Louisiana: The Impact of COVID-19',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-4.51.22-PM-1.png',
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/nonprofit_survey',
-        icon: 'dark'
+        icon: 'dark',
+        type: 'embed',
+        issuuEmbed: 'https://e.issuu.com/embed.html?d=gnof-uno_covid_19_nonprofit_study&hideIssuuLogo=true&hideShareButton=true&u=greaterneworleansfoundation'
       }
     ]
   },
@@ -2410,11 +2426,13 @@ export default [
         icon: 'dark'
       },
       {
-        description: 'Stormwater Opportunities: Spirit of Charity, Lafitte Greenway, Armstrong Park TODO: missing issuu embed link',
+        description: 'Stormwater Opportunities: Spirit of Charity, Lafitte Greenway, Armstrong Park',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-4.56.49-PM.png',
         size: 'full',
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/gnof_stormwater_report',
-        icon: 'light'
+        icon: 'light',
+        type: 'embed',
+        issuuEmbed: 'https://e.issuu.com/embed.html?d=gnof_stormwater_report&hideIssuuLogo=true&hideShareButton=true&pageLayout=singlePage&u=greaterneworleansfoundation'
       }
     ]
   },
@@ -2460,7 +2478,9 @@ export default [
         description: 'State of Nonprofits in Southeast Louisiana 2021 - Full Report',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-5.01.34-PM.png',
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/nle_survey_report_-_full_5',
-        icon: 'light'
+        icon: 'light',
+        type: 'embed',
+        issuuEmbed: 'https://e.issuu.com/embed.html?d=nle_survey_report_-_full_5&hideIssuuLogo=true&hideShareButton=true&u=greaterneworleansfoundation'
       }
     ]
   },
@@ -2498,6 +2518,24 @@ export default [
         size: 'full',
         clickThrough: 'https://www.gnof.org/foundation-announces-1-million-grant-to-community-lighthouse-project/',
         icon: 'dark'
+      }
+    ]
+  },
+  {
+    month: 'Mar',
+    day: '',
+    year: '2023',
+    category: 'action',
+    header: 'Foundation Announces the Next 100 Years Challenge',
+    body: [],
+    images: [
+      {
+        description: 'TODO: Need to implement actual clickthrough type + add image',
+        url: '',
+        size: '',
+        clickThrough: 'https://www.gnof.org/greater-new-orleans-foundation-next-100-years-challenge-kickoff/',
+        icon: '',
+        type: 'clickThrough'
       }
     ]
   }
