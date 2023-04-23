@@ -1,5 +1,39 @@
 <template>
-  <div class="card" :id="card.year + card.header">
+  <div class="card" :id="cardID">
+    <!-- DECADE HIGHLIGHT CARDS -->
+    <div v-if="card.type && card.type === 'highlights'">
+      <div class="decade-highlight"><span class="decade">{{ card.decade }}</span></div>
+      <div class="decade-categories">
+        <div class="decade-category" v-if="card.philanthropy.length">
+          <div class="philanthropy-header decade-category-name">
+            PHILANTHROPY
+          </div>
+          <div v-if="card.philanthropy.length">
+            {{ getCardText(card.philanthropy) }}
+          </div>
+        </div>
+        <hr v-if="card.philanthropy && (card.leadership || card.action)">
+        <div class="decade-category" v-if="card.leadership.length">
+          <div class="leadership-header decade-category-name">
+            LEADERSHIP
+          </div>
+          <div v-if="card.leadership.length">
+            {{ getCardText(card.leadership) }}
+          </div>
+        </div>
+        <hr v-if="card.leadership && card.action">
+        <div class="decade-category" v-if="card.action.length">
+          <div class="action-header decade-category-name">
+            ACTION
+          </div>
+          <div v-if="card.action.length">
+            {{ getCardText(card.action) }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- NON-DECADE HIGHLIGHT CARDS -->
+    <div v-else>
     <div class="text">
       <!-- CARD DATE -->
       <span class="date" :class="headerColor">
@@ -49,12 +83,14 @@
     <div class="color-highlight" :class="highlightColor"></div>
     <!-- CATEGORY RIGHT-SIDE TEXT -->
     <div class="category-text"><span>{{ card.category.toUpperCase() }}</span></div>
+    </div>
   </div>
 </template>
 
 <script>
 import { computed, ref, watch } from 'vue'
 import Image from '../components/Image.vue'
+import data from '../data/cardData'
 
 export default {
   components: { Image },
@@ -72,6 +108,14 @@ export default {
   },
   emits: ['open-lightbox'],
   setup(props, { emit }) {
+    const cardID = computed(() => {
+      if (props.card.type !== 'highlights') {
+        return props.card.id || props.card.year + props.card.header
+      } else {
+        return props.card.id
+      }
+    })
+
     const isExpanded = ref(false)
     const toggleExpand = () => {
       isExpanded.value = !isExpanded.value
@@ -106,12 +150,27 @@ export default {
       emit('open-lightbox', payload)
     }
 
+    const cardData = ref(data)
+    const cardDataMap = computed(() => {
+      return cardData.value.reduce((acc, card) => {
+        if (card.id) {
+          acc[card.id] = card
+        }
+        return acc
+      }, {})
+    })
+    const getCardText = (cardID) => {
+      return cardDataMap.value[cardID].header
+    }
+
     return {
       cardDateDisplay,
+      cardID,
       halfImageWidth,
       highlightColor,
       headerColor,
       isExpanded,
+      getCardText,
       openLightbox,
       toggleExpand
     }
@@ -144,6 +203,33 @@ export default {
   .card {
     padding: 20px 55px 20px 40px;
   }
+}
+.decade {
+  font-size: 24px;
+  font-weight: 600;
+}
+.decade-highlight {
+  position: absolute;
+  background-color: #04307e;
+  color: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  text-align: center;
+}
+.decade-categories {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.decade-category {
+  display: flex;
+}
+.decade-category-name {
+  font-size: 16px;
+  font-weight: 500;
+  min-width: 140px;
 }
 
 .color-highlight {
@@ -266,6 +352,14 @@ button:hover {
 }
 .close-button-margin-top {
   margin-top: 20px;
+}
+hr {
+  margin: 10px -100px;
+  width: 200%;
+  transform: translateX(5px);
+  height: 1px;
+  border: none;
+  background-color: #dedada;
 }
 
 </style>

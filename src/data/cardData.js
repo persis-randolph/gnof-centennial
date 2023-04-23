@@ -1,5 +1,15 @@
 export default [
   {
+    id: '1910-highlights',
+    decade: "1910's",
+    year: '1910',
+    type: 'highlights',
+    action: '',
+    leadership: 'leadership-jan-31-1914',
+    philanthropy: '',
+  },
+  {
+    id: 'leadership-jan-31-1914',
     month: 'Jan',
     day: '31',
     year: '1914',
@@ -49,6 +59,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-feb-11-1914',
     month: 'Feb',
     day: '11',
     year: '1914',
@@ -67,6 +78,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-jun-14-1915',
     month: 'Jun',
     day: '14',
     year: '1915',
@@ -85,6 +97,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-sep-1-1915',
     month: 'Sep',
     day: '1',
     year: '1915',
@@ -103,6 +116,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-sep-04-1915',
     month: 'Sep',
     day: '4',
     year: '1915',
@@ -127,6 +141,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-sep-06-1915',
     month: 'Sep',
     day: '6',
     year: '1915',
@@ -152,6 +167,16 @@ export default [
     ]
   },
   {
+    id: '1920-highlights',
+    decade: "1920's",
+    year: '1920',
+    type: 'highlights',
+    action: 'action-1925',
+    leadership: 'leadership-jul-17-1924',
+    philanthropy: 'philanthropy-jan-05-1925',
+  },
+  {
+    id: 'leadership-jul-17-1924',
     month: 'Jul',
     day: '17',
     year: '1924',
@@ -187,6 +212,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-0ct-01-1924',
     month: 'Oct',
     day: '1',
     year: '1924',
@@ -205,6 +231,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1924',
     month: '',
     day: '',
     year: '1924',
@@ -221,6 +248,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1924-1925',
     month: '',
     day: '',
     year: '1924',
@@ -236,6 +264,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1924-1927',
     month: '',
     day: '',
     year: '1924',
@@ -253,6 +282,7 @@ export default [
     ]
   },
   {
+    id: 'action-1925',
     month: '',
     day: '',
     year: '1925',
@@ -271,6 +301,7 @@ export default [
     ]
   },
   {
+    id: 'philanthropy-jan-05-1925',
     month: 'Jan',
     day: '5',
     year: '1925',
@@ -291,6 +322,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1925-1926',
     month: '',
     day: '',
     year: '1925',
@@ -306,6 +338,7 @@ export default [
     ]
   },
   {
+    id: 'action-1926',
     month: '',
     day: '',
     year: '1926',
@@ -324,6 +357,7 @@ export default [
     ]
   },
   {
+    id: 'philanthropy-jan-11-1926',
     month: 'Jan',
     day: '11',
     year: '1926',
@@ -343,6 +377,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1926-1927',
     month: '',
     day: '',
     year: '1926',
@@ -358,6 +393,7 @@ export default [
     ]
   },
   {
+    id: 'action-1927',
     month: '',
     day: '',
     year: '1927',
@@ -376,6 +412,7 @@ export default [
     ]
   },
   {
+    id: 'philanthropy-dec-30-1927',
     month: 'Dec',
     day: '30',
     year: '1927',
@@ -394,6 +431,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1927-1928',
     month: '',
     day: '',
     year: '1927',
@@ -409,6 +447,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1927-1930',
     month: '',
     day: '',
     year: '1927',
@@ -424,6 +463,7 @@ export default [
     ]
   },
   {
+    id: 'action-1928-logo',
     month: '',
     day: '',
     year: '1928',
@@ -442,6 +482,7 @@ export default [
     ]
   },
   {
+    id: 'action-1928-report',
     month: '',
     day: '',
     year: '1928',
@@ -459,6 +500,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1928-1929',
     month: '',
     day: '',
     year: '1928',
@@ -481,6 +523,7 @@ export default [
     ]
   },
   {
+    id: 'action-1929',
     month: '',
     day: '',
     year: '1929',
@@ -499,6 +542,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1929-1930',
     month: '',
     day: '',
     year: '1929',

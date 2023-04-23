@@ -66,7 +66,7 @@
     <div id="card-section">
       <Card
         v-for="(card, i) in cardData"
-        :key="i + card.year + card.category + card.header"
+        :key="i + (card.id ? card.id : card.year + card.category + card.header)"
         :card="card"
         class="card"
         @set-current-card="setCurrentCard"
@@ -206,9 +206,11 @@ export default {
 
     const preloadImages = () => {
       for (let card of cardData.value) {
-        for (let image of card.images) {
-          let imageToLoad = new Image()
-          imageToLoad.src = image.url
+        if (card.images) {
+          for (let image of card.images) {
+            let imageToLoad = new Image()
+            imageToLoad.src = image.url
+          }
         }
       }
     }
