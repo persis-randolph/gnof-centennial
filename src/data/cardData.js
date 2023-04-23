@@ -558,6 +558,16 @@ export default [
     ]
   },
   {
+    id: '1930-highlights',
+    decade: "1930's",
+    year: '1930',
+    type: 'highlights',
+    action: '',
+    leadership: 'leadership-1930-1932',
+    philanthropy: 'philanthropy-mar-01-1933',
+  },
+  {
+    id: 'leadership-1930-1932',
     month: '',
     day: '',
     year: '1930',
@@ -573,6 +583,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1930-1957',
     month: '',
     day: '',
     year: '1930',
@@ -590,6 +601,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1932',
     month: '',
     day: '',
     year: '1932',
@@ -604,6 +616,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1933',
     month: '',
     day: '',
     year: '1933',
@@ -618,6 +631,7 @@ export default [
     ]
   },
   {
+    id: 'philanthropy-mar-01-1933',
     month: 'Mar',
     day: '1',
     year: '1933',
@@ -643,6 +657,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1934',
     month: '',
     day: '',
     year: '1934',
@@ -657,6 +672,7 @@ export default [
     ]
   },
   {
+    id: 'philanthropy-1934',
     month: '',
     day: '',
     year: '1934',
@@ -675,6 +691,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1935',
     month: '',
     day: '',
     year: '1935',
@@ -689,6 +706,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1936',
     month: '',
     day: '',
     year: '1936',
@@ -703,6 +721,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1937',
     month: '',
     day: '',
     year: '1937',
@@ -717,6 +736,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1938',
     month: '',
     day: '',
     year: '1938',
@@ -731,6 +751,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1939',
     month: '',
     day: '',
     year: '1939',
@@ -745,6 +766,16 @@ export default [
     ]
   },
   {
+    id: '1940-highlights',
+    decade: "1940's",
+    year: '1940',
+    type: 'highlights',
+    action: 'action-1942',
+    leadership: 'leadership-1940',
+    philanthropy: 'philanthropy-1940',
+  },
+  {
+    id: 'leadership-1940',
     month: '',
     day: '',
     year: '1940',
@@ -759,6 +790,7 @@ export default [
     ]
   },
   {
+    id: 'philanthropy-1940',
     month: '',
     day: '',
     year: '1940',
@@ -778,6 +810,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1941',
     month: '',
     day: '',
     year: '1941',
@@ -792,6 +825,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1942',
     month: '',
     day: '',
     year: '1942',
@@ -806,6 +840,7 @@ export default [
     ]
   },
   {
+    id: 'philanthropy-1942',
     month: '',
     day: '',
     year: '1942',
@@ -824,6 +859,7 @@ export default [
     ]
   },
   {
+    id: 'action-1942',
     month: '',
     day: '',
     year: '1942',
@@ -849,6 +885,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1943',
     month: '',
     day: '',
     year: '1943',
@@ -863,6 +900,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1944',
     month: '',
     day: '',
     year: '1944',
@@ -877,6 +915,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1945',
     month: '',
     day: '',
     year: '1945',
@@ -893,6 +932,7 @@ export default [
     ]
   },
   {
+    id: 'action-1945',
     month: '',
     day: '',
     year: '1945',
@@ -912,6 +952,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1946',
     month: '',
     day: '',
     year: '1946',
@@ -926,6 +967,7 @@ export default [
     ]
   },
   {
+    id: 'action-1946',
     month: '',
     day: '',
     year: '1946',
@@ -944,6 +986,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1947',
     month: '',
     day: '',
     year: '1947',
@@ -958,6 +1001,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1948',
     month: '',
     day: '',
     year: '1948',
@@ -972,6 +1016,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1949',
     month: '',
     day: '',
     year: '1949',
@@ -987,6 +1032,7 @@ export default [
     ]
   },
   {
+    id: 'action-1949',
     month: '',
     day: '',
     year: '1949',
@@ -1003,6 +1049,16 @@ export default [
     ]
   },
   {
+    id: '1950-highlights',
+    decade: "1950's",
+    year: '1950',
+    type: 'highlights',
+    action: 'action-1953',
+    leadership: 'leadership-1950',
+    philanthropy: 'philanthropy-1955',
+  },
+  {
+    id: 'leadership-1950',
     month: '',
     day: '',
     year: '1950',
@@ -1017,6 +1073,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1951',
     month: '',
     day: '',
     year: '1951',
@@ -1031,6 +1088,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1952',
     month: '',
     day: '',
     year: '1952',
@@ -1046,6 +1104,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1953',
     month: '',
     day: '',
     year: '1953',
@@ -1060,6 +1119,7 @@ export default [
     ]
   },
   {
+    id: 'action-1953',
     month: '',
     day: '',
     year: '1953',
@@ -1079,6 +1139,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1954',
     month: '',
     day: '',
     year: '1954',
@@ -1093,6 +1154,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1955',
     month: '',
     day: '',
     year: '1955',
@@ -1109,6 +1171,7 @@ export default [
     ]
   },
   {
+    id: 'philanthropy-1955',
     month: '',
     day: '',
     year: '1955',
@@ -1127,6 +1190,7 @@ export default [
     ]
   },
   {
+    id: 'action-1955',
     month: '',
     day: '',
     year: '1955',
@@ -1145,6 +1209,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1956',
     month: '',
     day: '',
     year: '1956',
@@ -1159,21 +1224,7 @@ export default [
     ]
   },
   {
-    month: '',
-    day: '',
-    year: '1957',
-    alternateYearDisplay: '1957, 1962 - 1964',
-    category: 'leadership',
-    header: 'Chair of the Board, Wood Brown',
-    body: [],
-    images: [
-      {
-        description: 'Wood Brown',
-        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Wood-Brown.png'
-      }
-    ]
-  },
-  {
+    id: 'leadership-1957-1959',
     month: '',
     day: '',
     year: '1957',
@@ -1189,6 +1240,23 @@ export default [
     ]
   },
   {
+    id: 'leadership-1957-1964',
+    month: '',
+    day: '',
+    year: '1957',
+    alternateYearDisplay: '1957, 1962 - 1964',
+    category: 'leadership',
+    header: 'Chair of the Board, Wood Brown',
+    body: [],
+    images: [
+      {
+        description: 'Wood Brown',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Wood-Brown.png'
+      }
+    ]
+  },
+  {
+    id: 'leadership-1958-frank-werner',
     month: '',
     day: '',
     year: '1958',
@@ -1203,6 +1271,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1958-community-trust',
     month: '',
     day: '',
     year: '1958',
@@ -1221,6 +1290,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1959-1961',
     month: '',
     day: '',
     year: '1959',
@@ -1236,6 +1306,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1959-1974',
     month: '',
     day: '',
     year: '1959',
@@ -1251,6 +1322,16 @@ export default [
     ]
   },
   {
+    id: '1960-highlights',
+    decade: "1960's",
+    year: '1960',
+    type: 'highlights',
+    action: '',
+    leadership: 'leadership-1969-1972',
+    philanthropy: 'philanthropy-1960',
+  },
+  {
+    id: 'philanthropy-1960',
     month: '',
     day: '',
     year: '1960',
@@ -1269,6 +1350,7 @@ export default [
     ]
   },
   {
+    id: 'philanthropy-1962',
     month: '',
     day: '',
     year: '1962',
@@ -1287,6 +1369,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1965-1968',
     month: '',
     day: '',
     year: '1965',
@@ -1304,6 +1387,7 @@ export default [
     ]
   },
   {
+    id: 'philanthropy-1969',
     month: '',
     day: '',
     year: '1969',
@@ -1322,6 +1406,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1969-1972',
     month: '',
     day: '',
     year: '1969',
@@ -1339,6 +1424,16 @@ export default [
     ]
   },
   {
+    id: '1970-highlights',
+    decade: "1970's",
+    year: '1970',
+    type: 'highlights',
+    action: '',
+    leadership: 'leadership-1973',
+    philanthropy: '',
+  },
+  {
+    id: 'leadership-1973',
     month: '',
     day: '',
     year: '1973',
@@ -1355,6 +1450,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1974',
     month: '',
     day: '',
     year: '1974',
@@ -1372,6 +1468,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1975-1977',
     month: '',
     day: '',
     year: '1975',
@@ -1390,6 +1487,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1977-1979',
     month: '',
     day: '',
     year: '1977',
@@ -1407,6 +1505,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1979-1981',
     month: '',
     day: '',
     year: '1979',
@@ -1424,6 +1523,16 @@ export default [
     ]
   },
   {
+    id: '1980-highlights',
+    decade: "1980's",
+    year: '1980',
+    type: 'highlights',
+    action: 'action-1983',
+    leadership: 'leadership-1981-1983',
+    philanthropy: '',
+  },
+  {
+    id: 'leadership-1981-1983',
     month: '',
     day: '',
     year: '1981',
@@ -1441,6 +1550,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1982',
     month: '',
     day: '',
     year: '1982',
@@ -1452,6 +1562,7 @@ export default [
     images: []
   },
   {
+    id: 'action-1983',
     month: '',
     day: '',
     year: '1983',
@@ -1470,6 +1581,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1983-1985',
     month: '',
     day: '',
     year: '1983',
@@ -1488,6 +1600,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1984-1985',
     month: '',
     day: '',
     year: '1984',
@@ -1505,6 +1618,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1985-1987',
     month: '',
     day: '',
     year: '1985',
@@ -1523,6 +1637,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1985-1991',
     month: '',
     day: '',
     year: '1985',
@@ -1543,6 +1658,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1986',
     month: '',
     day: '',
     year: '1986',
@@ -1552,6 +1668,7 @@ export default [
     images: []
   },
   {
+    id: 'action-1986',
     month: '',
     day: '',
     year: '1986',
@@ -1571,6 +1688,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1987-1989',
     month: '',
     day: '',
     year: '1987',
@@ -1589,6 +1707,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1989-1991',
     month: '',
     day: '',
     year: '1989',
@@ -1607,6 +1726,16 @@ export default [
     ]
   },
   {
+    id: '1990-highlights',
+    decade: "1990's",
+    year: '1990',
+    type: 'highlights',
+    action: 'action-1991',
+    leadership: 'leadership-1991',
+    philanthropy: 'philanthropy-1993',
+  },
+  {
+    id: 'leadership-1991',
     month: '',
     day: '',
     year: '1991',
@@ -1626,6 +1755,7 @@ export default [
     ]
   },
   {
+    id: 'action-1991',
     month: '',
     day: '',
     year: '1991',
@@ -1644,6 +1774,7 @@ export default [
     ]
   },
   {
+    id: 'philanthropy-1993',
     month: '',
     day: '',
     year: '1993',
@@ -1662,6 +1793,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1993-1995',
     month: '',
     day: '',
     year: '1993',
@@ -1680,6 +1812,7 @@ export default [
     ]
   },
   {
+    id: 'philanthropy-1994',
     month: '',
     day: '',
     year: '1994',
@@ -1698,6 +1831,7 @@ export default [
     ]
   },
   {
+    id: 'philanthropy-1995',
     month: '',
     day: '',
     year: '1995',
@@ -1717,6 +1851,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1995-1997',
     month: '',
     day: '',
     year: '1995',
@@ -1736,6 +1871,7 @@ export default [
     ]
   },
   {
+    id: 'philanthropy-1997',
     month: '',
     day: '',
     year: '1997',
@@ -1755,6 +1891,7 @@ export default [
     ]
   },
   {
+    id: 'action-1997',
     month: '',
     day: '',
     year: '1997',
@@ -1774,6 +1911,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1997-1999',
     month: '',
     day: '',
     year: '1997',
@@ -1791,6 +1929,7 @@ export default [
     ]
   },
   {
+    id: 'philanthropy-1999',
     month: '',
     day: '',
     year: '1999',
@@ -1808,6 +1947,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-1999-2001',
     month: '',
     day: '',
     year: '1999',
@@ -1826,6 +1966,16 @@ export default [
     ]
   },
   {
+    id: '2000-highlights',
+    decade: "2000's",
+    year: '2000',
+    type: 'highlights',
+    action: 'action-2005',
+    leadership: 'leadership-2001-2003',
+    philanthropy: 'philanthropy-2000',
+  },
+  {
+    id: 'philanthropy-2000',
     month: '',
     day: '',
     year: '2000',
@@ -1842,6 +1992,7 @@ export default [
     ]
   },
   {
+    id: 'philanthropy-2001',
     month: '',
     day: '',
     year: '2001',
@@ -1858,6 +2009,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-2001-2003',
     month: '',
     day: '',
     year: '2001',
@@ -1875,6 +2027,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-2003-2005',
     month: '',
     day: '',
     year: '2003',
@@ -1892,6 +2045,7 @@ export default [
     ]
   },
   {
+    id: 'action-2005',
     month: '',
     day: '',
     year: '2005',
@@ -1910,6 +2064,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-2005-2007',
     month: '',
     day: '',
     year: '2005',
@@ -1925,6 +2080,7 @@ export default [
     ]
   },
   {
+    id: 'action-2006-2008',
     month: '',
     day: '',
     year: '2006',
@@ -1945,6 +2101,7 @@ export default [
     ]
   },
   {
+    id: 'philanthropy-2007',
     month: '',
     day: '',
     year: '2007',
@@ -1963,6 +2120,7 @@ export default [
     ]
   },
   {
+    id: 'action-2007',
     month: '',
     day: '',
     year: '2007',
@@ -1982,6 +2140,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-2007-2009',
     month: '',
     day: '',
     year: '2007',
@@ -2001,6 +2160,7 @@ export default [
     ]
   },
   {
+    id: 'action-2009',
     month: '',
     day: '',
     year: '2009',
@@ -2020,6 +2180,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-2009-2011',
     month: '',
     day: '',
     year: '2009',
@@ -2038,6 +2199,16 @@ export default [
     ]
   },
   {
+    id: '2010-highlights',
+    decade: "2010's",
+    year: '2010',
+    type: 'highlights',
+    action: 'action-2010',
+    leadership: 'leadership-2011-2013',
+    philanthropy: 'philanthropy-2012',
+  },
+  {
+    id: 'action-2010',
     month: '',
     day: '',
     year: '2010',
@@ -2057,6 +2228,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-2011-2013',
     month: '',
     day: '',
     year: '2011',
@@ -2074,6 +2246,7 @@ export default [
     ]
   },
   {
+    id: 'philanthropy-2012',
     month: '',
     day: '',
     year: '2012',
@@ -2101,6 +2274,7 @@ export default [
     ]
   },
   {
+    id: 'action-2012-organizational-effectiveness',
     month: '',
     day: '',
     year: '2012',
@@ -2120,6 +2294,7 @@ export default [
     ]
   },
   {
+    id: 'action-2012-pitch-it-challenge',
     month: '',
     day: '',
     year: '2012',
@@ -2138,6 +2313,7 @@ export default [
     ]
   },
   {
+    id: 'philanthropy-2013',
     month: '',
     day: '',
     year: '2013',
@@ -2157,6 +2333,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-2013-2015',
     month: '',
     day: '',
     year: '2013',
@@ -2175,6 +2352,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-2014',
     month: '',
     day: '',
     year: '2014',
@@ -2192,11 +2370,12 @@ export default [
     ]
   },
   {
+    id: 'leadership-2015-2017',
     month: '',
     day: '',
     year: '2015',
     yearEnd: '2017',
-    category: '',
+    category: 'leadership',
     header: 'Chair of the Board, Cheryl M. Teamer',
     body: [
       "Cheryl Teamer served on the Greater New Orleans Foundation Board from 2005 to 2019 and served as board chair from 2015 to 2017. Teamer's leadership came during a time of great impact. Not only did she chair nearly every committee the Foundation had during her tenure as a trustee, but she gave her heart and soul and generous spirit to everything we did. From GiveNOLADay to Impact 100 to leading bus tours visiting grantees, she did it all with a joyful and infectious smile. Teamer was a strong proponent of public service and was active in a variety of civic and charitable organizations. She also served on a variety of boards during her life, including the Louisiana Legislative Black Caucus Foundation, Second Harvest, and Chamber of Commerce for New Orleans."
@@ -2209,6 +2388,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-2016-andy-kopplin',
     month: '',
     day: '',
     year: '2016',
@@ -2225,6 +2405,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-2016-center-for-philanthropy',
     month: '',
     day: '',
     year: '2016',
@@ -2244,6 +2425,7 @@ export default [
     ]
   },
   {
+    id: 'philanthropy-2016',
     month: '',
     day: '',
     year: '2016',
@@ -2272,6 +2454,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-2017-2019',
     month: '',
     day: '',
     year: '2017',
@@ -2287,6 +2470,7 @@ export default [
     ]
   },
   {
+    id: 'action-2018',
     month: '',
     day: '',
     year: '2018',
@@ -2312,6 +2496,7 @@ export default [
     ]
   },
   {
+    id: 'philanthropy-2019',
     month: '',
     day: '',
     year: '2019',
@@ -2331,6 +2516,7 @@ export default [
     ]
   },
   {
+    id: 'action-2019-equity-and-climate-change-report',
     month: '',
     day: '',
     year: '2019',
@@ -2358,6 +2544,7 @@ export default [
     ]
   },
   {
+    id: 'action-2019-new-orleans-school-partnership-study',
     month: '',
     day: '',
     year: '2019',
@@ -2385,6 +2572,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-2019-2021',
     month: '',
     day: '',
     year: '2019',
@@ -2403,6 +2591,16 @@ export default [
     ]
   },
   {
+    id: '2020-highlights',
+    decade: "2020's",
+    year: '2020',
+    type: 'highlights',
+    action: 'action-jun-2020',
+    leadership: 'leadership-2021-2023',
+    philanthropy: 'philanthropy-2020',
+  },
+  {
+    id: 'philanthropy-2020',
     month: '',
     day: '',
     year: '2020',
@@ -2415,6 +2613,7 @@ export default [
     images: []
   },
   {
+    id: 'action-jun-2020',
     month: 'Jun',
     day: '',
     year: '2020',
@@ -2435,6 +2634,7 @@ export default [
     ]
   },
   {
+    id: 'philanthropy-oct-2020',
     month: 'Oct',
     day: '',
     year: '2020',
@@ -2453,6 +2653,7 @@ export default [
     ]
   },
   {
+    id: 'action-oct-2020',
     month: 'Oct',
     day: '',
     year: '2020',
@@ -2481,6 +2682,7 @@ export default [
     ]
   },
   {
+    id: 'action-nov-2020',
     month: 'Nov',
     day: '',
     year: '2020',
@@ -2501,6 +2703,7 @@ export default [
     ]
   },
   {
+    id: 'action-dec-2021',
     month: 'Dec',
     day: '',
     year: '2021',
@@ -2529,6 +2732,7 @@ export default [
     ]
   },
   {
+    id: 'leadership-2021-2023',
     month: '',
     day: '',
     year: '2021',
@@ -2547,6 +2751,7 @@ export default [
     ]
   },
   {
+    id: 'action-may-2022',
     month: 'May',
     day: '',
     year: '2022',
@@ -2566,6 +2771,7 @@ export default [
     ]
   },
   {
+    id: 'action-mar-2023',
     month: 'Mar',
     day: '',
     year: '2023',
