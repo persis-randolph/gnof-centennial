@@ -72,6 +72,7 @@
         @set-current-card="setCurrentCard"
         :allCardsExpanded="allCardsExpanded"
         @open-lightbox="openLightbox"
+        @toggle-to-decade="onClick"
       />
     </div>
   </div>
@@ -113,11 +114,13 @@ export default {
       // on reselection or window resize - re-map card heights for dynamic timeline
       const cards = document.getElementsByClassName('card')
       for (let member in topYearMap) delete topYearMap[member]
-      for (let member in reverseMap) delete reverseMap[member]
+      for (let member in reverseMap.value) delete reverseMap.value[member]
       for (let i = 0; i < cardData.value.length; i++) {
         let cardBounds = cards[i].getBoundingClientRect()
         topYearMap[cardBounds.top + window.scrollY] = cardData.value[i].year
-        reverseMap[cardData.value[i].year] = cardBounds.top + window.scrollY
+        if (!reverseMap.value[cardData.value[i].year]) {
+          reverseMap.value[cardData.value[i].year] = cardBounds.top + window.scrollY
+        }
       }
     })
 
@@ -128,7 +131,7 @@ export default {
     }
 
     const topYearMap = {}
-    const reverseMap = {}
+    const reverseMap = ref({})
     watch(scrollYPosition, () => {
       if (!isScrolling.value) {
         const cardPositions = Object.keys(topYearMap)
@@ -149,7 +152,7 @@ export default {
           isScrolling.value = false
         }, 1000)
         window.scroll({
-          top: reverseMap[year] - 200,
+          top: reverseMap.value[year] - 250,
           behavior: 'smooth'
         })
       }
@@ -225,7 +228,9 @@ export default {
       for (let i = 0; i < cards.length; i++) {
         let cardBounds = cards[i].getBoundingClientRect()
         topYearMap[cardBounds.top + window.scrollY] = cardData.value[i].year
-        reverseMap[cardData.value[i].year] = cardBounds.top + window.scrollY
+        if (!reverseMap.value[cardData.value[i].year]) {
+          reverseMap.value[cardData.value[i].year] = cardBounds.top + window.scrollY
+        }
       }
     })
     onBeforeUnmount(() => {

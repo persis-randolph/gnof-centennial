@@ -2,13 +2,29 @@
   <div class="card" :id="cardID">
     <!-- DECADE HIGHLIGHT CARDS -->
     <div v-if="card.type && card.type === 'highlights'">
-      <div class="decade-highlight"><span class="decade">{{ card.decade }}</span></div>
+      <!-- DECADE HIGHLIGHT HEADER -->
+      <div class="decade-highlight">
+        <div
+          @click="toggleDecade('previous')"
+          :class="showIcon('left') ? 'svg-container' : 'hide svg-container'"
+        >
+          <img src="../assets/Icons_ArrowLeft_Light.svg" class="arrow">
+        </div>
+        <div class="decade">{{ card.decade }}</div>
+        <div
+          @click="toggleDecade('next')"
+          :class="showIcon('right') ? 'svg-container' : 'hide svg-container'"
+        >
+          <img src="../assets/Icons_ArrowRight_Light.svg" class="arrow">
+        </div>
+      </div>
+      <!-- DECADE HIGHLIGHT CONTENT -->
       <div class="decade-categories">
         <div class="decade-category" v-if="card.philanthropy.length">
           <div class="philanthropy-header decade-category-name">
             PHILANTHROPY
           </div>
-          <div v-if="card.philanthropy.length">
+          <div v-if="card.philanthropy.length" class="decade-category-text">
             {{ getCardText(card.philanthropy) }}
           </div>
         </div>
@@ -17,7 +33,7 @@
           <div class="leadership-header decade-category-name">
             LEADERSHIP
           </div>
-          <div v-if="card.leadership.length">
+          <div v-if="card.leadership.length" class="decade-category-text">
             {{ getCardText(card.leadership) }}
           </div>
         </div>
@@ -26,7 +42,7 @@
           <div class="action-header decade-category-name">
             ACTION
           </div>
-          <div v-if="card.action.length">
+          <div v-if="card.action.length" class="decade-category-text">
             {{ getCardText(card.action) }}
           </div>
         </div>
@@ -106,7 +122,7 @@ export default {
       default: false
     }
   },
-  emits: ['open-lightbox'],
+  emits: ['open-lightbox', 'toggle-to-decade'],
   setup(props, { emit }) {
     const cardID = computed(() => {
       if (props.card.type !== 'highlights') {
@@ -163,6 +179,25 @@ export default {
       return cardDataMap.value[cardID].header
     }
 
+    const showIcon = (direction) => {
+      if (direction === 'left') {
+        return props.card.year !== '1910'
+      } else if (direction === 'right') {
+        return props.card.year !== '2020'
+      }
+    }
+
+    const toggleDecade = (direction) => {
+      let year
+      if (direction === 'previous') {
+        year = (+props.card.year - 10).toString()
+        emit('toggle-to-decade', year)
+      } else if (direction === 'next') {
+        year = (+props.card.year + 10).toString()
+        emit('toggle-to-decade', year)
+      }
+    }
+
     return {
       cardDateDisplay,
       cardID,
@@ -172,6 +207,8 @@ export default {
       isExpanded,
       getCardText,
       openLightbox,
+      showIcon,
+      toggleDecade,
       toggleExpand
     }
   }
@@ -207,6 +244,7 @@ export default {
 .decade {
   font-size: 24px;
   font-weight: 600;
+  margin: auto 0;
 }
 .decade-highlight {
   position: absolute;
@@ -216,7 +254,9 @@ export default {
   left: 0;
   width: 100%;
   border-radius: 8px 8px 0 0;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
 }
 .decade-categories {
   margin-top: 30px;
@@ -231,7 +271,10 @@ export default {
   font-weight: 500;
   min-width: 140px;
 }
-
+.decade-category-text {
+  font-size: 16px;
+  font-weight: 300;
+}
 .color-highlight {
   background-color: #04307e;
   color: #ffffff;
@@ -360,6 +403,27 @@ hr {
   height: 1px;
   border: none;
   background-color: #dedada;
+}
+.svg-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 70px;
+}
+@media only screen and (max-width: 700px)  {
+  .svg-container {
+    padding: 0 35px;
+  }
+}
+.arrow {
+  color: white;
+  height: 24px;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+}
+.hide {
+  visibility: hidden;
 }
 
 </style>

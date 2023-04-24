@@ -795,7 +795,7 @@ export default [
     day: '',
     year: '1940',
     category: 'philanthropy',
-    header: '',
+    header: 'Community Chest Receives Bequest for Norman Mayer Memorial Building',
     body: [
       'The Community Chest received a bequest of Mrs. Fannie Levy Mayer, widow of Norman Mayer, in the sum of $150,000 for the purchase or construction of a building to be known as the Norman Mayer Memorial Building. The will stipulated that the building was to be used for the offices of the Community Chest and affiliated organizations.'
     ],
