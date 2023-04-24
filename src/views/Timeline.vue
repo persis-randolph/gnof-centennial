@@ -158,6 +158,7 @@ export default {
       }
     }
 
+    // TODO: either make it so that filters do not remove decade highlights, or make a filter specific for them?
     const selectedFiltersObj = reactive({
       'philanthropy': true,
       'leadership': true,

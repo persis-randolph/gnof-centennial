@@ -9,12 +9,14 @@
           :class="showIcon('left') ? 'svg-container' : 'hide svg-container'"
         >
           <img src="../assets/Icons_ArrowLeft_Light.svg" class="arrow">
+          <div class="decade-small">{{ previousDecade }}</div>
         </div>
         <div class="decade">{{ card.decade }}</div>
         <div
           @click="toggleDecade('next')"
           :class="showIcon('right') ? 'svg-container' : 'hide svg-container'"
         >
+          <div class="decade-small">{{ nextDecade }}</div>
           <img src="../assets/Icons_ArrowRight_Light.svg" class="arrow">
         </div>
       </div>
@@ -187,6 +189,13 @@ export default {
       }
     }
 
+    const previousDecade = computed(() => {
+      return (+props.card.year - 10).toString() + `'s`
+    })
+    const nextDecade = computed(() => {
+      return (+props.card.year + 10).toString() + `'s`
+    })
+
     const toggleDecade = (direction) => {
       let year
       if (direction === 'previous') {
@@ -205,6 +214,8 @@ export default {
       highlightColor,
       headerColor,
       isExpanded,
+      nextDecade,
+      previousDecade,
       getCardText,
       openLightbox,
       showIcon,
@@ -245,6 +256,12 @@ export default {
   font-size: 24px;
   font-weight: 600;
   margin: auto 0;
+}
+.decade-small {
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
 }
 .decade-highlight {
   position: absolute;
