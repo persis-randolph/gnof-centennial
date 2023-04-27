@@ -129,7 +129,8 @@ export default {
         cardIdMap[cardData.value[i].id] = {
           year: cardData.value[i].year,
           position: cardBounds.top + window.scrollY,
-          isExpanded: tempCopy[cardData.value[i].id]?.isExpanded || false
+          isExpanded: tempCopy[cardData.value[i].id]?.isExpanded || false,
+          category: cardData.value[i].category || cardData.value[i].type
         }
       }
     })
@@ -170,7 +171,26 @@ export default {
     }
 
     const jumpToCard = async (cardID) => {
-      if (!isScrolling.value) {
+      // if the card isn't currently in the displayed data, turns off all filters and then has a brief timeout to wait to scroll to the card
+      if (!cardIdMap[cardID]) {
+        selectedFiltersObj.philanthropy = true
+        selectedFiltersObj.leadership = true
+        selectedFiltersObj.action = true
+
+        setTimeout(() => {
+          if (!isScrolling.value) {
+          currentCard.value = cardIdMap[cardID].year
+          isScrolling.value = true
+          setTimeout(() => {
+            isScrolling.value = false
+          }, 1000)
+          window.scroll({
+            top: cardIdMap[cardID].position - 250,
+            behavior: 'smooth'
+          })
+          }
+        }, 250)
+      } else if (!isScrolling.value) {
         currentCard.value = cardIdMap[cardID].year
         isScrolling.value = true
         setTimeout(() => {
@@ -181,9 +201,9 @@ export default {
           behavior: 'smooth'
         })
       }
+
     }
 
-    // TODO: either make it so that filters do not remove decade highlights, or make a filter specific for them?
     const selectedFiltersObj = reactive({
       'philanthropy': true,
       'leadership': true,
@@ -209,7 +229,7 @@ export default {
       cardData.value = data.filter(card => {
         if (
           selectedFiltersObj[card.category] ||
-          (card.type && card.type === 'highlights' && card[card.category])
+          (card.type && card.type === 'highlights')
         ) {
           if (allCardsExpanded.value) {
             cardIdMap[card.id] = {
@@ -275,7 +295,8 @@ export default {
         cardIdMap[cardData.value[i].id] = {
           year: cardData.value[i].year,
           position: cardBounds.top + window.scrollY,
-          isExpanded: false
+          isExpanded: false,
+          category: cardData.value[i].category || cardData.value[i].type
         }
       }
     })
