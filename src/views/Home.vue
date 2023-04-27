@@ -1,5 +1,3 @@
-<!-- TODO: scroll needs to reset to 0 when navigating to the homepage -->
-
 <template>
   <div>
     <div :style="{ backgroundColor: 'black' }">
@@ -15,6 +13,7 @@
 import PullOutFigureSection from "../components/PullOutFigureSection.vue"
 import OurStory from "../components/OurStory.vue"
 import Animation from "../components/Animation.vue"
+import { onMounted } from 'vue'
 
 export default {
   name: "Home",
@@ -24,6 +23,13 @@ export default {
     PullOutFigureSection,
   },
   setup() {
+    // ensures scroll is at top when returning to this page
+    onMounted(() => {
+      window.scroll({
+        top: 0
+      })
+    })
+
     return {}
   },
 };

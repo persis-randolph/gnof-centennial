@@ -280,6 +280,10 @@ export default {
     }
 
     onMounted(() => {
+      // ensures scroll is at top when returning to this page
+      window.scroll({
+        top: 0
+      })
       preloadImages()
       nextTick(() => {
         window.addEventListener('scroll', onScroll)
