@@ -1,7 +1,7 @@
 <template>
   <div class="card" :id="cardID">
     <!-- DECADE HIGHLIGHT CARDS -->
-    <div v-if="card.type && card.type === 'highlights'">
+    <div v-if="card.type && card.type === 'highlights'" class="decade-highlight-card">
       <!-- DECADE HIGHLIGHT HEADER -->
       <div class="decade-highlight">
         <div
@@ -51,56 +51,56 @@
       </div>
     </div>
     <!-- NON-DECADE HIGHLIGHT CARDS -->
-    <div v-else>
-    <div class="text">
-      <!-- CARD DATE -->
-      <span class="date" :class="headerColor">
-        {{ cardDateDisplay }}
-      </span>
-      <!-- CARD HEADER (if exists) -->
-      <span class="header">{{ card.header }}</span>
-      <div :class="card.images.length ? 'image-text-container' : ''">
-        <!-- IMAGES (if exist & non-collapsed) -->
-        <div
-          class="image-container"
-          :class="halfImageWidth ? 'half-width' : 'full-width'"
-          v-if="card.images.length && isExpanded"
-        >
-          <div v-for="(image, i) in card.images" :key="i + image.url">
-            <Image
-              :image="image"
-              :key="i + image.url"
-              @open-lightbox="openLightbox"
-              :imageIndex="i"
-              :imageArray="card.images"
-            />
-          </div>  
-        </div>
-        <!-- CARD PARAGRAPHS -->
-        <div v-if="isExpanded && card.body.length">
-          <div v-for="(paragraph, i) of card.body" :key="i + card.header">
-            <div class="body">
-              <p v-html="paragraph"></p>
-              <button @click="toggleExpand" v-if="card.body.length - 1 === i" class="close-button-margin-top">Close</button>
+    <div v-else class="normal-card">
+      <div class="text">
+        <!-- CARD DATE -->
+        <span class="date" :class="headerColor">
+          {{ cardDateDisplay }}
+        </span>
+        <!-- CARD HEADER (if exists) -->
+        <span class="header">{{ card.header }}</span>
+        <div :class="card.images.length ? 'image-text-container' : ''">
+          <!-- IMAGES (if exist & non-collapsed) -->
+          <div
+            class="image-container"
+            :class="halfImageWidth ? 'half-width' : 'full-width'"
+            v-if="card.images.length && isExpanded"
+          >
+            <div v-for="(image, i) in card.images" :key="i + image.url">
+              <Image
+                :image="image"
+                :key="i + image.url"
+                @open-lightbox="openLightbox"
+                :imageIndex="i"
+                :imageArray="card.images"
+              />
+            </div>  
+          </div>
+          <!-- CARD PARAGRAPHS -->
+          <div v-if="isExpanded && card.body.length">
+            <div v-for="(paragraph, i) of card.body" :key="i + card.header">
+              <div class="body">
+                <p v-html="paragraph"></p>
+                <button @click="toggleExpand" v-if="card.body.length - 1 === i" class="close-button-margin-top">Close</button>
+              </div>
+              <br v-if="card.body.length - 1 > i">
             </div>
-            <br v-if="card.body.length - 1 > i">
+          </div>
+          <!-- if card is expanded with no body text, but has images -->
+          <div v-else-if="isExpanded && !card.body.length && card.images.length">
+            <button @click="toggleExpand">Close</button>
+          </div>
+          <div class="body" v-else-if="!isExpanded">
+            <div class="collapsed-text"><span>{{ card.body[0] }}</span></div>
+            <br v-if="card.body.length && !isExpanded">
+            <button @click="toggleExpand">View More</button>
           </div>
         </div>
-        <!-- if card is expanded with no body text, but has images -->
-        <div v-else-if="isExpanded && !card.body.length && card.images.length">
-          <button @click="toggleExpand">Close</button>
-        </div>
-        <div class="body" v-else-if="!isExpanded">
-          <div class="collapsed-text"><span>{{ card.body[0] }}</span></div>
-          <br v-if="card.body.length && !isExpanded">
-          <button @click="toggleExpand">View More</button>
-        </div>
       </div>
-    </div>
-    <!-- CATEGORY RIGHT-SIDE COLOR BORDER -->
-    <div class="color-highlight" :class="highlightColor"></div>
-    <!-- CATEGORY RIGHT-SIDE TEXT -->
-    <div class="category-text"><span>{{ card.category.toUpperCase() }}</span></div>
+      <!-- CATEGORY RIGHT-SIDE COLOR BORDER -->
+      <div class="color-highlight" :class="highlightColor"></div>
+      <!-- CATEGORY RIGHT-SIDE TEXT -->
+      <div class="category-text"><span>{{ card.category.toUpperCase() }}</span></div>
     </div>
   </div>
 </template>
@@ -237,7 +237,6 @@ export default {
 .card {
   margin: 15px auto;
   text-align: left;
-  padding: 50px 70px 50px 70px;
   line-height: 1.5;
   background-color: #ffffff;
   box-shadow: 2px 2px 2px #b0a9a0;
@@ -245,6 +244,13 @@ export default {
   -webkit-box-shadow: 2px 2px 3px #b0a9a0;
   border-radius: 8px;
   position: relative;
+}
+
+.normal-card {
+  padding: 50px 70px;
+}
+.decade-highlight-card {
+  padding: 25px 70px;
 }
 
 @media only screen and (max-width: 700px)  {
@@ -434,7 +440,7 @@ hr {
 }
 .arrow {
   color: white;
-  height: 24px;
+  height: 12px;
   margin: 0 auto;
   display: block;
   cursor: pointer;
