@@ -35,7 +35,7 @@ export default [
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/charter?fr=sNjk5YjU4Njg0NTI',
         icon: 'dark',
         rightMargin: true,
-        issuuEmbed: 'https://e.issuu.com/embed.html?d=charter&doAutoflipPages=true&hideIssuuLogo=true&pageLayout=singlePage&u=greaterneworleansfoundation'
+        issuuEmbed: 'https://e.issuu.com/embed.html?d=charter&hideIssuuLogo=true&pageLayout=singlePage&hideShareButton=true&u=greaterneworleansfoundation'
       },
       {
         description: 'Officers, Federation of Non-sectarian Charity and Philanthropy of New Orleans',
@@ -226,7 +226,7 @@ export default [
         clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/articles-of-incorporation-1924.pdf',
         icon: 'dark',
         type: 'embed',
-        issuuEmbed: 'https://e.issuu.com/embed.html?d=articles-of-incorporation-1924&hideIssuuLogo=true&hideShareButton=true&u=greaterneworleansfoundation'
+        issuuEmbed: 'https://e.issuu.com/embed.html?d=articles-of-incorporation-1924&hideIssuuLogo=true&pageLayout=singlePage&hideShareButton=true&u=greaterneworleansfoundation'
       }
     ]
   },
@@ -300,7 +300,7 @@ export default [
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/1925-1935_annual_report_1st_year?fr=sZWI5MTU4Njg0NTI',
         icon: 'dark',
         type: 'embed',
-        issuuEmbed: 'https://e.issuu.com/embed.html?d=1925-1935_annual_report_2nd_year&hideIssuuLogo=true&hideShareButton=true&logoImageUrl=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fs4yppl0pr5nvbda%2FGNOF_CentennialLogo_RGB_Full%2520Color.png%3Fdl%3D0&pageLayout=singlePage&u=greaterneworleansfoundation'
+        issuuEmbed: 'https://e.issuu.com/embed.html?d=1925-1935_annual_report_2nd_year&hideIssuuLogo=true&pageLayout=singlePage&hideShareButton=true&u=greaterneworleansfoundation'
       }
     ]
   },
@@ -321,7 +321,7 @@ export default [
         clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/1925-member-organizations.pdf',
         icon: 'dark',
         type: 'embed',
-        issuuEmbed: 'https://e.issuu.com/embed.html?d=1925-member-organizations&hideIssuuLogo=true&hideShareButton=true&u=greaterneworleansfoundation'
+        issuuEmbed: 'https://e.issuu.com/embed.html?d=1925-member-organizations&hideIssuuLogo=true&pageLayout=singlePage&hideShareButton=true&u=greaterneworleansfoundation'
       }
     ]
   },
@@ -356,7 +356,7 @@ export default [
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/1925-1935_annual_report_2nd_year?fr=sYzNlZTU4Njg0NTI',
         icon: 'dark',
         type: 'embed',
-        issuuEmbed: 'https://e.issuu.com/embed.html?d=1925-1935_annual_report_1st_year&hideShareButton=true&logoImageUrl=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fs4yppl0pr5nvbda%2FGNOF_CentennialLogo_RGB_Full%2520Color.png%3Fdl%3D0&pageLayout=singlePage&u=greaterneworleansfoundation'
+        issuuEmbed: 'https://e.issuu.com/embed.html?d=1925-1935_annual_report_1st_year&hideIssuuLogo=true&pageLayout=singlePage&hideShareButton=true&u=greaterneworleansfoundation'
       }
     ]
   },
@@ -411,7 +411,7 @@ export default [
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/1925-1935_annual_report_3rd_year?fr=sZTFkMDU4Njg0NTI',
         icon: 'dark',
         type: 'embed',
-        issuuEmbed: 'https://e.issuu.com/embed.html?d=1925-1935_annual_report_3rd_year&hideIssuuLogo=true&hideShareButton=true&logoImageUrl=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fs4yppl0pr5nvbda%2FGNOF_CentennialLogo_RGB_Full%2520Color.png%3Fdl%3D0&pageLayout=singlePage&u=greaterneworleansfoundation'
+        issuuEmbed: 'https://e.issuu.com/embed.html?d=1925-1935_annual_report_3rd_year&hideIssuuLogo=true&pageLayout=singlePage&hideShareButton=true&u=greaterneworleansfoundation'
       }
     ]
   },
@@ -499,7 +499,7 @@ export default [
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/1925-1935-Annual-Report-4th-year-1.png',
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/1925-1935_annual_report_4th_year?fr=sM2ZhYTU4Njg0NTI',
         icon: 'dark',
-        issuuEmbed: 'https://e.issuu.com/embed.html?d=1925-1935_annual_report_4th_year&hideIssuuLogo=true&hideShareButton=true&logoImageUrl=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fs4yppl0pr5nvbda%2FGNOF_CentennialLogo_RGB_Full%2520Color.png%3Fdl%3D0&pageLayout=singlePage&u=greaterneworleansfoundation'
+        issuuEmbed: 'https://e.issuu.com/embed.html?d=1925-1935_annual_report_4th_year&hideIssuuLogo=true&pageLayout=singlePage&hideShareButton=true&u=greaterneworleansfoundation'
       }
     ]
   },
@@ -541,7 +541,7 @@ export default [
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/annual_report_1925-1935_5th_year?fr=sZTNiZDU4Njg0NTI',
         icon: 'dark',
         type: 'embed',
-        issuuEmbed: 'https://e.issuu.com/embed.html?d=annual_report_1925-1935_5th_year&hideIssuuLogo=true&hideShareButton=true&logoImageUrl=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fs4yppl0pr5nvbda%2FGNOF_CentennialLogo_RGB_Full%2520Color.png%3Fdl%3D0&pageLayout=singlePage&u=greaterneworleansfoundation'
+        issuuEmbed: 'https://e.issuu.com/embed.html?d=annual_report_1925-1935_5th_year&hideIssuuLogo=true&pageLayout=singlePage&hideShareButton=true&u=greaterneworleansfoundation'
       }
     ]
   },
@@ -658,7 +658,7 @@ export default [
         icon: 'dark',
         rightMargin: true,
         type: 'embed',
-        issuuEmbed: 'https://e.issuu.com/embed.html?d=1933-annual-report-11th-year&hideIssuuLogo=true&hideShareButton=true&pageLayout=singlePage&u=greaterneworleansfoundation'
+        issuuEmbed: 'https://e.issuu.com/embed.html?d=1933-annual-report-11th-year&hideIssuuLogo=true&pageLayout=singlePage&hideShareButton=true&u=greaterneworleansfoundation'
       },
       {
         description: '1936 Community Chest Annual Report | The Community Chest in the 12th Year | Business Improvement',
@@ -698,7 +698,7 @@ export default [
         clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/1925-1935-10th-year.pdf',
         icon: 'dark',
         type: 'embed',
-        issuuEmbed: 'https://e.issuu.com/embed.html?d=1934-the_first_decade_of_the_community_chest&hideIssuuLogo=true&hideShareButton=true&pageLayout=singlePage&showOtherPublicationsAsSuggestions=true&u=greaterneworleansfoundation'
+        issuuEmbed: 'https://e.issuu.com/embed.html?d=1934-the_first_decade_of_the_community_chest&hideIssuuLogo=true&pageLayout=singlePage&hideShareButton=true&u=greaterneworleansfoundation'
       }
     ]
   },
@@ -2568,7 +2568,7 @@ export default [
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/2019.08.30_-_climate_action_equity_report_-_web',
         icon: 'dark',
         type: 'emmbed',
-        issuuEmbed: 'https://e.issuu.com/embed.html?d=2019.08.30_-_climate_action_equity_report_-_web&hideIssuuLogo=true&hideShareButton=true&u=greaterneworleansfoundation'
+        issuuEmbed: 'https://e.issuu.com/embed.html?d=2019.08.30_-_climate_action_equity_report_-_web&hideIssuuLogo=true&pageLayout=singlePage&hideShareButton=true&u=greaterneworleansfoundation'
       }
     ]
   },
@@ -2596,7 +2596,7 @@ export default [
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/opsb_condensed_report',
         icon: 'light',
         type: 'embed',
-        issuuEmbed: 'https://e.issuu.com/embed.html?d=opsb_condensed_report&hideIssuuLogo=true&hideShareButton=true&u=greaterneworleansfoundation'
+        issuuEmbed: 'https://e.issuu.com/embed.html?d=opsb_condensed_report&hideIssuuLogo=true&pageLayout=singlePage&hideShareButton=true&u=greaterneworleansfoundation'
       }
     ]
   },
@@ -2658,7 +2658,7 @@ export default [
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/nonprofit_survey',
         icon: 'dark',
         type: 'embed',
-        issuuEmbed: 'https://e.issuu.com/embed.html?d=gnof-uno_covid_19_nonprofit_study&hideIssuuLogo=true&hideShareButton=true&u=greaterneworleansfoundation'
+        issuuEmbed: 'https://e.issuu.com/embed.html?d=gnof-uno_covid_19_nonprofit_study&hideIssuuLogo=true&pageLayout=singlePage&hideShareButton=true&u=greaterneworleansfoundation'
       }
     ]
   },
@@ -2706,7 +2706,7 @@ export default [
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/gnof_stormwater_report',
         icon: 'light',
         type: 'embed',
-        issuuEmbed: 'https://e.issuu.com/embed.html?d=gnof_stormwater_report&hideIssuuLogo=true&hideShareButton=true&pageLayout=singlePage&u=greaterneworleansfoundation'
+        issuuEmbed: 'https://e.issuu.com/embed.html?d=gnof_stormwater_report&hideIssuuLogo=true&pageLayout=singlePage&hideShareButton=true&u=greaterneworleansfoundation'
       }
     ]
   },
@@ -2756,7 +2756,7 @@ export default [
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/nle_survey_report_-_full_5',
         icon: 'light',
         type: 'embed',
-        issuuEmbed: 'https://e.issuu.com/embed.html?d=nle_survey_report_-_full_5&hideIssuuLogo=true&hideShareButton=true&u=greaterneworleansfoundation'
+        issuuEmbed: 'https://e.issuu.com/embed.html?d=nle_survey_report_-_full_5&hideIssuuLogo=true&pageLayout=singlePage&hideShareButton=true&u=greaterneworleansfoundation'
       }
     ]
   },

@@ -4,7 +4,7 @@
             class="modal-background"
             @click="closeLightbox"
         ></div>
-        <div class="lightbox">
+        <div :class="lightboxClasses">
             <div class="image-wrapper">
                 <div class="icon-container">
                     <img src="../assets/Icons_X_Light.svg" class="icon" @click="closeLightbox">
@@ -21,10 +21,11 @@
                 </div>
                 <!-- IF VIMEO EMBED -->
                 <div v-if="imageArray[indexToShow].vimeoEmbed" class="embed-wrapper">
+                    <!-- width="640"
+                        height="360" -->
                     <iframe
                         :src="imageArray[indexToShow].vimeoEmbed"
-                        width="640"
-                        height="360"
+   
                         frameborder="0"
                         allow="autoplay; fullscreen; picture-in-picture"
                         allowfullscreen>
@@ -41,26 +42,24 @@
                         allowfullscreen>
                     </iframe>
                 </div>
+                <!-- IF PDF -->
                 <div v-if="getFileType(imageArray[indexToShow].clickThrough) === 'pdf' && !imageArray[indexToShow].issuuEmbed">
                     <iframe
                         :src="imageArray[indexToShow].clickThrough + '#view=fitH'"
                         frameborder="1"
                         type="application/pdf"
-                        width="700px"
-                        height="1000px"
+                        class="pdf-iframe"
                     />
                 </div>
                 <img :src="imageArray[indexToShow].clickThrough" :id="imageArray[indexToShow].clickThrough" v-if="getFileType(imageArray[indexToShow].clickThrough) === 'image'">
             </div>
             <div
-                class="caption"
-                :class="!showLeftArrow && !showRightArrow ? 'bottom' : ''"
+                :class="captionClasses"
                 v-html="imageArray[indexToShow].description">
             </div>
             <div
-                v-if="showLeftArrow || showRightArrow" 
-                class="image-selectors"
-                :class="showLeftArrow || showRightArrow ? 'bottom' : ''" 
+                v-if="showLeftArrow || showRightArrow"
+                :class="imageSelectorClasses"
             >
                 <div
                     v-if="showLeftArrow"
@@ -69,7 +68,7 @@
                 >
                     <img src="../assets/Icons_ArrowLeft_Light.svg">
                 </div>
-                <span class="image-number">{{ (indexToShow + 1) + '/' + imageArray.length }}</span>
+                <span class="image-number">{{ (imageIndexMap[indexToShow]) + '/' + viewableImageCount }}</span>
                 <div
                     v-if="showRightArrow"
                     class="image-selector"
@@ -83,7 +82,7 @@
 </template>
 
 <script>
-import { computed, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 
 export default {
     name: 'Lightbox',
@@ -117,25 +116,88 @@ export default {
         const indexToShow = ref(props.imageIndex)
 
         const showLeftArrow = computed(() => {
-            const imageCount = props.imageArray.length
-            return imageCount > 1 && indexToShow.value !== 0
+            const viewIndex = imageIndexMap.value[indexToShow.value]
+            return viewableImageCount.value > 1 && viewIndex !== 1
         })
         const showRightArrow = computed(() => {
-            const imageCount = props.imageArray.length
-            return imageCount > 1 && indexToShow.value !== (imageCount - 1)
+            const viewIndex = imageIndexMap.value[indexToShow.value]
+            return viewableImageCount.value > 1 && viewIndex !== (viewableImageCount.value)
         })
         
         const toggleImage = (change) => {
             indexToShow.value = indexToShow.value + change
         }
 
+        const viewableImageCount = computed(() => {
+            return props.imageArray.reduce((acc, image) => {
+                if (image.clickThrough) acc += 1
+                return acc
+            }, 0)
+        })
+
+        const preloadImages = () => {
+            for (let image of props.imageArray) {
+                if (image.clickThrough) {
+                    if (image.clickThrough.slice(-3) === 'png' && !image.issueEmbed) {
+                        let imageToLoad = new Image()
+                        imageToLoad.src = image.clickThrough
+                    }
+                }
+            }
+        }
+
+        const lightboxClasses = computed(() => {
+            let classStr = 'lightbox'
+            if (props.imageArray[indexToShow.value].issuuEmbed) classStr += ' issuu-lightbox'
+            if (getFileType(props.imageArray[indexToShow.value].clickThrough) === 'pdf') {
+                classStr += ' pdf-lightbox'
+            }
+            return classStr
+        })
+
+        const captionClasses = computed(() => {
+            let classStr = 'caption'
+            if (!showLeftArrow.value && !showRightArrow.value) classStr += ' bottom'
+            if (getFileType(props.imageArray[indexToShow.value].clickThrough) === 'pdf') {
+                classStr += ' pdf-caption'
+            }
+            return classStr
+        })
+
+        const imageSelectorClasses = computed(() => {
+            let classStr = 'image-selectors'
+            if (showLeftArrow.value || showRightArrow.value) classStr += ' bottom'
+            if (getFileType(props.imageArray[indexToShow.value].clickThrough) === 'pdf') {
+                classStr += ' pdf-image-selectors'
+            }
+            return classStr
+        })
+
+        const imageIndexMap = ref({})
+        onMounted(() => {
+            preloadImages()
+            let viewIndex = 1
+            for (let i = 0; i < props.imageArray.length; i++) {
+                if (props.imageArray[i].clickThrough) {
+                    imageIndexMap.value[i] = viewIndex
+                    viewIndex++
+                }
+
+            }
+        })
+
         return {
             getFileType,
             closeLightbox,
             toggleImage,
+            captionClasses,
+            imageIndexMap,
+            imageSelectorClasses,
             indexToShow,
+            lightboxClasses,
             showLeftArrow,
-            showRightArrow
+            showRightArrow,
+            viewableImageCount
         }
     }
 }
@@ -160,6 +222,10 @@ export default {
     top: 0;
     bottom: 0;
 }
+.pdf-iframe {
+    min-width: 80vw;
+    min-height: 80vh;
+}
 .lightbox {
     position: fixed;
     top: 50%;
@@ -172,6 +238,17 @@ export default {
     padding: 5px;
     max-height: 80%;
     max-width: 80%;
+}
+.issuu-lightbox {
+    min-width: 80%
+}
+.pdf-lightbox {
+    min-width: 90%;
+    min-height: 90%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    top: 55%;
 }
 .modal-background {
     position: fixed;
@@ -192,6 +269,10 @@ export default {
     background-color: #04307e;
     transform: translateX(-25px);
 }
+.pdf-caption {
+    transform: translateX(0);
+    transform: translateY(35px);
+}
 .image-number {
     font-size: 14px;
     margin: auto 0;
@@ -200,7 +281,7 @@ export default {
     max-width: 80vw;
     max-height: 80vh;
     padding: 0 20px;
-    overflow: hidden;
+    /* overflow: hidden; */
     display: flex;
     flex-direction: column;
 }
@@ -226,6 +307,10 @@ img {
     background-color: #04307e;
     padding: 5px;
     transform: translateX(-5px);
+}
+.pdf-image-selectors {
+    transform: translateX(0);
+    transform: translateY(35px);
 }
 .image-selector {
     cursor: pointer;
