@@ -146,9 +146,13 @@ export default {
     allCardsExpanded: {
       type: Boolean,
       default: false
+    },
+    cardIsExpanded: {
+      type: Boolean,
+      default: false
     }
   },
-  emits: ['jump-to-card', 'open-lightbox', 'toggle-to-decade'],
+  emits: ['jump-to-card', 'open-lightbox', 'toggle-to-decade','toggle-card-expansion'],
   setup(props, { emit }) {
     const cardID = computed(() => {
       if (props.card.type !== 'highlights') {
@@ -158,9 +162,10 @@ export default {
       }
     })
 
-    const isExpanded = ref(false)
+    const isExpanded = ref(props.cardIsExpanded)
     const toggleExpand = () => {
       isExpanded.value = !isExpanded.value
+      emit('toggle-card-expansion', { cardID: props.card.id, isExpanded: isExpanded.value })
     }
 
     const highlightColor = ref(props.card.category + '-highlight')
@@ -185,7 +190,12 @@ export default {
     })
 
     watch(props, () => {
-      isExpanded.value = props.allCardsExpanded
+      if (props.allCardsExpanded !== isExpanded.value) {
+        isExpanded.value = props.allCardsExpanded
+      }
+      if (props.cardIsExpanded !== isExpanded.value) {
+        isExpanded.value = props.cardIsExpanded
+      }
     })
 
     const openLightbox = (payload) => {

@@ -74,6 +74,8 @@
         @open-lightbox="openLightbox"
         @toggle-to-decade="onClick"
         @jump-to-card="jumpToCard"
+        :cardIsExpanded="cardIdMap[card.id] ? cardIdMap[card.id].isExpanded : false"
+        @toggle-card-expansion="singleCardExpansion"
       />
     </div>
   </div>
@@ -116,6 +118,7 @@ export default {
       const cards = document.getElementsByClassName('card')
       for (let member in topYearMap) delete topYearMap[member]
       for (let member in reverseMap.value) delete reverseMap.value[member]
+      const tempCopy = { ...cardIdMap }
       for (let member in cardIdMap) delete cardIdMap[member]
       for (let i = 0; i < cardData.value.length; i++) {
         let cardBounds = cards[i].getBoundingClientRect()
@@ -125,7 +128,8 @@ export default {
         }
         cardIdMap[cardData.value[i].id] = {
           year: cardData.value[i].year,
-          position: cardBounds.top + window.scrollY
+          position: cardBounds.top + window.scrollY,
+          isExpanded: tempCopy[cardData.value[i].id]?.isExpanded || false
         }
       }
     })
@@ -207,6 +211,12 @@ export default {
           selectedFiltersObj[card.category] ||
           (card.type && card.type === 'highlights' && card[card.category])
         ) {
+          if (allCardsExpanded.value) {
+            cardIdMap[card.id] = {
+              year: card.year,
+              isExpanded: true
+            }
+          }
           return card
         }
         return
@@ -214,10 +224,15 @@ export default {
       uniqueYears.value = new Set(years.value)
     }, { deep: true })
 
-    // TODO: expand all needs to hold when filters are toggled
     const allCardsExpanded = ref(false)
     const toggleExpansion = () => {
       allCardsExpanded.value = !allCardsExpanded.value
+      for (let member in cardIdMap) {
+        cardIdMap[member].isExpanded = allCardsExpanded.value
+      }
+    }
+    const singleCardExpansion = ({ cardID, isExpanded }) => {
+      cardIdMap[cardID].isExpanded = isExpanded
     }
 
     const imageIndex = ref(null)
@@ -259,7 +274,8 @@ export default {
         }
         cardIdMap[cardData.value[i].id] = {
           year: cardData.value[i].year,
-          position: cardBounds.top + window.scrollY
+          position: cardBounds.top + window.scrollY,
+          isExpanded: false
         }
       }
     })
@@ -271,6 +287,7 @@ export default {
     return {
       allCardsExpanded,
       cardData,
+      cardIdMap,
       currentCard,
       firstYear,
       imageArray,
@@ -283,6 +300,7 @@ export default {
       onClick,
       openLightbox,
       setCurrentCard,
+      singleCardExpansion,
       toggleExpansion,
       toggleFilter
     }
