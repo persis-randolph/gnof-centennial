@@ -73,6 +73,7 @@
         :allCardsExpanded="allCardsExpanded"
         @open-lightbox="openLightbox"
         @toggle-to-decade="onClick"
+        @jump-to-card="jumpToCard"
       />
     </div>
   </div>
@@ -115,11 +116,16 @@ export default {
       const cards = document.getElementsByClassName('card')
       for (let member in topYearMap) delete topYearMap[member]
       for (let member in reverseMap.value) delete reverseMap.value[member]
+      for (let member in cardIdMap) delete cardIdMap[member]
       for (let i = 0; i < cardData.value.length; i++) {
         let cardBounds = cards[i].getBoundingClientRect()
         topYearMap[cardBounds.top + window.scrollY] = cardData.value[i].year
         if (!reverseMap.value[cardData.value[i].year]) {
           reverseMap.value[cardData.value[i].year] = cardBounds.top + window.scrollY
+        }
+        cardIdMap[cardData.value[i].id] = {
+          year: cardData.value[i].year,
+          position: cardBounds.top + window.scrollY
         }
       }
     })
@@ -132,6 +138,7 @@ export default {
 
     const topYearMap = {}
     const reverseMap = ref({})
+    const cardIdMap = {}
     watch(scrollYPosition, () => {
       if (!isScrolling.value) {
         const cardPositions = Object.keys(topYearMap)
@@ -153,6 +160,20 @@ export default {
         }, 1000)
         window.scroll({
           top: reverseMap.value[year] - 250,
+          behavior: 'smooth'
+        })
+      }
+    }
+
+    const jumpToCard = async (cardID) => {
+      if (!isScrolling.value) {
+        currentCard.value = cardIdMap[cardID].year
+        isScrolling.value = true
+        setTimeout(() => {
+          isScrolling.value = false
+        }, 1000)
+        window.scroll({
+          top: cardIdMap[cardID].position - 250,
           behavior: 'smooth'
         })
       }
@@ -236,6 +257,10 @@ export default {
         if (!reverseMap.value[cardData.value[i].year]) {
           reverseMap.value[cardData.value[i].year] = cardBounds.top + window.scrollY
         }
+        cardIdMap[cardData.value[i].id] = {
+          year: cardData.value[i].year,
+          position: cardBounds.top + window.scrollY
+        }
       }
     })
     onBeforeUnmount(() => {
@@ -254,6 +279,7 @@ export default {
       selectedFiltersObj,
       uniqueYears,
       closeLightbox,
+      jumpToCard,
       onClick,
       openLightbox,
       setCurrentCard,

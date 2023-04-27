@@ -28,6 +28,11 @@
           </div>
           <div v-if="card.philanthropy.length" class="decade-category-text">
             {{ getCardText(card.philanthropy) }}
+            <img
+              src="../assets/Icons_ArrowRight_Dark.svg"
+              class="jump-to-arrow"
+              @click="jumpToCard(card.philanthropy)"
+            >
           </div>
         </div>
         <hr v-if="card.philanthropy && (card.leadership || card.action)">
@@ -37,6 +42,11 @@
           </div>
           <div v-if="card.leadership.length" class="decade-category-text">
             {{ getCardText(card.leadership) }}
+            <img
+              src="../assets/Icons_ArrowRight_Dark.svg"
+              class="jump-to-arrow"
+              @click="jumpToCard(card.leadership)"
+            >
           </div>
         </div>
         <hr v-if="card.leadership && card.action">
@@ -46,6 +56,11 @@
           </div>
           <div v-if="card.action.length" class="decade-category-text">
             {{ getCardText(card.action) }}
+            <img
+              src="../assets/Icons_ArrowRight_Dark.svg"
+              class="jump-to-arrow"
+              @click="jumpToCard(card.action)"
+            >
           </div>
         </div>
       </div>
@@ -124,7 +139,7 @@ export default {
       default: false
     }
   },
-  emits: ['open-lightbox', 'toggle-to-decade'],
+  emits: ['jump-to-card', 'open-lightbox', 'toggle-to-decade'],
   setup(props, { emit }) {
     const cardID = computed(() => {
       if (props.card.type !== 'highlights') {
@@ -207,6 +222,10 @@ export default {
       }
     }
 
+    const jumpToCard = (cardID) => {
+      emit('jump-to-card', cardID)
+    }
+
     return {
       cardDateDisplay,
       cardID,
@@ -217,6 +236,7 @@ export default {
       nextDecade,
       previousDecade,
       getCardText,
+      jumpToCard,
       openLightbox,
       showIcon,
       toggleDecade,
@@ -450,6 +470,11 @@ hr {
   margin: 0 auto;
   display: block;
   cursor: pointer;
+}
+.jump-to-arrow {
+  height: 12px;
+  cursor: pointer;
+  margin-left: 2px;
 }
 .hide {
   visibility: hidden;
