@@ -245,17 +245,18 @@ export default {
   border-radius: 8px;
   position: relative;
 }
-
 .normal-card {
   padding: 50px 70px;
 }
 .decade-highlight-card {
   padding: 25px 70px;
 }
-
 @media only screen and (max-width: 700px)  {
-  .card {
+  .normal-card {
     padding: 20px 55px 20px 40px;
+  }
+  .decade-highlight-card {
+    padding: 20px 40px;
   }
 }
 .decade {
