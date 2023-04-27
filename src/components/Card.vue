@@ -290,6 +290,11 @@ export default {
 .decade-category {
   display: flex;
 }
+@media only screen and (max-width: 700px)  {
+  .decade-category {
+    flex-direction: column;
+  }
+}
 .decade-category-name {
   font-size: 16px;
   font-weight: 500;
