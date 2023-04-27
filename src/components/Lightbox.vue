@@ -20,12 +20,11 @@
                     ></iframe>
                 </div>
                 <!-- IF VIMEO EMBED -->
-                <div v-if="imageArray[indexToShow].vimeoEmbed" class="embed-wrapper">
-                    <!-- width="640"
-                        height="360" -->
+                <div v-if="imageArray[indexToShow].vimeoEmbed">
                     <iframe
                         :src="imageArray[indexToShow].vimeoEmbed"
-   
+                        width="640"
+                        height="360"
                         frameborder="0"
                         allow="autoplay; fullscreen; picture-in-picture"
                         allowfullscreen>
@@ -130,7 +129,7 @@ export default {
 
         const viewableImageCount = computed(() => {
             return props.imageArray.reduce((acc, image) => {
-                if (image.clickThrough) acc += 1
+                if (image.clickThrough && (image.type && image.type === 'external-link')) acc += 1
                 return acc
             }, 0)
         })
@@ -149,7 +148,7 @@ export default {
         const lightboxClasses = computed(() => {
             let classStr = 'lightbox'
             if (props.imageArray[indexToShow.value].issuuEmbed) classStr += ' issuu-lightbox'
-            if (getFileType(props.imageArray[indexToShow.value].clickThrough) === 'pdf') {
+            if (getFileType(props.imageArray[indexToShow.value].clickThrough) === 'pdf' && !props.imageArray[indexToShow.value].issuuEmbed) {
                 classStr += ' pdf-lightbox'
             }
             return classStr
@@ -158,7 +157,7 @@ export default {
         const captionClasses = computed(() => {
             let classStr = 'caption'
             if (!showLeftArrow.value && !showRightArrow.value) classStr += ' bottom'
-            if (getFileType(props.imageArray[indexToShow.value].clickThrough) === 'pdf') {
+            if (getFileType(props.imageArray[indexToShow.value].clickThrough) === 'pdf' && !props.imageArray[indexToShow.value].issuuEmbed) {
                 classStr += ' pdf-caption'
             }
             return classStr
@@ -167,7 +166,7 @@ export default {
         const imageSelectorClasses = computed(() => {
             let classStr = 'image-selectors'
             if (showLeftArrow.value || showRightArrow.value) classStr += ' bottom'
-            if (getFileType(props.imageArray[indexToShow.value].clickThrough) === 'pdf') {
+            if (getFileType(props.imageArray[indexToShow.value].clickThrough) === 'pdf' && !props.imageArray[indexToShow.value].issuuEmbed) {
                 classStr += ' pdf-image-selectors'
             }
             return classStr

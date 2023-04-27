@@ -903,7 +903,7 @@ export default [
       {
         description: 'Board of Directors, First Meeting of the United Community and War Chest',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/1942-Board-of-Directors-First-Meeting-of-United-Community-War-Chest.png',
-        clickThrough: '',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/1942-Board-of-Directors-First-Meeting-of-United-Community-War-Chest.pdf',
         icon: 'dark'
       }
     ]
@@ -2288,9 +2288,7 @@ export default [
       {
         description: 'Picture from 2017 Pitch Event',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Gigsy-2017-10-26-GNOF-Impact-100-046.jpg',
-        size: 'full',
-        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-4.30.37-PM.png',
-        icon: 'dark'
+        size: 'full'
       },
       {
         description: 'GNOF: Impact 100 Ten Year Anniversary - Video',
@@ -2466,11 +2464,12 @@ export default [
     ],
     images: [
       {
-        description: 'Philanthropy News Digest',
+        description: 'Article Link: Philanthropy News Digest',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-4.29.12-PM.png',
         size: 'full',
         clickThrough: 'http://philanthropynewsdigest.org/news/greater-new-orleans-foundation-launches-lgbt-fund',
-        icon: 'dark'
+        icon: 'dark',
+        type: 'external-link'
       },
       {
         description: 'LGBTQ Fund Booklet',
@@ -2594,7 +2593,7 @@ export default [
         description: 'New Orleans School Partnership Study',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-4.49.14-PM.png',
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/opsb_condensed_report',
-        icon: 'light',
+        icon: 'dark',
         type: 'embed',
         issuuEmbed: 'https://e.issuu.com/embed.html?d=opsb_condensed_report&hideIssuuLogo=true&pageLayout=singlePage&hideShareButton=true&u=greaterneworleansfoundation'
       }
@@ -2656,7 +2655,7 @@ export default [
         description: 'The State of Nonprofits in Southeast Louisiana: The Impact of COVID-19',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-4.51.22-PM-1.png',
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/nonprofit_survey',
-        icon: 'dark',
+        icon: 'light',
         type: 'embed',
         issuuEmbed: 'https://e.issuu.com/embed.html?d=gnof-uno_covid_19_nonprofit_study&hideIssuuLogo=true&pageLayout=singlePage&hideShareButton=true&u=greaterneworleansfoundation'
       }
@@ -2693,11 +2692,12 @@ export default [
     ],
     images: [
       {
-        description: 'Stormwater Opportunities Report - gnof.org',
+        description: 'Article Link: Stormwater Opportunities Report - gnof.org',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-4.56.47-PM.png',
         size: 'full',
         clickThrough: 'https://www.gnof.org/stormwater-opportunities-report/',
-        icon: 'dark'
+        icon: 'dark',
+        type: 'external-link'
       },
       {
         description: 'Stormwater Opportunities: Spirit of Charity, Lafitte Greenway, Armstrong Park',
@@ -2754,7 +2754,7 @@ export default [
         description: 'State of Nonprofits in Southeast Louisiana 2021 - Full Report',
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-5.01.34-PM.png',
         clickThrough: 'https://issuu.com/greaterneworleansfoundation/docs/nle_survey_report_-_full_5',
-        icon: 'light',
+        icon: 'dark',
         type: 'embed',
         issuuEmbed: 'https://e.issuu.com/embed.html?d=nle_survey_report_-_full_5&hideIssuuLogo=true&pageLayout=singlePage&hideShareButton=true&u=greaterneworleansfoundation'
       }
@@ -2795,7 +2795,7 @@ export default [
         url: 'https://www.gnof.org/wp-content/uploads/2023/03/Screenshot-2023-03-24-at-5.01.40-PM.png',
         size: 'full',
         clickThrough: 'https://www.gnof.org/foundation-announces-1-million-grant-to-community-lighthouse-project/',
-        icon: 'dark'
+        icon: 'light'
       }
     ]
   },
