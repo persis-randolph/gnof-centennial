@@ -26,12 +26,15 @@
           <div class="philanthropy-header decade-category-name">
             PHILANTHROPY
           </div>
-          <div v-if="card.philanthropy.length" class="decade-category-text">
+          <div
+            v-if="card.philanthropy.length"
+            class="decade-category-text"
+            @click="jumpToCard(card.philanthropy)"
+          >
             {{ getCardText(card.philanthropy) }}
             <img
               src="../assets/Icons_ArrowRight_Dark.svg"
               class="jump-to-arrow"
-              @click="jumpToCard(card.philanthropy)"
             >
           </div>
         </div>
@@ -40,12 +43,15 @@
           <div class="leadership-header decade-category-name">
             LEADERSHIP
           </div>
-          <div v-if="card.leadership.length" class="decade-category-text">
+          <div
+            v-if="card.leadership.length"
+            class="decade-category-text"
+            @click="jumpToCard(card.leadership)"
+          >
             {{ getCardText(card.leadership) }}
             <img
               src="../assets/Icons_ArrowRight_Dark.svg"
               class="jump-to-arrow"
-              @click="jumpToCard(card.leadership)"
             >
           </div>
         </div>
@@ -54,12 +60,15 @@
           <div class="action-header decade-category-name">
             ACTION
           </div>
-          <div v-if="card.action.length" class="decade-category-text">
+          <div
+            v-if="card.action.length"
+            class="decade-category-text"
+            @click="jumpToCard(card.action)"
+          >
             {{ getCardText(card.action) }}
             <img
               src="../assets/Icons_ArrowRight_Dark.svg"
               class="jump-to-arrow"
-              @click="jumpToCard(card.action)"
             >
           </div>
         </div>
@@ -323,6 +332,7 @@ export default {
 .decade-category-text {
   font-size: 16px;
   font-weight: 300;
+  cursor: pointer;
 }
 .color-highlight {
   background-color: #04307e;
