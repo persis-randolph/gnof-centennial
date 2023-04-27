@@ -182,7 +182,10 @@ export default {
 
     watch(selectedFiltersObj, () => {
       cardData.value = data.filter(card => {
-        if (selectedFiltersObj[card.category]) {
+        if (
+          selectedFiltersObj[card.category] ||
+          (card.type && card.type === 'highlights' && card[card.category])
+        ) {
           return card
         }
         return
@@ -190,6 +193,7 @@ export default {
       uniqueYears.value = new Set(years.value)
     }, { deep: true })
 
+    // TODO: expand all needs to hold when filters are toggled
     const allCardsExpanded = ref(false)
     const toggleExpansion = () => {
       allCardsExpanded.value = !allCardsExpanded.value

@@ -243,7 +243,9 @@ export default [
     images: [
       {
         description: 'Rabbi Emil W. Leipziger',
-        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Emil-Leipziger-1.png'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/04/Rabbi-Emil-W-Leipziger.png',
+        icon: 'dark',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/04/Rabbi-Emil-W-Leipziger_Full.png'
       }
     ]
   },
@@ -259,7 +261,9 @@ export default [
     images: [
       {
         description: 'George H. Terriberry',
-        url: 'https://www.gnof.org/wp-content/uploads/2023/03/George-Hitching-Terriberry-1921.jpg'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/04/H_George-H-Terriberry.png',
+        icon: 'dark',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/04/George-H-Terriberry.png'
       }
     ]
   },
@@ -333,7 +337,7 @@ export default [
     images: [
       {
         description: 'Charles Seyburn Williams',
-        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Charles-Seyburn-Williams.png'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/04/H_C-S-Williams.png'
       }
     ]
   },
@@ -553,7 +557,7 @@ export default [
     images: [
       {
         description: 'E. Newton Kearny',
-        url: 'https://www.gnof.org/wp-content/uploads/2023/03/E-Newton-Kearny.png'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/04/E-Newton-Kearny.png'
       }
     ]
   },
@@ -578,7 +582,9 @@ export default [
     images: [
       {
         description: 'Parham Werlein',
-        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Parham-Werlein-1930-1932.jpg'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/04/H_Parham-Werlein.png',
+        icon: 'dark',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/04/Parham-Werlein.png'
       }
     ]
   },
@@ -596,7 +602,9 @@ export default [
     images: [
       {
         description: 'Julius Goldman',
-        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Julius-Goldman-1.png'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/04/H_Julius-Goldman.png',
+        icon: 'dark',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/04/Julius-Goldman.png'
       }
     ]
   },
@@ -611,7 +619,9 @@ export default [
     images: [
       {
         description: 'John Xavier Wegmann',
-        url: 'https://www.gnof.org/wp-content/uploads/2023/03/John-Xavier-Wegmann-1934-1935.jpg'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/04/H_John-X-Wegmann.png',
+        icon: 'dark',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/04/John-X-Wegmann.png'
       }
     ]
   },
@@ -667,7 +677,9 @@ export default [
     images: [
       {
         description: 'Nicholas Bauer',
-        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Nicholas-Bauer.png'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/04/H_Nicholas-Bauer.png',
+        icon: 'dark',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/04/Nicholas-Bauer.png'
       }
     ]
   },
@@ -701,7 +713,9 @@ export default [
     images: [
       {
         description: 'Joseph Haspel',
-        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Joseph-Haspel.jpg'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/04/H_Joseph-Haspel.png',
+        icon: 'dark',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/04/Joseph-Haspel.png'
       }
     ]
   },
@@ -716,7 +730,9 @@ export default [
     images: [
       {
         description: 'Theodore M. Simmons',
-        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Theodore-M-Simmons.png'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/04/H_Theodore-M-Simmons.png',
+        icon: 'dark',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/04/Theodore-M-Simmons.png'
       }
     ]
   },
@@ -731,7 +747,9 @@ export default [
     images: [
       {
         description: 'George S. Clarke',
-        url: 'https://www.gnof.org/wp-content/uploads/2023/03/George-S-Clarke.png'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/04/H_George-S-Clarke.png',
+        icon: 'dark',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/04/George-S-Clarke.png'
       }
     ]
   },
@@ -746,7 +764,9 @@ export default [
     images: [
       {
         description: 'James Gilly, Jr.',
-        url: 'https://www.gnof.org/wp-content/uploads/2023/03/James-Gilly.png'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/04/H_James-Gilly-Jr.png',
+        icon: 'dark',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/04/James-Gilly-Jr.png'
       }
     ]
   },
@@ -785,7 +805,9 @@ export default [
     images: [
       {
         description: 'C. Ellis Henican',
-        url: 'https://www.gnof.org/wp-content/uploads/2023/03/C-Ellis-Henican.png'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/04/HH_C-Ellis-Henican.png',
+        icon: 'dark',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/04/C-Ellis-Henican.png'
       }
     ]
   },
@@ -820,7 +842,9 @@ export default [
     images: [
       {
         description: 'Louis G. Lemle',
-        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Louis-G.-Lemle.png'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/04/H_Louis-G-Lemle.png',
+        icon: 'dark',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/04/Louis-G-Lemle.png'
       }
     ]
   },
@@ -910,7 +934,9 @@ export default [
     images: [
       {
         description: 'George Soule',
-        url: 'https://www.gnof.org/wp-content/uploads/2023/03/George-Soule-1944.jpg'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/04/H-George-Soule.png',
+        icon: 'dark',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/04/George-Soule.png'
       }
     ]
   },
@@ -962,7 +988,9 @@ export default [
     images: [
       {
         description: 'Thomas F. Regan',
-        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Regan.png'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/04/h-Thomas-F-Regan.png',
+        icon: 'dark',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/04/Thomas-F-Regan.png'
       }
     ]
   },
@@ -1026,8 +1054,9 @@ export default [
     images: [
       {
         description: 'Joseph H. Epstein, Sr.',
-        url: 'https://www.gnof.org/wp-content/uploads/2023/03/Joseph-Epstein-1949-pt-2.png',
-        size: 'full'
+        url: 'https://www.gnof.org/wp-content/uploads/2023/04/h-Joseph-H-Epstein.png',
+        icon: 'dark',
+        clickThrough: 'https://www.gnof.org/wp-content/uploads/2023/04/Joseph-H-Epstein.png'
       }
     ]
   },
@@ -2780,12 +2809,12 @@ export default [
     body: [],
     images: [
       {
-        description: 'TODO: Need to implement actual clickthrough type + add image',
-        url: '',
-        size: '',
+        description: 'Article Link: Next 100 Years Challenge',
+        url: 'https://www.gnof.org/wp-content/uploads/2023/04/f-100-Years-Challenge.png',
+        size: 'full',
         clickThrough: 'https://www.gnof.org/greater-new-orleans-foundation-next-100-years-challenge-kickoff/',
-        icon: '',
-        type: 'clickThrough'
+        icon: 'dark',
+        type: 'external-link'
       }
     ]
   }

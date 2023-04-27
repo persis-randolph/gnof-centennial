@@ -2,11 +2,23 @@
     <!-- EACH IMAGE -->
     <div class="single-image-container" @mouseover="hover = true" @mouseleave="hover = false">
         <img
+            v-if="!image.type || image.type !== 'external-link'"
             :src="image.url"
             :class="imageClasses"
             :alt="image.description"
             @click="openLightbox"
         >
+        <a
+            v-if="image.type && image.type === 'external-link'"
+            :href="image.clickThrough"
+            target="_blank"
+        >
+            <img
+                :src="image.url"
+                :class="imageClasses"
+                :alt="image.description"
+            >
+        </a>
         <!-- CAPTION BACKGROUND -->
         <div class="caption-background" v-if="hover">
             <!-- CAPTION -->
