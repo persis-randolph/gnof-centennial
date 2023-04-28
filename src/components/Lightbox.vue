@@ -120,7 +120,7 @@ export default {
         })
         const showRightArrow = computed(() => {
             const viewIndex = imageIndexMap.value[indexToShow.value]
-            return viewableImageCount.value > 1 && viewIndex !== (viewableImageCount.value)
+            return viewableImageCount.value > 1 && viewIndex !== viewableImageCount.value
         })
         
         const toggleImage = (change) => {
@@ -129,7 +129,7 @@ export default {
 
         const viewableImageCount = computed(() => {
             return props.imageArray.reduce((acc, image) => {
-                if (image.clickThrough && (image.type && image.type === 'external-link')) acc += 1
+                if (image.clickThrough && (!image.type || image.type !== 'external-link')) acc += 1
                 return acc
             }, 0)
         })
