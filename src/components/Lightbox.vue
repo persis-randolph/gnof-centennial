@@ -223,7 +223,7 @@ export default {
 }
 .pdf-iframe {
     min-width: 80vw;
-    min-height: 80vh;
+    min-height: 70vh;
 }
 .lightbox {
     position: fixed;
@@ -243,7 +243,7 @@ export default {
 }
 .pdf-lightbox {
     min-width: 90%;
-    min-height: 90%;
+    min-height:80%;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -270,7 +270,6 @@ export default {
 }
 .pdf-caption {
     transform: translateX(0);
-    transform: translateY(35px);
 }
 .image-number {
     font-size: 14px;
@@ -309,7 +308,6 @@ img {
 }
 .pdf-image-selectors {
     transform: translateX(0);
-    transform: translateY(35px);
 }
 .image-selector {
     cursor: pointer;

@@ -20,7 +20,7 @@
             >
         </a>
         <!-- CAPTION BACKGROUND -->
-        <div class="caption-background" v-if="hover">
+        <div class="caption-background" v-if="hover || isSmallScreenWidth">
             <!-- CAPTION -->
             <div class="caption" v-html="image.description"></div>
         </div>
@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import { computed, ref } from 'vue'
+import { computed, nextTick, onBeforeUnmount, onMounted, ref } from 'vue'
 
 export default {
     name: 'Image',
@@ -71,9 +71,29 @@ export default {
             return classStr
         })
 
+        const windowWidth = ref(window.innerWidth)
+        const isSmallScreenWidth = computed(() => {
+            return windowWidth.value <= 700
+        })
+        // on resize, recalculating position maps since the positions will vary due to width
+        const onResize = () => {
+            windowWidth.value = window.innerWidth
+        }
+
+        onMounted(() => {
+            nextTick(() => {
+                window.addEventListener('resize', onResize)
+            })
+        })
+
+        onBeforeUnmount(() => {
+            window.removeEventListener('resize', onResize)
+        })
+
         return {
             hover,
             imageClasses,
+            isSmallScreenWidth,
             openLightbox
         }
     }
