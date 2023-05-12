@@ -2347,7 +2347,7 @@ export default [
     category: 'philanthropy',
     header: 'GiveNOLA Day, a 24-Hour Giving Day Launched',
     body: [
-      "To join the national trend of community foundations hosting giving days, the Foundation created its very own giving day in 2013. Called GiveNOLA Day, the online, community-wide, 24-hour giving day shattered all goals and raised a staggering $2.3 million for over 150 nonprofits with 19,000 donations. It was a true testament to the generosity of our region's giving community. To date GiveNOLA Day has raised over $43M for regional nonprofits."
+      "To join the national trend of community foundations hosting giving days, the Foundation created its very own giving day in 2013. Called GiveNOLA Day, the online, community-wide, 24-hour giving day shattered all goals and raised a staggering $2.3 million for over 150 nonprofits with 19,000 donations. It was a true testament to the generosity of our region's giving community. To date GiveNOLA Day has raised nearly $57M for regional nonprofits."
     ],
     images: [
       {
